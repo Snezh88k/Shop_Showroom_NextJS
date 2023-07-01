@@ -1,0 +1,25 @@
+.product_card__main_slider {
+  .slick-list > .slick-track > .slick-slide > div > div {
+    width: 570px;
+    height: 570px;
+    // background-color: red;
+  }
+  .product_card__main_slider__image {
+    object-fit: contain;
+  }
+}
+
+.product_card__secondary_slider {
+  .slick-list {
+    width: 570px;
+  }
+
+  .slick-list > .slick-track > .slick-slide > div > div {
+    width: 120px;
+    height: 140px;
+  }
+
+  .product_card__secondary_slider__image {
+    object-fit: contain;
+  }
+}

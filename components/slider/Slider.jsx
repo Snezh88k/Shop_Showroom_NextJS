@@ -19,12 +19,6 @@ export default function SimpleSlider({ title, className = "" }) {
     centerMode: true,
   };
 
-  const imageStyle = {
-    borderRadius: "5px",
-    border: "1px solid #fff",
-    objectFit: "cover",
-  };
-
   return (
     <div className={clsx("wrapper", className)}>
       <h4>{title}</h4>

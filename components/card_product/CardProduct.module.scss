@@ -1,6 +1,8 @@
 .wrapper {
   position: relative;
-
+  border-radius: 20px;
+  overflow: hidden;
+  width: fit-content;
   cursor: pointer;
 
   .description {
@@ -33,9 +35,6 @@
   }
 
   .image_wrapper {
-    width: fit-content;
-    overflow: hidden;
-    border-radius: 20px;
     .product_image {
       transition: 1s;
       &:hover {
