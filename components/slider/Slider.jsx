@@ -6,7 +6,6 @@ import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
 import "./Slider.scss";
-import Image from "next/image";
 import CardProduct from "../card_product/CardProduct";
 
 export default function SimpleSlider({ title, className = "" }) {
@@ -31,35 +30,35 @@ export default function SimpleSlider({ title, className = "" }) {
       <h4>{title}</h4>
       <Slider {...settings}>
         <CardProduct
-          src={"/first_block/Rectangle1.png"}
+          src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
           price={1652}
           category="брюки"
         />
         <CardProduct
-          src={"/first_block/Rectangle1.png"}
+          src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
           price={1652}
           category="брюки"
         />
         <CardProduct
-          src={"/first_block/Rectangle1.png"}
+          src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
           price={1652}
           category="брюки"
         />
         <CardProduct
-          src={"/first_block/Rectangle1.png"}
+          src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
           price={122652}
           category="брюки"
         />
         <CardProduct
-          src={"/first_block/Rectangle1.png"}
+          src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
           price={11652}

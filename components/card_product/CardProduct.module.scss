@@ -1,5 +1,6 @@
 .wrapper {
   position: relative;
+
   cursor: pointer;
 
   .description {
@@ -15,7 +16,7 @@
 
     .price {
       color: rgba(255, 255, 255, 1);
-      font-size: 20px;
+      font-size: 22px;
       font-family: Inter;
       font-weight: 500;
       line-height: 100%;
@@ -28,6 +29,18 @@
       font-family: Inter;
       font-weight: 400;
       line-height: 100%;
+    }
+  }
+
+  .image_wrapper {
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 20px;
+    .product_image {
+      transition: 1s;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

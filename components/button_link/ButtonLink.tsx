@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -13,27 +11,11 @@ interface ButtonLinkProps {
 }
 
 export default function ButtonLink({ link, text, className }: ButtonLinkProps) {
-  const [isHover, setIsHover] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHover(false);
-  };
-
   return (
-    <div
-      className={className}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className={className}>
       <Link href={link}>
         <button type="button" className={styles.wrapper}>
-          {text}{" "}
-          <ArrowRight
-            style={{ fill: isHover ? "white" : "rgba(255, 255, 255, 0.5)" }}
-          />
+          {text} <ArrowRight className={styles.arrowWrapper} />
         </button>
       </Link>
     </div>

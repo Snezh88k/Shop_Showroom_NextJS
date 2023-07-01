@@ -24,7 +24,16 @@ export default function CardProduct({
   )}`;
   return (
     <div className={styles.wrapper}>
-      <Image src={src} width={300} height={height} alt={alt} />
+      <div className={styles.image_wrapper}>
+        <Image
+          src={src}
+          width={300}
+          height={height}
+          alt={alt}
+          className={styles.product_image}
+        />
+      </div>
+
       <div className={styles.description}>
         <span className={styles.price}>{priceEdited} ₽</span>
         <span className={styles.category}>{category}</span>

@@ -16,4 +16,8 @@
   line-height: 100%;
 
   cursor: pointer;
+
+  &:hover .arrowWrapper {
+    fill: white;
+  }
 }
