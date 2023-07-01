@@ -1,0 +1,34 @@
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.top_line {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quick_panel {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  span {
+    cursor: pointer;
+  }
+}
+
+.main_menu {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.9);
+  padding-right: 200px;
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}

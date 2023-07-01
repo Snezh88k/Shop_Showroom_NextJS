@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  h3 {
+    position: absolute;
+    margin-top: 82px;
+    z-index: 10;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Anglecia Pro Dsp";
+    line-height: 100%;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+
+  &:hover h3 {
+    transform: scale(1.05);
+  }
+}
