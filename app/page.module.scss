@@ -68,12 +68,14 @@
     );
 
     .discount {
-      margin-top: 40px;
-      margin-left: 40px;
-      width: 321px;
-      height: 102px;
+      padding-top: 40px;
+      padding-left: 40px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
       h2 {
+        max-width: 321px;
         color: #000;
         font-size: 32px;
         font-family: Inter;
@@ -87,22 +89,21 @@
 
       > span {
         display: block;
-        width: 235px;
-        height: 52px;
+        max-width: 235px;
         margin-top: 8px;
         color: rgba(0, 0, 0, 0.3);
         font-size: 16px;
         font-family: Inter;
         font-weight: 500;
         line-height: 160%;
-
+        flex-grow: 1;
         span {
           color: rgba(0, 0, 0, 0.45);
         }
       }
 
       .catalog_button {
-        margin-top: 72px;
+        margin-bottom: 40px;
       }
     }
   }

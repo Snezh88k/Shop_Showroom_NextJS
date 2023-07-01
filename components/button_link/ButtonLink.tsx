@@ -1,10 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./ButtonLink.module.scss";
-import arrowIcon from "../../public/icons/arrow.svg";
-import Image from "next/image";
-import clsx from "clsx";
+import { ArrowRight } from "../../public/icons/arrow_right";
 
 interface ButtonLinkProps {
   link: string;
@@ -13,11 +13,29 @@ interface ButtonLinkProps {
 }
 
 export default function ButtonLink({ link, text, className }: ButtonLinkProps) {
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+
   return (
-    <Link href={link}>
-      <button type="button" className={clsx(styles.wrapper, className)}>
-        {text} <Image src={arrowIcon} alt="" />
-      </button>
-    </Link>
+    <div
+      className={className}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Link href={link}>
+        <button type="button" className={styles.wrapper}>
+          {text}{" "}
+          <ArrowRight
+            style={{ fill: isHover ? "white" : "rgba(255, 255, 255, 0.5)" }}
+          />
+        </button>
+      </Link>
+    </div>
   );
 }

@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "./Header.module.scss";
 import Image from "next/image";
 
-import findIcon from "../../public/menu_icon/search.png";
-import heartsIcon from "../../public/menu_icon/hearts.png";
-import bagIcon from "../../public/menu_icon/shopping-bag.png";
+import findIcon from "../../public/menu_icon/search.svg";
+import heartsIcon from "../../public/menu_icon/hearts.svg";
+import bagIcon from "../../public/menu_icon/shopping_bag.svg";
 
 export default function Header() {
   return (

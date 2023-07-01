@@ -5,7 +5,7 @@ import styles from "./page.module.scss";
 import SimpleSlider from "../components/slider/Slider";
 
 import Rectangle1 from "../public/first_block/Rectangle1.png";
-import arrowUpRight from "../public/icons/arrow-up-right.png";
+import arrowUpRight from "../public/icons/arrow-up-right.svg";
 
 import SelectionCard from "@/components/card_selection/SelectionCard";
 import ButtonLink from "@/components/button_link/ButtonLink";
