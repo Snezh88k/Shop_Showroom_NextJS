@@ -11,7 +11,7 @@ export default function Header() {
     <div className={styles.wrapper}>
       <div className={styles.top_line}>
         <Link href="/">
-          <div>LOGO</div>
+          <div className={styles.logo}>I AM</div>
         </Link>
 
         <div className={styles.quick_panel}>
@@ -29,31 +29,19 @@ export default function Header() {
       <nav>
         <ul className={styles.main_menu}>
           <li>
-            <Link href="/about">новинки</Link>
+            <Link href="/">каталог</Link>
           </li>
           <li>
-            <Link href="/">одежда</Link>
+            <Link href="/">оплата</Link>
           </li>
           <li>
-            <Link href="/">обувь</Link>
+            <Link href="/">доставка</Link>
           </li>
           <li>
-            <Link href="/">сумки</Link>
+            <Link href="/">акции</Link>
           </li>
           <li>
-            <Link href="/">аксуссуары</Link>
-          </li>
-          <li>
-            <Link href="/">спорт</Link>
-          </li>
-          <li>
-            <Link href="/">бренды</Link>
-          </li>
-          <li>
-            <Link href="/">новости</Link>
-          </li>
-          <li>
-            <Link href="/">скидки</Link>
+            <Link href="/">instagram</Link>
           </li>
         </ul>
       </nav>

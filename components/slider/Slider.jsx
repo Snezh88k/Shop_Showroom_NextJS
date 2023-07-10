@@ -24,6 +24,7 @@ export default function SimpleSlider({ title, className = "" }) {
       <h4>{title}</h4>
       <Slider {...settings}>
         <CardProduct
+          id={1}
           src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
@@ -31,6 +32,7 @@ export default function SimpleSlider({ title, className = "" }) {
           category="брюки"
         />
         <CardProduct
+          id={2}
           src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
@@ -38,6 +40,7 @@ export default function SimpleSlider({ title, className = "" }) {
           category="брюки"
         />
         <CardProduct
+          id={3}
           src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
@@ -45,6 +48,7 @@ export default function SimpleSlider({ title, className = "" }) {
           category="брюки"
         />
         <CardProduct
+          id={4}
           src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"
@@ -52,6 +56,7 @@ export default function SimpleSlider({ title, className = "" }) {
           category="брюки"
         />
         <CardProduct
+          id={5}
           src={"/first_block/Rectangle2.jpg"}
           height={350}
           alt="Карточка"

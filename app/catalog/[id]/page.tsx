@@ -6,50 +6,47 @@ import Button from "@/components/button/Button";
 
 import ShoppingBag from "../../../public/menu_icon/shopping_bag";
 import HeartsIcon from "../../../public/menu_icon/hearts";
-import Size from "@/components/size/Size";
 
 import dataTest from "../../TestPropducts/products.json";
-import Image from "next/image";
+
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
-
-// interface DataTest {
-//   id: string;
-//   name: string;
-//   price: number;
-//   sale: boolean;
-//   compound: string;
-//   size: {
-//     rus: number[];
-//     int: string[];
-//   };
-//   images: {
-//     main: string;
-//     other: string[];
-//   };
-// }
 
 interface ProductProps {
   params: {
     id: string;
   };
 }
+
+interface DataTest {
+  id: string;
+}
 export default function page({ params }: ProductProps) {
-  console.log(dataTest[0].images.main);
+  console.log(params.id);
+  const product = dataTest.find((product) => {
+    console.log(typeof product.id, typeof params.id);
+    return product.id === params.id;
+  });
+
+  let name = "Товар",
+    price = 1111;
+  if (product) {
+    name = product.name;
+    price = product.price;
+  }
+
   return (
     <div className={styles.wrapper}>
-      {/* {params.id} */}
-      {/* <Image src={dataTest[0].images.main} alt="" width={300} height={300} /> */}
-      <SliderInCard />
+      <SliderInCard images={product?.images.other} />
       <div className={styles.desription}>
-        <h1>Куртка "Бомбер"</h1>
+        <h1 className={styles.name}>{name}</h1>
         <div className={styles.price}>
-          <span>2 000 ₽</span>
+          <span>{price} ₽</span>
         </div>
-        <span className={styles.portraiture}>
+        <div className={styles.portraiture}>
           Утепленная куртка выполнена из водоотталкивающего текстиля с
           искусственным наполнителем. Модель прямого кроя.
-        </span>
+        </div>
         <div className={styles.handmade}>
           <span></span>
           <span></span>

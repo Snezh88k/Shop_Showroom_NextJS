@@ -1,12 +1,12 @@
 [
   {
-    "id": "1",
-    "name": "Bomber",
-    "price": 11720,
+    "id": "23S24003",
+    "name": "Топ",
+    "price": 24,
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
-      { "Артикул": "512521" },
+      { "Артикул": "23S24003" },
       { "Страна производитель": "Турция" }
     ],
 
@@ -19,15 +19,67 @@
     ],
 
     "images": {
-      "main": "/product/photo(1).jpg",
+      "main": "/product/TopsShirts/23S24003_1.jpg",
       "other": [
-        "/product/photo(1).jpg",
-        "/product/photo(2).jpg",
-        "/product/photo(3).jpg",
-        "/product/photo(4).jpg",
-        "/product/photo(5).jpg",
-        "/product/photo(6).jpg",
-        "/product/photo(7).jpg"
+        "/product/TopsShirts/23S24003_1.jpg",
+        "/product/TopsShirts/23S24003_2.jpg",
+        "/product/TopsShirts/23S24003_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24003Y",
+    "name": "Топ",
+    "price": 24,
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24003_Y_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24003_Y_1.jpg",
+        "/product/TopsShirts/23S24003_Y_2.jpg",
+        "/product/TopsShirts/23S24003_Y_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24003G",
+    "name": "Топ",
+    "price": 24,
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24003_G_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24003_G_1.jpg",
+        "/product/TopsShirts/23S24003_G_2.jpg",
+        "/product/TopsShirts/23S24003_G_3.jpg"
       ]
     }
   }

@@ -9,17 +9,17 @@ import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./SliderInCard.scss";
 import Image from "next/image";
 
-const images = [
-  "/product/photo(1).jpg",
-  "/product/photo(2).jpg",
-  "/product/photo(3).jpg",
-  "/product/photo(4).jpg",
-  "/product/photo(5).jpg",
-  "/product/photo(6).jpg",
-  "/product/photo(7).jpg",
-];
+// const images = [
+//   "/product/photo(1).jpg",
+//   "/product/photo(2).jpg",
+//   "/product/photo(3).jpg",
+//   "/product/photo(4).jpg",
+//   "/product/photo(5).jpg",
+//   "/product/photo(6).jpg",
+//   "/product/photo(7).jpg",
+// ];
 
-export default function SliderInCard() {
+export default function SliderInCard({ images }) {
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
 
@@ -48,12 +48,12 @@ export default function SliderInCard() {
       <Slider
         asNavFor={slider1}
         ref={(slider) => setSlider2(slider)}
-        slidesToShow={5}
+        slidesToShow={images.length}
         swipeToSlide={true}
         focusOnSelect={true}
         className="product_card__secondary_slider"
         centerMode={true}
-        centerPadding={-10}
+        centerPadding={110}
         arrows={false}
       >
         {images.map((image) => (
