@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  gap: 54px;
+  margin-top: 40px;
+}
+
+.description {
+  max-width: 400px;
+  height: 628px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sizes_table {
+  margin-top: 40px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 40px;
+  .buttonAddToCart {
+    svg {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+    span {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .buttonAddToFavorite {
+    background: rgba(244, 244, 244, 1);
+    svg {
+      fill: red;
+    }
+    span {
+      color: rgba(0, 0, 0, 0.9);
+    }
+  }
+}

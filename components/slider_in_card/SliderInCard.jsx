@@ -10,12 +10,13 @@ import "./SliderInCard.scss";
 import Image from "next/image";
 
 const images = [
-  "/first_block/Rectangle2.jpg",
-  "/first_block/Rectangle2.jpg",
-  "/first_block/Rectangle2.jpg",
-  "/first_block/Rectangle2.jpg",
-  "/first_block/Rectangle2.jpg",
-  "/first_block/Rectangle2.jpg",
+  "/product/photo(1).jpg",
+  "/product/photo(2).jpg",
+  "/product/photo(3).jpg",
+  "/product/photo(4).jpg",
+  "/product/photo(5).jpg",
+  "/product/photo(6).jpg",
+  "/product/photo(7).jpg",
 ];
 
 export default function SliderInCard() {
@@ -24,14 +25,12 @@ export default function SliderInCard() {
 
   return (
     <div>
-      <h2>Slider Syncing (AsNavFor)</h2>
-      <h4>First Slider</h4>
-
       <Slider
         asNavFor={slider2}
         ref={(slider) => setSlider1(slider)}
         className="product_card__main_slider"
         fade={true}
+        arrows={true}
       >
         {images.map((image) => (
           <div>
@@ -45,23 +44,24 @@ export default function SliderInCard() {
           </div>
         ))}
       </Slider>
-      <h4>Second Slider</h4>
+
       <Slider
         asNavFor={slider1}
         ref={(slider) => setSlider2(slider)}
-        slidesToShow={4}
+        slidesToShow={5}
         swipeToSlide={true}
         focusOnSelect={true}
         className="product_card__secondary_slider"
-        centerPadding={0}
+        centerMode={true}
+        centerPadding={-10}
         arrows={false}
       >
         {images.map((image) => (
-          <div>
+          <div className="product_card__secondary_slider__image_wrapper">
             <Image
               src={image}
               alt={image}
-              width={120}
+              width={100}
               height={140}
               className="product_card__secondary_slider__image"
             />

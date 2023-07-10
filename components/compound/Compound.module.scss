@@ -1,0 +1,39 @@
+.wrapper {
+  max-width: 400px;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  .compound {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    div {
+      position: relative;
+
+      font-size: 14px;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      white-space: nowrap;
+
+      .property {
+        margin-right: 8px;
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      .property_dots {
+        color: rgba(0, 0, 0, 0.15);
+      }
+
+      .value {
+        position: absolute;
+        background-color: white;
+        right: 0;
+        padding-left: 4px;
+
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}

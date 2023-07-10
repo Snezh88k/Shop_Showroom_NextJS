@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Bomber",
+    "price": 11720,
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "512521" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" }
+    ],
+
+    "images": {
+      "main": "/product/photo(1).jpg",
+      "other": [
+        "/product/photo(1).jpg",
+        "/product/photo(2).jpg",
+        "/product/photo(3).jpg",
+        "/product/photo(4).jpg",
+        "/product/photo(5).jpg",
+        "/product/photo(6).jpg",
+        "/product/photo(7).jpg"
+      ]
+    }
+  }
+]

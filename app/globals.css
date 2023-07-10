@@ -11,6 +11,9 @@ body {
   margin: 0 auto;
 }
 
+button {
+  border: none;
+}
 .main {
   min-height: calc(100% - 216px - 128px);
 }
