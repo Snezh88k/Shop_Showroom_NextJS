@@ -20,11 +20,6 @@ export default function CardProduct({
   price,
   category,
 }: CardProductProps) {
-  const priceString = price.toString();
-  const priceLength = priceString.length - 3;
-  const priceEdited = `${priceString.slice(0, priceLength)} ${priceString.slice(
-    priceLength
-  )}`;
   return (
     <div className={styles.wrapper}>
       <Link href={`catalog/${id}`}>

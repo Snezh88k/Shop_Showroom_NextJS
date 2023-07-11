@@ -1,13 +1,13 @@
 import React from "react";
-import SliderInCard from "../../../components/slider_in_card/SliderInCard";
+import SliderInCard from "../../../../components/slider_in_card/SliderInCard";
 
 import styles from "./page.module.scss";
 import Button from "@/components/button/Button";
 
-import ShoppingBag from "../../../public/menu_icon/shopping_bag";
-import HeartsIcon from "../../../public/menu_icon/hearts";
+import ShoppingBag from "../../../../public/menu_icon/shopping_bag";
+import HeartsIcon from "../../../../public/menu_icon/hearts";
 
-import dataTest from "../../TestPropducts/products.json";
+import dataTest from "../../../TestPropducts/products.json";
 
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";

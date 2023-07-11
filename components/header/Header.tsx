@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import Image from "next/image";
@@ -5,8 +7,12 @@ import Image from "next/image";
 import findIcon from "../../public/menu_icon/search.svg";
 import heartsIcon from "../../public/menu_icon/hearts.svg";
 import bagIcon from "../../public/menu_icon/shopping_bag.svg";
+import DropdownMenu from "../dropdown_menu/DropdownMenu";
+import { useState } from "react";
 
 export default function Header() {
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.top_line}>
@@ -28,8 +34,18 @@ export default function Header() {
       </div>
       <nav>
         <ul className={styles.main_menu}>
-          <li>
+          <li
+            className={styles.dropdown_menu_link}
+            onMouseEnter={() => setVisible(true)}
+            onMouseLeave={() => setVisible(false)}
+          >
             <Link href="/">каталог</Link>
+            <div onClick={() => setVisible(false)}>
+              <DropdownMenu
+                visible={visible}
+                className={styles.dropdown_menu}
+              />
+            </div>
           </li>
           <li>
             <Link href="/">оплата</Link>

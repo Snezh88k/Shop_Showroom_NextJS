@@ -28,12 +28,27 @@
   height: 56px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.9);
   padding-right: 400px;
   border-top: 2px solid rgba(0, 0, 0, 0.08);
   border-bottom: 2px solid rgba(0, 0, 0, 0.08);
   text-transform: uppercase;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.dropdown_menu_link {
+  position: relative;
+  .dropdown_menu {
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 0;
+  }
 }

@@ -35,7 +35,9 @@
   }
 
   .image_wrapper {
+    height: 350px;
     .product_image {
+      border-radius: 20px;
       transition: 1s;
       &:hover {
         -webkit-transform: scale(1.05, 1.05);

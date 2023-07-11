@@ -52,10 +52,9 @@ export default function Home() {
           <CardProduct
             id={product.id}
             src={product.images.main}
-            height={350}
             alt="Карточка"
             price={product.price}
-            category="брюки"
+            category={product.name}
             key={product.id}
           />
         ))}
