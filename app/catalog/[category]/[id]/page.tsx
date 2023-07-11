@@ -13,12 +13,7 @@ import dataTest from "../../../TestPropducts/products.json";
 
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
-import Head from "next/head";
 
-export const metadata = {
-  title: "Одежда",
-  description: "Одежда для вас и вашей семьи",
-};
 interface ProductProps {
   params: {
     id: string;
