@@ -21,16 +21,16 @@ export default function DropdownMenu({
           <Link href="/">Показать все</Link>
         </li>
         <li>
-          <Link href="/">Топы и рубашки</Link>
+          <Link href="/catalog/tops_shirts">Топы и рубашки</Link>
         </li>
         <li>
-          <Link href="/">Платья и юбки</Link>
+          <Link href="/catalog/dresses_skirts">Платья и юбки</Link>
         </li>
         <li>
-          <Link href="/">Брюки и джинсы</Link>
+          <Link href="/catalog/pants_jeans">Брюки и джинсы</Link>
         </li>
         <li>
-          <Link href="/">Костюмы и комплекты</Link>
+          <Link href="/catalog/suits_sets">Костюмы и комплекты</Link>
         </li>
       </ul>
     </div>

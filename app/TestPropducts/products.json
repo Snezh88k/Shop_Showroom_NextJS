@@ -2,6 +2,8 @@
   {
     "id": "23S24003",
     "name": "Топ",
+
+    "category": "suits_sets",
     "price": 24,
     "sale": false,
     "compound": [
@@ -30,6 +32,7 @@
   {
     "id": "23S24003Y",
     "name": "Топ",
+    "category": "dresses_skirts",
     "price": 24,
     "sale": false,
     "compound": [
@@ -58,6 +61,36 @@
   {
     "id": "23S24003G",
     "name": "Топ",
+    "category": "pants_jeans",
+    "price": 24,
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" },
+      { "rus": "42/44", "int": "s" }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24003_G_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24003_G_1.jpg",
+        "/product/TopsShirts/23S24003_G_2.jpg",
+        "/product/TopsShirts/23S24003_G_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24003G",
+    "name": "Топ",
+    "category": "tops_shirts",
     "price": 24,
     "sale": false,
     "compound": [

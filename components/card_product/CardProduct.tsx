@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./CardProduct.module.scss";
 import Image from "next/image";
-import Link from "next/link";
 
 interface CardProductProps {
   id: string;
@@ -22,22 +21,20 @@ export default function CardProduct({
 }: CardProductProps) {
   return (
     <div className={styles.wrapper}>
-      <Link href={`catalog/${id}`}>
-        <div className={styles.image_wrapper}>
-          <Image
-            src={src}
-            width={300}
-            height={height}
-            alt={alt}
-            className={styles.product_image}
-          />
-        </div>
+      <div className={styles.image_wrapper}>
+        <Image
+          src={src}
+          width={300}
+          height={height}
+          alt={alt}
+          className={styles.product_image}
+        />
+      </div>
 
-        <div className={styles.description}>
-          <span className={styles.price}>{price} ₾</span>
-          <span className={styles.category}>{category}</span>
-        </div>
-      </Link>
+      <div className={styles.description}>
+        <span className={styles.price}>{price} ₾</span>
+        <span className={styles.category}>{category}</span>
+      </div>
     </div>
   );
 }

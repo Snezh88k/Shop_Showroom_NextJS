@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import SliderInCard from "../../../../components/slider_in_card/SliderInCard";
 
@@ -11,7 +13,12 @@ import dataTest from "../../../TestPropducts/products.json";
 
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
+import Head from "next/head";
 
+export const metadata = {
+  title: "Одежда",
+  description: "Одежда для вас и вашей семьи",
+};
 interface ProductProps {
   params: {
     id: string;
@@ -22,9 +29,7 @@ interface DataTest {
   id: string;
 }
 export default function page({ params }: ProductProps) {
-  console.log(params.id);
   const product = dataTest.find((product) => {
-    console.log(typeof product.id, typeof params.id);
     return product.id === params.id;
   });
 
@@ -34,6 +39,10 @@ export default function page({ params }: ProductProps) {
     name = product.name;
     price = product.price;
   }
+
+  const addProductCart = () => {
+    localStorage.setItem(params.id, "1");
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -59,11 +68,13 @@ export default function page({ params }: ProductProps) {
             text="Добавить в корзину"
             children={<ShoppingBag />}
             className={styles.buttonAddToCart}
+            onClick={() => addProductCart()}
           />
           <Button
             text="Добавить в избранное"
             children={<HeartsIcon />}
             className={styles.buttonAddToFavorite}
+            onClick={() => console.log("Покупка")}
           />
         </div>
       </div>
