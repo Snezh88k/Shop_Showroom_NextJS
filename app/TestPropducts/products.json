@@ -2,9 +2,9 @@
   {
     "id": "23S24003",
     "name": "Топ",
-
     "category": "suits_sets",
     "price": 24,
+    "description": "Белый топ с акцентом на талии — непревзойденная свежесть и элегантность в одном образе.",
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
@@ -13,11 +13,11 @@
     ],
 
     "size": [
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" }
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
     ],
 
     "images": {
@@ -34,6 +34,7 @@
     "name": "Топ",
     "category": "dresses_skirts",
     "price": 24,
+    "description": "Освежите свой стиль с нашим топом яркого манго, создающим изысканный акцент на талии и придающим вашему образу сочности и энергии.",
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
@@ -42,11 +43,11 @@
     ],
 
     "size": [
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" }
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
     ],
 
     "images": {
@@ -63,6 +64,7 @@
     "name": "Топ",
     "category": "pants_jeans",
     "price": 24,
+    "description": "Освежите свой гардероб с нашим сочным зеленым топом на бретелях, который сделает акцент на вашей талии и добавит яркости в любой образ.",
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
@@ -71,11 +73,11 @@
     ],
 
     "size": [
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" }
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
     ],
 
     "images": {
@@ -87,11 +89,13 @@
       ]
     }
   },
+
   {
-    "id": "23S24003G",
-    "name": "Топ",
+    "id": "23S15002P",
+    "name": "Блузка",
     "category": "tops_shirts",
-    "price": 24,
+    "price": 47,
+    "description": "Ярко-розовая блуза на одно плечо подойдет как для повседневного образа в стиле кэжуал, так и для вечернего. Она идеально сочетается с джинсами, брюками и юбками, добавляя изящности и шарма вашему образу.",
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
@@ -100,19 +104,289 @@
     ],
 
     "size": [
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" },
-      { "rus": "42/44", "int": "s" }
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
     ],
 
     "images": {
-      "main": "/product/TopsShirts/23S24003_G_1.jpg",
+      "main": "/product/TopsShirts/23S15002_P_1.jpg",
       "other": [
-        "/product/TopsShirts/23S24003_G_1.jpg",
-        "/product/TopsShirts/23S24003_G_2.jpg",
-        "/product/TopsShirts/23S24003_G_3.jpg"
+        "/product/TopsShirts/23S15002_P_1.jpg",
+        "/product/TopsShirts/23S15002_P_2.jpg",
+        "/product/TopsShirts/23S15002_P_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S15002W",
+    "name": "Блузка",
+    "category": "tops_shirts",
+    "price": 47,
+    "description": "Эта универсальная блузка базового бежевого цвета идеально сочетается с любым низом, будь то голубые джинсы, белые шорты или черные брюки. Она придает вашему образу элегантность и стиль, подходя как для повседневных, так и для особенных случаев.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S15002_W_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S15002_W_1.jpg",
+        "/product/TopsShirts/23S15002_W_2.jpg",
+        "/product/TopsShirts/23S15002_W_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S15002G",
+    "name": "Блузка",
+    "category": "tops_shirts",
+    "price": 47,
+    "description": "Эта яркая зеленая блузка на одно плечо подходит как для непринужденного повседневного стиля, так и для элегантных вечерних выходов. Она прекрасно сочетается с джинсами, брюками и юбками, добавляя изящества и очарования вашему образу.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S15002_G_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S15002_G_1.jpg",
+        "/product/TopsShirts/23S15002_G_2.jpg",
+        "/product/TopsShirts/23S15002_G_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24007Y",
+    "name": "Топ",
+    "category": "tops_shirts",
+    "price": 32,
+    "description": "Очаровательный топ цвета манго на широких бретелях добавит яркости и стиля в ваш образ. Сочетайте его с любыми низами, будь то джинсы, шорты или юбки, и создавайте безупречные летние комплекты.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24007_Y_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24007_Y_1.jpg",
+        "/product/TopsShirts/23S24007_Y_2.jpg",
+        "/product/TopsShirts/23S24007_Y_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24007W",
+    "name": "Топ",
+    "category": "tops_shirts",
+    "price": 32,
+    "description": "Белый топ на широких бретелях - воплощение классической элегантности. Этот базовый элемент гардероба идеально сочетается с любыми низами, будь то джинсы, юбки или шорты, придавая вашему образу свежий и стильный вид. Он станет незаменимым дополнением для вашего летнего гардероба, подчеркивая вашу изящность.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24007_W_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24007_W_1.jpg",
+        "/product/TopsShirts/23S24007_W_2.jpg",
+        "/product/TopsShirts/23S24007_W_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S15022P",
+    "name": "Полупрозрачный топ",
+    "category": "tops_shirts",
+    "price": 43,
+    "description": "Укороченный полупрозрачный топ розово-сиреневого цвета - модный и смелый выбор для современных девушек. Сочетание прозрачной ткани и нежных оттенков создает эффектный и стильный образ, подходящий для любого случая.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S15022_P_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S15022_P_1.jpg",
+        "/product/TopsShirts/23S15022_P_2.jpg",
+        "/product/TopsShirts/23S15022_P_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S18007B",
+    "name": "Рубашка",
+    "category": "tops_shirts",
+    "price": 67,
+    "description": "Черная укороченная рубашка с длинным рукавом - идеальный выбор для создания делового и стильного образа. Её элегантный дизайн придаст образу роскошную привлекательность.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S18007_B_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S18007_B_1.jpg",
+        "/product/TopsShirts/23S18007_B_2.jpg",
+        "/product/TopsShirts/23S18007_B_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S18007W",
+    "name": "Рубашка",
+    "category": "tops_shirts",
+    "price": 67,
+    "description": "Белая укороченная рубашка с длинным рукавом - идеальный выбор для создания свежего и стильного образа. Её элегантный дизайн придаст образу непринужденную привлекательность.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S18007_W_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S18007_W_1.jpg",
+        "/product/TopsShirts/23S18007_W_2.jpg",
+        "/product/TopsShirts/23S18007_W_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S15009B",
+    "name": "Блуза",
+    "category": "tops_shirts",
+    "price": 32,
+    "description": "Шикарная черная блуза с короткими рукавами и акцентом на шее и декольте — воплощение стиля и элегантности. Она подчеркнет вашу утонченность и придаст загадочности вашему образу. Вы будете в центре внимания.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S15009_B_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S15009_B_1.jpg",
+        "/product/TopsShirts/23S15009_B_2.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S15009P",
+    "name": "Блуза",
+    "category": "tops_shirts",
+    "price": 32,
+    "description": "Розовая блуза с короткими рукавами и изысканным акцентом на области шеи и декольте — воплощение нежности и элегантности. Эта блуза добавит романтичности вашему образу, подчеркнет вашу женственность.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Хлопок - 100%" },
+      { "Артикул": "23S24003" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S15009_P_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S15009_P_1.jpg",
+        "/product/TopsShirts/23S15009_P_2.jpg",
+        "/product/TopsShirts/23S15009_P_3.jpg"
       ]
     }
   }

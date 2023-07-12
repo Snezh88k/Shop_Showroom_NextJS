@@ -1,6 +1,9 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  .logo {
+    font-weight: 600;
+  }
 
   .sections {
     display: flex;

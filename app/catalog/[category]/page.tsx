@@ -25,21 +25,23 @@ export default function page({ params }: CatalogProps) {
       {params.category === "dresses_skirts" ? <h1>Платья и юбки</h1> : ""}
       {params.category === "pants_jeans" ? <h1>Брюки и джинсы</h1> : ""}
       {params.category === "suits_sets" ? <h1>Костюмы и комплекты</h1> : ""}
-      {dataTest.map((product) => {
-        if (product.category === params.category)
-          return (
-            <Link href={`${params.category}/${product.id}`}>
-              <CardProduct
-                id={product.id}
-                src={product.images.main}
-                alt="Карточка"
-                price={product.price}
-                category={product.name}
-                key={product.id}
-              />
-            </Link>
-          );
-      })}
+      <div className={styles.products}>
+        {dataTest.map((product) => {
+          if (product.category === params.category)
+            return (
+              <Link href={`${params.category}/${product.id}`}>
+                <CardProduct
+                  id={product.id}
+                  src={product.images.main}
+                  alt="Карточка"
+                  price={product.price}
+                  category={product.name}
+                  key={product.id}
+                />
+              </Link>
+            );
+        })}
+      </div>
     </div>
   );
 }

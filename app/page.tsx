@@ -3,60 +3,25 @@ import React from "react";
 import styles from "./page.module.scss";
 import SimpleSlider from "../components/slider/Slider";
 
-import SelectionCard from "@/components/card_selection/SelectionCard";
-
 import dataTest from "../app/TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
+import Link from "next/link";
 
 export default function Home() {
-  const images = [
-    {
-      path: "/product/photo(1).jpg",
-      category: "товары на акции",
-      description: "до 50%",
-    },
-    {
-      path: "/product/photo(2).jpg",
-      category: "товары на акции",
-      description: "до 50%",
-    },
-    {
-      path: "/product/photo(3).jpg",
-      category: "товары на акции",
-      description: "до 50%",
-    },
-    {
-      path: "/product/photo(4).jpg",
-      category: "товары на акции",
-      description: "до 50%",
-    },
-  ];
-
   return (
     <div>
-      {/* <div className={styles.random_selection_block}>
-        {images.map((image) => {
-          return (
-            <SelectionCard
-              src={image.path}
-              alt="Карточка"
-              category="Товары на акции"
-              description="до 50%"
-              key={image.path}
-            />
-          );
-        })}
-      </div> */}
       <div className={styles.catalog_wraper}>
         {dataTest.map((product) => (
-          <CardProduct
-            id={product.id}
-            src={product.images.main}
-            alt="Карточка"
-            price={product.price}
-            category={product.name}
-            key={product.id}
-          />
+          <Link href={`/catalog/${product.category}/${product.id}`}>
+            <CardProduct
+              id={product.id}
+              src={product.images.main}
+              alt="Карточка"
+              price={product.price}
+              category={product.name}
+              key={product.id}
+            />
+          </Link>
         ))}
       </div>
       <div className={styles.popular_block}>

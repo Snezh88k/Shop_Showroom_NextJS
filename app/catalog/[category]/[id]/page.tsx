@@ -20,43 +20,26 @@ interface ProductProps {
   };
 }
 
-interface DataTest {
-  id: string;
-}
 export default function page({ params }: ProductProps) {
   const product = dataTest.find((product) => {
     return product.id === params.id;
   });
 
-  let name = "Товар",
-    price = 1111;
-  if (product) {
-    name = product.name;
-    price = product.price;
-  }
-
-  const addProductCart = () => {
-    localStorage.setItem(params.id, "1");
-  };
-
   return (
     <div className={styles.wrapper}>
       <SliderInCard images={product?.images.other} />
       <div className={styles.desription}>
-        <h1 className={styles.name}>{name}</h1>
+        <h1 className={styles.name}>{product?.name}</h1>
         <div className={styles.price}>
-          <span>{price} ₽</span>
+          <span>{product?.price} ₾</span>
         </div>
-        <div className={styles.portraiture}>
-          Утепленная куртка выполнена из водоотталкивающего текстиля с
-          искусственным наполнителем. Модель прямого кроя.
-        </div>
+        <div className={styles.portraiture}>{product?.description}</div>
         <div className={styles.handmade}>
           <span></span>
           <span></span>
         </div>
         <Compound compound={dataTest[0].compound} />
-        <SizeTable sizes={dataTest[0].size} className={styles.sizes_table} />
+        <SizeTable sizes={product?.size} className={styles.sizes_table} />
 
         <div className={styles.buttons}>
           <Button

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styles from "./DropdownMenu.module.scss";
 import clsx from "clsx";
+import { Inter } from "next/font/google";
 
+const inter = Inter({ subsets: ["latin"] });
 interface DropdownMenuProps {
   className?: string;
   visible: boolean;
@@ -13,7 +15,7 @@ export default function DropdownMenu({
 }: DropdownMenuProps) {
   return (
     <div
-      className={clsx(styles.wrapper, className)}
+      className={clsx(styles.wrapper, inter.className, className)}
       style={visible ? { display: "block" } : { display: "none" }}
     >
       <ul className={styles.list}>

@@ -1,12 +1,9 @@
 .wrapper {
-  padding-top: 30px;
-
-  .products {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 62px;
-  }
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   h1 {
     color: rgba(0, 0, 0, 0.9);
     font-family: Inter;

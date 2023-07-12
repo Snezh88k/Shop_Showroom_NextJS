@@ -48,10 +48,10 @@ export default function Header() {
             </div>
           </li>
           <li>
-            <Link href="/">оплата</Link>
+            <Link href="/payment">оплата</Link>
           </li>
           <li>
-            <Link href="/">доставка</Link>
+            <Link href="/delivery">доставка</Link>
           </li>
           <li>
             <Link href="/">акции</Link>
