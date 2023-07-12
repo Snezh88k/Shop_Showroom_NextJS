@@ -5,7 +5,7 @@ import Image from "next/image";
 interface CardProductProps {
   id: string;
   src: string;
-  height?: number;
+
   alt: string;
   price: number;
   category: string;
@@ -14,7 +14,7 @@ interface CardProductProps {
 export default function CardProduct({
   id,
   src,
-  height = 350,
+
   alt,
   price,
   category,
@@ -24,10 +24,11 @@ export default function CardProduct({
       <div className={styles.image_wrapper}>
         <Image
           src={src}
-          width={300}
-          height={height}
           alt={alt}
           className={styles.product_image}
+          // width={300}
+          // height={350}
+          fill={true}
         />
       </div>
 

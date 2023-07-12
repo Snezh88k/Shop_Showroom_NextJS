@@ -35,14 +35,21 @@
   }
 
   .image_wrapper {
+    width: 300px;
     height: 350px;
     border-radius: 20px;
+
+    position: relative;
+
     .product_image {
       border-radius: 20px;
       transition: 1s;
-      object-fit: cover;
+
       &:hover {
+        border-radius: 20px;
+        isolation: isolate;
         transform: scale(1.05);
+        transform: translateZ(0);
       }
     }
   }
