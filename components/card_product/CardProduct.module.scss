@@ -1,4 +1,6 @@
 .wrapper {
+  width: 300px;
+  height: 350px;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -35,21 +37,14 @@
   }
 
   .image_wrapper {
-    width: 300px;
-    height: 350px;
     border-radius: 20px;
-    overflow: hidden;
-
+    transition: 1s;
+    object-fit: cover;
     position: relative;
 
-    .product_image {
+    &:hover {
       border-radius: 20px;
-      transition: 1s;
-
-      &:hover {
-        border-radius: 20px;
-        transform: scale3d(1.05, 1.05, 0);
-      }
+      transform: scale3d(1.05, 1.05, 0);
     }
   }
 }

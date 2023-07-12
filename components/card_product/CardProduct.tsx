@@ -26,9 +26,9 @@ export default function CardProduct({
           src={src}
           alt={alt}
           className={styles.product_image}
-          // width={300}
-          // height={350}
-          fill={true}
+          width={300}
+          height={350}
+          // fill={true}
         />
       </div>
 
