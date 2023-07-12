@@ -14,7 +14,7 @@ type Size = {
 };
 
 interface SizeTableProps {
-  sizes: Size[];
+  sizes?: Size[];
   className?: string;
 }
 

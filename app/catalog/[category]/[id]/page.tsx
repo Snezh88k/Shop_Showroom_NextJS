@@ -25,6 +25,8 @@ export default function page({ params }: ProductProps) {
     return product.id === params.id;
   });
 
+  const addProductCart = () => {};
+
   return (
     <div className={styles.wrapper}>
       <SliderInCard images={product?.images.other} />
