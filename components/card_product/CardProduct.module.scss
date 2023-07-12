@@ -36,11 +36,13 @@
 
   .image_wrapper {
     height: 350px;
+    border-radius: 20px;
     .product_image {
       border-radius: 20px;
       transition: 1s;
+      object-fit: cover;
       &:hover {
-        -webkit-transform: scale(1.05, 1.05);
+        transform: scale(1.05);
       }
     }
   }
