@@ -38,6 +38,7 @@
     width: 300px;
     height: 350px;
     border-radius: 20px;
+    overflow: hidden;
 
     position: relative;
 
@@ -49,7 +50,6 @@
         border-radius: 20px;
         isolation: isolate;
         transform: scale(1.05);
-        transform: translateZ(0);
       }
     }
   }
