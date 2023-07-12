@@ -48,8 +48,7 @@
 
       &:hover {
         border-radius: 20px;
-        isolation: isolate;
-        transform: scale(1.05);
+        transform: scale3d(1.05, 1.05, 0);
       }
     }
   }
