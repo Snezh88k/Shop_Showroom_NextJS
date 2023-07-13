@@ -57,7 +57,7 @@ export default function Header() {
             <Link href="/">акции</Link>
           </li>
           <li>
-            <Link href="/">instagram</Link>
+            <Link href="/instagram">instagram</Link>
           </li>
         </ul>
       </nav>
