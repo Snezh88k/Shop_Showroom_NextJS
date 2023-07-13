@@ -28,7 +28,9 @@ export default function Header() {
             <Image src={heartsIcon} alt="hearts" />
           </span>
           <span>
-            <Image src={bagIcon} alt="bag" />
+            <Link href="/cart">
+              <Image src={bagIcon} alt="bag" />
+            </Link>
           </span>
         </div>
       </div>

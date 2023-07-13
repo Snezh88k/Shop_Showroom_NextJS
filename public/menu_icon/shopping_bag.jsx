@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ShoppingBag() {
+export default function ShoppingBag({ className = "" }) {
   return (
     <svg
       width="20"
@@ -8,6 +8,7 @@ export default function ShoppingBag() {
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
       fill="black"
+      className={className}
     >
       <path
         fillRule="evenodd"

@@ -1,0 +1,41 @@
+.wrapper {
+  padding-top: 80px;
+  .empty_cart {
+    max-width: 289px;
+    .bag_icon {
+      width: 40px;
+      height: 40px;
+      fill: rgba(0, 0, 0, 0.3);
+    }
+    h3 {
+      color: rgba(0, 0, 0, 0.9);
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+
+      margin-top: 32px;
+    }
+
+    span {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.3);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+
+      margin-top: 12px;
+    }
+  }
+
+  .info_card_wrapper {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    margin-top: 290px;
+  }
+}

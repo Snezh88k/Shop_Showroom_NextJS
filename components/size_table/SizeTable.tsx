@@ -30,7 +30,7 @@ export default function SizeTable({ sizes, className }: SizeTableProps) {
   };
   return (
     <div className={clsx(styles.wrapper, className)}>
-      <h4>Размеры</h4>
+      <h4>Размер</h4>
       <div className={styles.sizes}>
         {sizes?.map((size, index) => (
           <Size
