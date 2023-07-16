@@ -81,7 +81,11 @@ const catrSlice = createSlice({
       state.allCount += 1;
     },
     createCountInCart(state, action) {
-      state.allCount = action.payload - 1;
+      if (action.payload === 0) {
+        state.allCount = 0;
+      } else {
+        state.allCount = action.payload - 1;
+      }
     },
   },
 });

@@ -21,7 +21,7 @@ export default function page() {
 
       cart ? setProducts(cart.split(" ")) : null;
     }
-  });
+  }, []);
 
   return (
     <div className={styles.wrapper}>
