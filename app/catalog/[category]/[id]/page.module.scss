@@ -69,3 +69,15 @@
     }
   }
 }
+
+.no_found {
+  padding-top: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .no_found_title {
+    font-size: 42px;
+    font-weight: 500;
+  }
+}

@@ -1,7 +1,10 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+
+import CartProvider from "../redux/CartProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,15 +20,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>
-          <Header />
-        </header>
-        <main className="main">{children}</main>
-        <footer>
-          <Footer />
-        </footer>
-      </body>
+      <CartProvider>
+        <body className={inter.className}>
+          <header>
+            <Header />
+          </header>
+          <main className="main">{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+        </body>
+      </CartProvider>
     </html>
   );
 }

@@ -1,0 +1,18 @@
+.wrapper {
+  position: relative;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(255, 166, 0);
+    text-align: center;
+    font-size: 13px;
+  }
+}

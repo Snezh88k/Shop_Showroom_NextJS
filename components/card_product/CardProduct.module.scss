@@ -7,6 +7,8 @@
   width: fit-content;
   cursor: pointer;
 
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
   .description {
     position: absolute;
     z-index: 10;
@@ -44,12 +46,7 @@
 
     transition: 1s;
     &:hover {
-      border-radius: 20px;
       transform: scale(1.05);
-      // transform: scale3d(1.05, 1.05, 0);
-    }
-    .product_image {
-      border-radius: 20px;
     }
   }
 }

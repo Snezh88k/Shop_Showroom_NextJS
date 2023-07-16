@@ -3,15 +3,30 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
 
 import findIcon from "../../public/menu_icon/search.svg";
 import heartsIcon from "../../public/menu_icon/hearts.svg";
-import bagIcon from "../../public/menu_icon/shopping_bag.svg";
+
 import DropdownMenu from "../dropdown_menu/DropdownMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import FindModule from "../find_module/FindModule";
+import CartIcon from "../cart_icon/CartIcon";
+import { createCountInCart } from "@/redux/slices/cartSlice";
 
 export default function Header() {
   const [visible, setVisible] = useState(false);
+
+  const countInCart = useSelector((state: any) => state.cart.allCount);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const count = localStorage.getItem("cart")
+      ? localStorage.getItem("cart")?.split(" ").length
+      : 0;
+    dispatch(createCountInCart(count));
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -21,15 +36,13 @@ export default function Header() {
         </Link>
 
         <div className={styles.quick_panel}>
-          <span>
-            <Image src={findIcon} alt="find" />
-          </span>
+          <FindModule />
           <span>
             <Image src={heartsIcon} alt="hearts" />
           </span>
           <span>
             <Link href="/cart">
-              <Image src={bagIcon} alt="bag" />
+              <CartIcon count={countInCart} />
             </Link>
           </span>
         </div>

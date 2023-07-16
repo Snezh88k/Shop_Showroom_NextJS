@@ -39,3 +39,44 @@
     margin-top: 290px;
   }
 }
+
+.full_cart_wrapper {
+  position: relative;
+
+  h1 {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40px;
+    padding-top: 24px;
+
+    .title {
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .price {
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.08);
+    }
+  }
+}

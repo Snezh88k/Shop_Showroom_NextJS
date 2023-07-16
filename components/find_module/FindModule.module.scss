@@ -1,0 +1,33 @@
+.find {
+  display: block;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+
+  &:hover .find_input {
+    right: 0;
+  }
+
+  .find_input__wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 200px;
+    height: 20px;
+  }
+
+  .find_input {
+    position: absolute;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    top: 3px;
+    right: -100px;
+    width: 100px;
+    background-color: initial;
+    transition: 1s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

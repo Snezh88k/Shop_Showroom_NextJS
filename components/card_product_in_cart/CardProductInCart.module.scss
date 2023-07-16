@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 32px;
+
+  .description_wrapper {
+    display: flex;
+    align-items: center;
+
+    .product_image {
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 24px;
+
+      color: rgba(0, 0, 0, 0.3);
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    .name {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.9);
+    }
+
+    .size_wrapper {
+      display: flex;
+
+      .size {
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .total {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    .price {
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .delete {
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

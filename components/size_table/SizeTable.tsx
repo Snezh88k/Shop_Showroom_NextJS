@@ -16,18 +16,26 @@ type Size = {
 interface SizeTableProps {
   sizes?: Size[];
   className?: string;
+  onClick: (size?: number) => void;
 }
 
-export default function SizeTable({ sizes, className }: SizeTableProps) {
+export default function SizeTable({
+  sizes,
+  className,
+  onClick,
+}: SizeTableProps) {
   const [isSelect, setIsSelect] = useState<number>();
 
   const clickSelect = (index: number) => {
     if (index === isSelect) {
       setIsSelect(99);
+      onClick();
     } else {
       setIsSelect(index);
+      onClick(index);
     }
   };
+
   return (
     <div className={clsx(styles.wrapper, className)}>
       <h4>Размер</h4>

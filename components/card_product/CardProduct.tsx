@@ -5,7 +5,6 @@ import Image from "next/image";
 interface CardProductProps {
   id: string;
   src: string;
-
   alt: string;
   price: number;
   category: string;
@@ -14,7 +13,6 @@ interface CardProductProps {
 export default function CardProduct({
   id,
   src,
-
   alt,
   price,
   category,
@@ -28,7 +26,6 @@ export default function CardProduct({
           className={styles.product_image}
           width={300}
           height={350}
-          // fill={true}
         />
       </div>
 
