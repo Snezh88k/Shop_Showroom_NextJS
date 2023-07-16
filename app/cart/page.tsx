@@ -13,33 +13,22 @@ import CardProductInCart from "@/components/card_product_in_cart/CardProductInCa
 
 export default function page() {
   const [totalPrice, setTotalPrice] = useState(0);
-
-  const cart = localStorage.getItem("cart");
-
-  const productsList = cart?.split(" ");
+  const [products, setProducts] = useState<string[]>([]);
 
   useEffect(() => {
-    productsList?.map((item) => {
-      if (item) {
-        const parseProduct = JSON.parse(item);
-        dataTest.find((product) => {
-          if (parseProduct.id === product.id) {
-            const nowPrice = totalPrice + product.price;
-            setTotalPrice(nowPrice);
-          } else {
-            return null;
-          }
-        });
-      }
-    });
-  }, []);
+    if (typeof window !== "undefined") {
+      const cart = localStorage.getItem("cart");
+
+      cart ? setProducts(cart.split(" ")) : null;
+    }
+  });
 
   return (
     <div className={styles.wrapper}>
-      {productsList ? (
+      {products.length > 0 ? (
         <div className={styles.full_cart_wrapper}>
           <h1>корзина</h1>
-          {productsList?.map((product) => {
+          {products?.map((product) => {
             if (product) {
               const parseProduct = JSON.parse(product);
               const a = dataTest.find((item) => {
