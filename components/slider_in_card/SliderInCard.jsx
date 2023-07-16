@@ -29,6 +29,7 @@ export default function SliderInCard({ images }) {
               alt={image}
               width={570}
               height={570}
+              quality={100}
               className="product_card__main_slider__image"
             />
           </div>
@@ -53,6 +54,7 @@ export default function SliderInCard({ images }) {
               alt={image}
               width={100}
               height={140}
+              quality={100}
               className="product_card__secondary_slider__image"
             />
           </div>

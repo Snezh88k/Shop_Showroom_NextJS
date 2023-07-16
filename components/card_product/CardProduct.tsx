@@ -26,6 +26,7 @@ export default function CardProduct({
           className={styles.product_image}
           width={300}
           height={350}
+          quality={100}
         />
       </div>
 

@@ -62,7 +62,7 @@
   {
     "id": "23S24003G",
     "name": "Топ",
-    "category": "pants_jeans",
+    "category": "tops_shirts",
     "price": 24,
     "description": "Освежите свой гардероб с нашим сочным зеленым топом на бретелях, который сделает акцент на вашей талии и добавит яркости в любой образ.",
     "sale": false,
@@ -122,7 +122,7 @@
   },
 
   {
-    "id": "23S15002W",
+    "id": "23S15002B",
     "name": "Блузка",
     "category": "tops_shirts",
     "price": 47,
@@ -143,11 +143,11 @@
     ],
 
     "images": {
-      "main": "/product/TopsShirts/23S15002_W_1.jpg",
+      "main": "/product/TopsShirts/23S15002_B_1.jpg",
       "other": [
-        "/product/TopsShirts/23S15002_W_1.jpg",
-        "/product/TopsShirts/23S15002_W_2.jpg",
-        "/product/TopsShirts/23S15002_W_3.jpg"
+        "/product/TopsShirts/23S15002_B_1.jpg",
+        "/product/TopsShirts/23S15002_B_2.jpg",
+        "/product/TopsShirts/23S15002_B_3.jpg"
       ]
     }
   },
@@ -340,7 +340,7 @@
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
-      { "Артикул": "23S24003" },
+      { "Артикул": "23S15009" },
       { "Страна производитель": "Турция" }
     ],
 
@@ -369,7 +369,7 @@
     "sale": false,
     "compound": [
       { "Состав": "Хлопок - 100%" },
-      { "Артикул": "23S24003" },
+      { "Артикул": "23S15009" },
       { "Страна производитель": "Турция" }
     ],
 
@@ -387,6 +387,656 @@
         "/product/TopsShirts/23S15009_P_1.jpg",
         "/product/TopsShirts/23S15009_P_2.jpg",
         "/product/TopsShirts/23S15009_P_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "23S03012C",
+    "name": "Шорты",
+    "category": "pants_jeans",
+    "price": 80,
+    "description": "Шорты кремового цвета с уникальным кроем, который создает эффектную силуэтную линию. Они комфортны в носке и подходят для различных летних и женственных образов.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S03012" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": 34, "int": "xs", "availability": true },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": 42, "int": "xl", "availability": true }
+    ],
+
+    "images": {
+      "main": "/product/PantsJeans/23S03012_C_1.jpg",
+      "other": [
+        "/product/PantsJeans/23S03012_C_1.jpg",
+        "/product/PantsJeans/23S03012_C_2.jpg",
+        "/product/PantsJeans/23S03012_C_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "2513",
+    "name": "Платье-пиджак",
+    "category": "dresses_skirts",
+    "price": 78,
+    "description": "Платье-пиджак в черном цвете - универсальное решение как для деловой встречи, так и для романтического свидания. Вы будете выглядеть стильно и уверенно в любой обстановке.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 100%" },
+      { "Артикул": "2513" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/DressesSkirts/2513_1.jpg",
+      "other": [
+        "/product/DressesSkirts/2513_1.jpg",
+        "/product/DressesSkirts/2513_2.jpg",
+        "/product/DressesSkirts/2513_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "23S25048W",
+    "name": "Платье-рубашка",
+    "category": "dresses_skirts",
+    "price": 85,
+    "description": "Универсальное платье-рубашка оверсайз. Можно носить его как рубашку с любым низом или как платье с поясом или без него. Это практичное и модное решение для вашего гардероба, которое позволяет создавать различные образы.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S25048" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/DressesSkirts/23S25048_W_1.jpg",
+      "other": [
+        "/product/DressesSkirts/23S25048_W_1.jpg",
+        "/product/DressesSkirts/23S25048_W_2.jpg",
+        "/product/DressesSkirts/23S25048_W_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "11505B",
+    "name": "Топ",
+    "category": "tops_shirts",
+    "price": 20,
+    "description": "Очаровательный топ в нежно голубом оттенке с элегантным бантом спереди. Идеальный выбор, чтобы подчеркнуть вашу женственность и выгодно выделиться.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 80%, Lycra - 20%" },
+      { "Артикул": "11505" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/11505_B_1.jpg",
+      "other": [
+        "/product/TopsShirts/11505_B_1.jpg",
+        "/product/TopsShirts/11505_B_2.jpg",
+        "/product/TopsShirts/11505_B_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "23S02018",
+    "name": "Юбка",
+    "category": "dresses_skirts",
+    "price": 40,
+    "description": "Юбка с принтом зебра - стильный акцент в вашем гардеробе, который легко сочетается с базовыми верхами: футболками, рубашками или топами. Она добавит оригинальности вашему образу и позволит выразить свою индивидуальность.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 100%" },
+      { "Артикул": "23S02018" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/DressesSkirts/23S02018_1.jpg",
+      "other": [
+        "/product/DressesSkirts/23S02018_1.jpg",
+        "/product/DressesSkirts/23S02018_2.jpg",
+        "/product/DressesSkirts/23S02018_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "23S01008",
+    "name": "Брюки",
+    "category": "pants_jeans",
+    "price": 105,
+    "description": "Откройте для себя самые трендовые брюки с поясом в черном цвете, который можно носить вывернутым наружу для ультрамодного образа или в классическом варианте для элегантности и удобства.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 65% , Viscose - 32% , Lycra - 3% " },
+      { "Артикул": "23S01008" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/PantsJeans/23S01008_B_1.jpg",
+      "other": [
+        "/product/PantsJeans/23S01008_B_1.jpg",
+        "/product/PantsJeans/23S01008_B_2.jpg",
+        "/product/PantsJeans/23S01008_B_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "23S05001",
+    "name": "Брюки",
+    "category": "pants_jeans",
+    "price": 120,
+    "description": "Самые актуальные и полюбившиеся нам джинсы этого сезона - карго. Они уже стали неотъемлемой частью наших гардеробов и обещают оставаться с нами надолго.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S05001" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": 34, "int": "xs", "availability": false },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": 42, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/PantsJeans/23S05001_1.jpg",
+      "other": [
+        "/product/PantsJeans/23S05001_1.jpg",
+        "/product/PantsJeans/23S05001_2.jpg",
+        "/product/PantsJeans/23S05001_3.jpg"
+      ]
+    }
+  },
+  {
+    "готово": "готово",
+    "id": "23S01008G",
+    "name": "Брюки",
+    "category": "pants_jeans",
+    "price": 105,
+    "description": "Откройте для себя самые трендовые брюки в сером цвете, с поясом, который можно носить вывернутым наружу для смелого стиля или в классическом варианте для элегантного образа.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 65% , Viscose - 32% , Lycra - 3% " },
+      { "Артикул": "23S01008" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/PantsJeans/23S01008_G_1.jpg",
+      "other": [
+        "/product/PantsJeans/23S01008_G_1.jpg",
+        "/product/PantsJeans/23S01008_G_2.jpg",
+        "/product/PantsJeans/23S01008_G_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24007G",
+    "name": "Топ",
+    "category": "tops_shirts",
+    "price": 32,
+    "description": "Ослепительный зеленый топ на широких бретелях добавит свежести и стиля в ваш образ. Этот топ легко сочетается с любыми низами, будь то джинсы, шорты или юбки, и позволяет создавать эффектные летние комплекты.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 100%" },
+      { "Артикул": "23S24007" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24007_G_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24007_G_1.jpg",
+        "/product/TopsShirts/23S24007_G_2.jpg",
+        "/product/TopsShirts/23S24007_G_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S24009",
+    "name": "Бра",
+    "category": "tops_shirts",
+    "price": 24,
+    "description": "Откройте новый уровень комфорта с нашим мягким и удобным бра в розовом цвете! Носите его вместо бюстгальтера или как самостоятельный элемент под пиджак или джинсовку, чтобы создать стильный и беззаботный образ.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyamide - 90% , Elastane - 10%" },
+      { "Артикул": "23S24009" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24009_P_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24009_P_1.jpg",
+        "/product/TopsShirts/23S24009_P_2.jpg",
+        "/product/TopsShirts/23S24009_P_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "11505P",
+    "name": "Топ",
+    "category": "tops_shirts",
+    "price": 20,
+    "description": "Очаровательный топ в нежно розовом оттенке с элегантным бантом спереди. Идеальный выбор, чтобы подчеркнуть вашу женственность и выгодно выделиться.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 80%, Lycra - 20%" },
+      { "Артикул": "11505" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/11505_P_1.jpg",
+      "other": [
+        "/product/TopsShirts/11505_P_1.jpg",
+        "/product/TopsShirts/11505_P_2.jpg",
+        "/product/TopsShirts/11505_P_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "11505G",
+    "name": "Топ",
+    "category": "tops_shirts",
+    "price": 20,
+    "description": "Очаровательный топ в нежно зеленом оттенке с элегантным бантом спереди. Идеальный выбор, чтобы подчеркнуть вашу женственность и выгодно выделиться.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 80%, Lycra - 20%" },
+      { "Артикул": "11505" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/11505_G_1.jpg",
+      "other": [
+        "/product/TopsShirts/11505_G_1.jpg",
+        "/product/TopsShirts/11505_G_2.jpg",
+        "/product/TopsShirts/11505_G_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S32002W",
+    "name": "Костюм",
+    "category": "suits_sets",
+    "price": 95,
+    "description": "Ощутите максимальный комфорт и свободу движений в нашем мягком, эластичном костюме белого цвета. Идеальный выбор для спорта, прогулок или домашнего отдыха.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyamide - 90% , Elastane - 10%" },
+      { "Артикул": "23S32002" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/SuitsSets/23S32002_W_1.jpg",
+      "other": [
+        "/product/SuitsSets/23S32002_W_1.jpg",
+        "/product/SuitsSets/23S32002_W_2.jpg",
+        "/product/SuitsSets/23S32002_W_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S32002B",
+    "name": "Костюм",
+    "category": "suits_sets",
+    "price": 95,
+    "description": "Ощутите максимальный комфорт и свободу движений в нашем мягком, эластичном костюме черного цвета. Идеальный выбор для спорта, прогулок или домашнего отдыха.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyamide - 90% , Elastane - 10%" },
+      { "Артикул": "23S32002" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/SuitsSets/23S32002_B_1.jpg",
+      "other": [
+        "/product/SuitsSets/23S32002_B_1.jpg",
+        "/product/SuitsSets/23S32002_B_2.jpg",
+        "/product/SuitsSets/23S32002_B_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S08006B",
+    "name": "Костюм",
+    "category": "suits_sets",
+    "price": 160,
+    "description": "Освежите свой гардероб с нашим потрясающим ультрамодным костюмом! Этот комплект включает в себя укороченную джинсовку и стильную юбку в бежевом цвете. Вы будете выглядеть эффектно и смело.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S08006" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/SuitsSets/23S08006_B_1.jpg",
+      "other": [
+        "/product/SuitsSets/23S08006_B_1.jpg",
+        "/product/SuitsSets/23S08006_B_2.jpg",
+        "/product/SuitsSets/23S08006_B_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S08006P",
+    "name": "Костюм",
+    "category": "suits_sets",
+    "price": 160,
+    "description": "Освежите свой гардероб с нашим потрясающим ультрамодным костюмом! Этот комплект включает в себя укороченную джинсовку и стильную юбку в лиловом цвете. Вы будете выглядеть ярко и смело.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S08006" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/SuitsSets/23S08006_P_1.jpg",
+      "other": [
+        "/product/SuitsSets/23S08006_P_1.jpg",
+        "/product/SuitsSets/23S08006_P_2.jpg",
+        "/product/SuitsSets/23S08006_P_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "23S35016B",
+    "name": "Костюм",
+    "category": "suits_sets",
+    "price": 80,
+    "description": "Очаровательный черный костюм с длинной юбкой и коротким топом - это ваш идеальный выбор, чтобы произвести потрясающее впечатление. Вы будете выглядеть захватывающе и уверенно в этом образе.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S35016" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/SuitsSets/23S35016_B_1.jpg",
+      "other": [
+        "/product/SuitsSets/23S35016_B_1.jpg",
+        "/product/SuitsSets/23S35016_B_2.jpg",
+        "/product/SuitsSets/23S35016_B_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "готово": "готово",
+    "id": "23S03009W",
+    "name": "Шорты",
+    "category": "pants_jeans",
+    "price": 94,
+    "description": "Белые шорты с цепочками - этот стильный элемент одежды добавит нотку дерзости и оригинальности к вашему летнему образу. Будьте в тренде с нашими шортами, которые подчеркнут вашу уверенность и стиль",
+    "sale": false,
+    "compound": [
+      { "Состав": "Cotton - 100%" },
+      { "Артикул": "23S03009" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": 34, "int": "xs", "availability": true },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": 42, "int": "xl", "availability": true }
+    ],
+
+    "images": {
+      "main": "/product/PantsJeans/23S03009_W_1.jpg",
+      "other": [
+        "/product/PantsJeans/23S03009_W_1.jpg",
+        "/product/PantsJeans/23S03009_W_2.jpg",
+        "/product/PantsJeans/23S03009_W_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24009B",
+    "name": "Бра",
+    "category": "tops_shirts",
+    "price": 24,
+    "description": "Откройте новый уровень комфорта с нашим мягким и удобным бра в черном цвете! Носите его вместо бюстгальтера или как самостоятельный элемент под пиджак или джинсовку, чтобы создать стильный и беззаботный образ.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyamide - 90% , Elastane - 10%" },
+      { "Артикул": "23S24009" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24009_B_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24009_B_1.jpg",
+        "/product/TopsShirts/23S24009_B_2.jpg",
+        "/product/TopsShirts/23S24009_B_3.jpg"
+      ]
+    }
+  },
+  {
+    "id": "23S24009W",
+    "name": "Бра",
+    "category": "tops_shirts",
+    "price": 24,
+    "description": "Откройте новый уровень комфорта с нашим мягким и удобным бра в черном цвете! Носите его вместо бюстгальтера или как самостоятельный элемент под пиджак или джинсовку, чтобы создать стильный и беззаботный образ.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyamide - 90% , Elastane - 10%" },
+      { "Артикул": "23S24009" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/TopsShirts/23S24009_W_1.jpg",
+      "other": [
+        "/product/TopsShirts/23S24009_W_1.jpg",
+        "/product/TopsShirts/23S24009_W_2.jpg",
+        "/product/TopsShirts/23S24009_W_3.jpg"
+      ]
+    }
+  },
+
+  {
+    "готово": "готово",
+    "id": "13500G",
+    "name": "Юбка",
+    "category": "dresses_skirts",
+    "price": 25,
+    "description": "A dazzling skirt in a bright green color with an accent neckline that attracts looks and creates a 'wow' effect.",
+    "sale": false,
+    "compound": [
+      { "Состав": "Polyester - 100%" },
+      { "Артикул": "23S02018" },
+      { "Страна производитель": "Турция" }
+    ],
+
+    "size": [
+      { "rus": null, "int": "xs", "availability": false },
+      { "rus": 36, "int": "s", "availability": true },
+      { "rus": 38, "int": "m", "availability": true },
+      { "rus": 40, "int": "l", "availability": true },
+      { "rus": null, "int": "xl", "availability": false }
+    ],
+
+    "images": {
+      "main": "/product/DressesSkirts/13500_G_1.jpg",
+      "other": [
+        "/product/DressesSkirts/13500_G_1.jpg",
+        "/product/DressesSkirts/13500_G_2.jpg",
+        "/product/DressesSkirts/13500_G_3.jpg"
       ]
     }
   }
