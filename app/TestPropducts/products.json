@@ -405,11 +405,11 @@
     ],
 
     "size": [
-      { "rus": 34, "int": "xs", "availability": true },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
-      { "rus": 42, "int": "xl", "availability": true }
+      { "rus": "34", "int": "xs", "availability": true },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
+      { "rus": "42", "int": "xl", "availability": true }
     ],
 
     "images": {
@@ -530,9 +530,9 @@
 
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
     ],
 
@@ -561,9 +561,9 @@
 
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
     ],
 
@@ -591,11 +591,11 @@
     ],
 
     "size": [
-      { "rus": 34, "int": "xs", "availability": false },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
-      { "rus": 42, "int": "xl", "availability": false }
+      { "rus": "34", "int": "xs", "availability": false },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
+      { "rus": "42", "int": "xl", "availability": false }
     ],
 
     "images": {
@@ -623,9 +623,9 @@
 
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
     ],
 
@@ -932,11 +932,11 @@
     ],
 
     "size": [
-      { "rus": 34, "int": "xs", "availability": true },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
-      { "rus": 42, "int": "xl", "availability": true }
+      { "rus": "34", "int": "xs", "availability": true },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
+      { "rus": "42", "int": "xl", "availability": true }
     ],
 
     "images": {
@@ -1025,9 +1025,9 @@
 
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": 36, "int": "s", "availability": true },
-      { "rus": 38, "int": "m", "availability": true },
-      { "rus": 40, "int": "l", "availability": true },
+      { "rus": "36", "int": "s", "availability": true },
+      { "rus": "38", "int": "m", "availability": true },
+      { "rus": "40", "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
     ],
 
