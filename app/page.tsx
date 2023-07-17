@@ -24,9 +24,9 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      <div className={styles.popular_block}>
+      {/* <div className={styles.popular_block}>
         <SimpleSlider title={"Популярное"} className={styles.slider_wrapper} />
-      </div>
+      </div> */}
     </div>
   );
 }

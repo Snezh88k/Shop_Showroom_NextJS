@@ -45,6 +45,10 @@
     object-fit: cover;
 
     transition: 1s;
+
+    .product_image {
+      object-fit: cover;
+    }
     &:hover {
       transform: scale(1.05);
     }

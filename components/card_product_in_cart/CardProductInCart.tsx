@@ -1,41 +1,58 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./CardProductInCart.module.scss";
 import Image from "next/image";
+import { addPrice } from "@/redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
 
 interface CardProductInCartProps {
+  // product: {
+  //   id: string;
+  //   name: string;
+  //   category: string;
+  //   price: number;
+  //   description: string;
+  //   sale: boolean;
+  //   compound: any;
+  //   size: any;
+  //   images: {
+  //     main: string;
+  //     other: string[];
+  //   };
+  // };
+  // selectSize: number;
+
   product: {
     id: string;
     name: string;
-    category: string;
+    image: string;
     price: number;
-    description: string;
-    sale: boolean;
-    compound: any;
-    size: any;
-    images: {
-      main: string;
-      other: string[];
+    size: {
+      int: any;
+      rus: any;
     };
   };
-  selectSize: number;
 }
 
-export default function CardProductInCart({
-  product,
-  selectSize,
-}: CardProductInCartProps) {
-  console.log(
-    product,
-    selectSize,
-    product.size[selectSize].rus,
-    product.size[selectSize].int
-  );
+export default function CardProductInCart({ product }: CardProductInCartProps) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addPrice(product.price));
+  }, []);
+
+  // console.log(
+  //   product,
+  //   selectSize,
+  //   product.size[selectSize].rus,
+  //   product.size[selectSize].int
+  // );
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.description_wrapper}>
         <Image
-          src={product.images.main}
-          alt={product.images.main}
+          src={product.image}
+          alt={product.id}
           className={styles.product_image}
           width={100}
           height={100}
@@ -45,8 +62,8 @@ export default function CardProductInCart({
           <span className={styles.name}>{product.name}</span>
           <div className={styles.size_wrapper}>
             <span>Размер:</span>
-            <span className={styles.size}>{product.size[selectSize].int}</span>
-            <span className={styles.size}>{product.size[selectSize].rus}</span>
+            <span className={styles.size}>{product.size.int}</span>
+            <span className={styles.size}>{product.size.rus}</span>
           </div>
         </div>
       </div>

@@ -87,6 +87,12 @@ const catrSlice = createSlice({
         state.allCount = action.payload - 1;
       }
     },
+    addPrice(state, action) {
+      state.totalPrice += action.payload;
+    },
+    revomeTotalPrice(state) {
+      state.totalPrice = 0;
+    },
   },
 });
 
@@ -97,6 +103,8 @@ export const {
   minusItem,
   addCounInCart,
   createCountInCart,
+  addPrice,
+  revomeTotalPrice,
 } = catrSlice.actions;
 
 export default catrSlice.reducer;

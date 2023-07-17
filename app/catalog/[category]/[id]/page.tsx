@@ -31,9 +31,12 @@ export default function page({ params }: ProductProps) {
     return product.id === params.id;
   });
 
+  let warningSize;
+
   const addProductCart = () => {
-    if (!isSize) {
+    if (!isSize && isSize !== 0) {
       console.log("Выберите размер");
+      warningSize = <div>Выберите размер</div>;
       return;
     }
 
@@ -82,6 +85,7 @@ export default function page({ params }: ProductProps) {
               className={styles.sizes_table}
               onClick={changeSize}
             />
+            {warningSize}
 
             <div className={styles.buttons}>
               <Button
