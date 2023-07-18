@@ -34,7 +34,6 @@ export default function Header() {
 
   const openMenu = () => {
     setIsOpenMenu(!isOpenMenu);
-
     const BODY = document.querySelector("body");
     BODY?.classList.toggle("close");
   };
@@ -45,7 +44,6 @@ export default function Header() {
 
   const closeCatalog = (e: any) => {
     e.stopPropagation();
-    console.log("закрываем");
     setIsOpenMenu(false);
   };
 

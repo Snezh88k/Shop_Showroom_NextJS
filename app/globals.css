@@ -103,7 +103,7 @@ body {
 body.close {
   overflow-y: hidden;
 }
-*/ .main {
+.main {
   min-height: calc(100% - 216px - 128px);
 }
 
