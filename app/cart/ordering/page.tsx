@@ -1,24 +1,16 @@
-// "use client";
-
-// import React from "react";
-// import { useSelector } from "react-redux";
-
-// export default function page() {
-//   const totalPrice = useSelector((state: any) => state.cart.totalPrice);
-//   const allCount = useSelector((state: any) => state.cart.allCount);
-//   console.log(totalPrice, allCount);
-//   return <div>page</div>;
-// }
-
 "use client";
 
 import axios from "axios";
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function page() {
   const TOKEN = "6038802604:AAGJX09ew1KdPN9Fk1bGVd_VhCLkGX5yn6g";
   const CHAT_ID = "-1001874434119";
   const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+  const totalPrice = useSelector((state: any) => state.cart.totalPrice);
+  const allCount = useSelector((state: any) => state.cart.allCount);
 
   const sendMessage = (e: any) => {
     e.preventDefault();

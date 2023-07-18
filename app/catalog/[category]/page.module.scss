@@ -19,3 +19,14 @@
     margin-bottom: 20px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+  }
+  .products {
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}

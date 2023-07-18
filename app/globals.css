@@ -79,22 +79,27 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Anglecia Pro Dsp";
+  src: url("../fonts/AngleciaProDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/AngleciaProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html,
 body {
   height: 100%;
   max-width: 1024px;
   margin: 0 auto;
 }
 
-button {
-  border: none;
-}
 .main {
   min-height: calc(100% - 216px - 128px);
 }
@@ -128,11 +133,6 @@ h6 {
   font-weight: inherit;
 }
 
-@font-face {
-  font-family: "Anglecia Pro Dsp";
-  src: url("../fonts/AngleciaProDisplay-Regular.woff2") format("woff2"),
-    url("../fonts/AngleciaProDisplay-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+button {
+  border: none;
 }
