@@ -5,6 +5,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
 import CartProvider from "../redux/CartProvider";
+import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CartProvider>
-        <body className={inter.className}>
+        <body className={clsx(inter.className, "body")}>
           <header>
             <Header />
           </header>

@@ -100,7 +100,10 @@ body {
   margin: 0 auto;
 }
 
-.main {
+body.close {
+  overflow-y: hidden;
+}
+*/ .main {
   min-height: calc(100% - 216px - 128px);
 }
 
@@ -135,4 +138,11 @@ h6 {
 
 button {
   border: none;
+}
+
+@media screen and (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+    max-width: 390px;
+  }
 }

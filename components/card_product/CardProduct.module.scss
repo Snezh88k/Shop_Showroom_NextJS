@@ -1,56 +1,71 @@
-.wrapper {
-  width: 300px;
-  height: 350px;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  width: fit-content;
-  cursor: pointer;
+@media screen and (max-width: 1920px) {
+  .wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: fit-content;
+    cursor: pointer;
 
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 
-  .description {
-    position: absolute;
-    z-index: 10;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    .description {
+      position: absolute;
+      z-index: 10;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
 
-    bottom: 20px;
-    left: 20px;
+      bottom: 20px;
+      left: 20px;
 
-    .price {
-      color: rgba(255, 255, 255, 1);
-      font-size: 22px;
-      font-family: Inter;
-      font-weight: 500;
-      line-height: 100%;
-      text-transform: uppercase;
+      .price {
+        color: rgba(255, 255, 255, 1);
+        font-size: 22px;
+        font-family: Inter;
+        font-weight: 500;
+        line-height: 100%;
+        text-transform: uppercase;
+      }
+
+      .category {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 100%;
+      }
     }
 
-    .category {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 14px;
-      font-family: Inter;
-      font-weight: 400;
-      line-height: 100%;
+    .image_wrapper {
+      border-radius: 20px;
+      width: 300px;
+      height: 350px;
+      object-fit: cover;
+      transition: 1s;
+
+      .product_image {
+        object-fit: cover;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
+}
 
-  .image_wrapper {
-    border-radius: 20px;
-    width: 300px;
-    height: 350px;
-    object-fit: cover;
+@media screen and (max-width: 390px) {
+  .wrapper {
+    border-radius: 5px;
 
-    transition: 1s;
+    .image_wrapper {
+      width: 100px;
+      height: 116px;
 
-    .product_image {
-      object-fit: cover;
-    }
-    &:hover {
-      transform: scale(1.05);
+      .product_image {
+        width: 100px;
+        height: 116px;
+      }
     }
   }
 }
