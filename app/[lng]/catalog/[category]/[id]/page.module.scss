@@ -39,11 +39,12 @@
   margin-bottom: 28px;
 }
 
-.sizes_table {
+.size_table {
   margin-top: 40px;
 }
 
 .buttons {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,23 +52,42 @@
 
   margin-top: 40px;
   .buttonAddToCart {
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.5s;
     svg {
       fill: rgba(255, 255, 255, 0.3);
     }
     span {
       color: rgba(255, 255, 255, 1);
     }
+
+    &:active {
+      background: rgba(0, 0, 0, 0.7);
+    }
   }
 
   .buttonAddToFavorite {
     background: rgba(244, 244, 244, 1);
+    transition: 0.5s;
     svg {
       fill: red;
     }
     span {
       color: rgba(0, 0, 0, 0.9);
     }
+    &:active {
+      background: rgb(180, 180, 180);
+    }
   }
+}
+
+.item_added {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 15px 50px 15px 50px;
+  border-radius: 5px;
+  background-color: rgba(0, 255, 21, 0.1);
 }
 
 .no_found {

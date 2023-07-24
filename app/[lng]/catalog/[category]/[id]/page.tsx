@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
-import SliderInCard from "../../../../components/slider_in_card/SliderInCard";
+import SliderInCard from "../../../../../components/slider_in_card/SliderInCard";
 
 import styles from "./page.module.scss";
 import Button from "@/components/button/Button";
 
-import ShoppingBag from "../../../../public/menu_icon/shopping_bag";
-import HeartsIcon from "../../../../public/menu_icon/hearts";
+import ShoppingBag from "../../../../../public/menu_icon/shopping_bag";
+import HeartsIcon from "../../../../../public/menu_icon/hearts";
 
-import dataTest from "../../../TestPropducts/products.json";
+import dataTest from "../../../../TestPropducts/products.json";
 
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
-import { addCounInCart } from "@/redux/slices/cartSlice";
+import { addItem } from "@/redux/slices/cartSlice";
 
 interface ProductProps {
   params: {
@@ -26,41 +26,44 @@ interface ProductProps {
 export default function page({ params }: ProductProps) {
   const dispatch = useDispatch();
 
-  const [isSize, setSize] = useState<number>();
+  const [isSize, setSize] = useState<string | null>();
+  const [sizeSelected, setSizeSelected] = useState(false);
+  const [successNotification, setSuccessNotification] = useState(false);
+
   const product = dataTest.find((product) => {
     return product.id === params.id;
   });
 
-  let warningSize;
+  const [currentUrl, setCurrentUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
 
   const addProductCart = () => {
-    if (!isSize && isSize !== 0) {
-      console.log("Выберите размер");
-      warningSize = <div>Выберите размер</div>;
+    if (!isSize) {
+      setSizeSelected(true);
+      setTimeout(() => setSizeSelected(false), 2000);
       return;
     }
 
-    const cart = localStorage.getItem("cart");
-
     const order = {
       id: params.id,
+      name: product?.name,
       size: isSize,
+      price: product?.price,
+      image: product?.images.main,
+      count: 1,
+      url: currentUrl,
     };
 
-    if (cart) {
-      if (cart.includes(`{"id":"${params.id}","size":${isSize}}`)) {
-        return;
-      }
-      const newCart = cart + JSON.stringify(order);
-      localStorage.setItem("cart", `${newCart} `);
-    } else {
-      localStorage.setItem("cart", `${JSON.stringify(order)} `);
-    }
+    setSuccessNotification(true);
+    setTimeout(() => setSuccessNotification(false), 3000);
 
-    dispatch(addCounInCart());
+    dispatch(addItem(order));
   };
 
-  const changeSize = (size?: number) => {
+  const changeSize = (size?: string | null) => {
     setSize(size);
   };
 
@@ -80,12 +83,13 @@ export default function page({ params }: ProductProps) {
               <span></span>
             </div>
             <Compound compound={dataTest[0].compound} />
+
             <SizeTable
               sizes={product?.size}
-              className={styles.sizes_table}
               onClick={changeSize}
+              sizeSelected={sizeSelected ? true : false}
+              className={styles.size_table}
             />
-            {warningSize}
 
             <div className={styles.buttons}>
               <Button
@@ -94,6 +98,7 @@ export default function page({ params }: ProductProps) {
                 className={styles.buttonAddToCart}
                 onClick={() => addProductCart()}
               />
+
               <Button
                 text="Добавить в избранное"
                 children={<HeartsIcon />}
@@ -101,7 +106,15 @@ export default function page({ params }: ProductProps) {
                 onClick={() => console.log("Покупка")}
               />
             </div>
-          </div>{" "}
+          </div>
+          <div
+            className={styles.item_added}
+            style={
+              successNotification ? { display: "block" } : { display: "none" }
+            }
+          >
+            Товар добавлен в корзину!
+          </div>
         </div>
       ) : (
         <div className={styles.no_found}>

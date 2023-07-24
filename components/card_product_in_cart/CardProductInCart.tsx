@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./CardProductInCart.module.scss";
 import Image from "next/image";
-import { addPrice } from "@/redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
+import { removeItem } from "@/redux/slices/cartSlice";
 
 interface CardProductInCartProps {
   // product: {
@@ -26,51 +26,47 @@ interface CardProductInCartProps {
     name: string;
     image: string;
     price: number;
-    size: {
-      int: any;
-      rus: any;
-    };
+    size: string;
+    numberSize: any;
   };
 }
 
 export default function CardProductInCart({ product }: CardProductInCartProps) {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(addPrice(product.price));
-  }, []);
-
-  // console.log(
-  //   product,
-  //   selectSize,
-  //   product.size[selectSize].rus,
-  //   product.size[selectSize].int
-  // );
+  const removeProduct = () => {
+    dispatch(removeItem(product));
+  };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.description_wrapper}>
-        <Image
-          src={product.image}
-          alt={product.id}
-          className={styles.product_image}
-          width={100}
-          height={100}
-          fill={false}
-        />
-        <div className={styles.info}>
-          <span className={styles.name}>{product.name}</span>
-          <div className={styles.size_wrapper}>
-            <span>Размер:</span>
-            <span className={styles.size}>{product.size.int}</span>
-            <span className={styles.size}>{product.size.rus}</span>
+    <>
+      {
+        <div className={styles.wrapper}>
+          <div className={styles.description_wrapper}>
+            <Image
+              src={product.image}
+              alt={product.id}
+              className={styles.product_image}
+              width={100}
+              height={100}
+              fill={false}
+            />
+            <div className={styles.info}>
+              <span className={styles.name}>{product.name}</span>
+              <div className={styles.size_wrapper}>
+                <span>Размер:</span>
+                <span className={styles.size}>{product.size}</span>
+              </div>
+            </div>
+          </div>
+          <div className={styles.total}>
+            <span className={styles.price}>{product.price} ₾</span>
+            <span className={styles.delete} onClick={removeProduct}>
+              удалить
+            </span>
           </div>
         </div>
-      </div>
-      <div className={styles.total}>
-        <span className={styles.price}>{product.price} ₾</span>
-        <span className={styles.delete}>удалить</span>
-      </div>
-    </div>
+      }
+    </>
   );
 }

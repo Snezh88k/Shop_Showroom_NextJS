@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.scss";
 
-import dataTest from "../../TestPropducts/products.json";
+import dataTest from "../../../TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
 import Link from "next/link";
 

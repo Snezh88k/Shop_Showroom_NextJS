@@ -1,15 +1,18 @@
 import React from "react";
 
 import styles from "./page.module.scss";
-import SimpleSlider from "../components/slider/Slider";
 
-import dataTest from "../app/TestPropducts/products.json";
+import dataTest from "../../app/TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
 import Link from "next/link";
 
-export default function Home() {
+import { useTranslation } from "../i18n";
+
+export default async function Home({ params: { lng } }: any) {
+  const { t } = await useTranslation(lng);
   return (
     <div>
+      {/* <h1>{t("title")}</h1> */}
       <div className={styles.catalog_wraper}>
         {dataTest.map((product) => (
           <Link href={`/catalog/${product.category}/${product.id}`}>
@@ -24,9 +27,6 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      {/* <div className={styles.popular_block}>
-        <SimpleSlider title={"Популярное"} className={styles.slider_wrapper} />
-      </div> */}
     </div>
   );
 }

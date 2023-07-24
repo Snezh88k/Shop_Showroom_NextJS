@@ -12,6 +12,8 @@
   }
 
   h4 {
+    border-radius: 3px;
+
     color: rgba(0, 0, 0, 0.9);
     font-size: 16px;
     font-family: Inter;
@@ -19,4 +21,14 @@
     font-weight: 600;
     line-height: 100%;
   }
+}
+
+.warning_size {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 15px 50px 15px 50px;
+  border-radius: 5px;
+
+  background-color: rgba(255, 0, 0, 0.1);
 }

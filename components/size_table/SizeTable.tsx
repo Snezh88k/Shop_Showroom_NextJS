@@ -16,23 +16,25 @@ type Size = {
 interface SizeTableProps {
   sizes?: Size[];
   className?: string;
-  onClick: (size?: number) => void;
+  onClick: (size?: string | null) => void;
+  sizeSelected: boolean;
 }
 
 export default function SizeTable({
   sizes,
   className,
   onClick,
+  sizeSelected,
 }: SizeTableProps) {
-  const [isSelect, setIsSelect] = useState<number>();
+  const [isSelect, setIsSelect] = useState<string | null>();
 
-  const clickSelect = (index: number) => {
-    if (index === isSelect) {
-      setIsSelect(99);
+  const clickSelect = (sizeRus: string | null, sizeInt: string | null) => {
+    if (sizeInt === isSelect || sizeRus === isSelect) {
+      setIsSelect("is_selected");
       onClick();
     } else {
-      setIsSelect(index);
-      onClick(index);
+      setIsSelect(sizeInt || sizeRus);
+      onClick(`${sizeInt ? sizeInt : ""} ${sizeRus ? sizeRus : ""}`);
     }
   };
 
@@ -45,10 +47,19 @@ export default function SizeTable({
             rus={size.rus}
             int={size.int}
             availability={size.availability}
-            select={index === isSelect ? true : false}
-            onClick={() => clickSelect(index)}
+            select={
+              size.rus === isSelect || size.int === isSelect ? true : false
+            }
+            onClick={() => clickSelect(size.rus, size.int)}
+            key={index}
           />
         ))}
+      </div>
+      <div
+        className={styles.warning_size}
+        style={sizeSelected ? { display: "block" } : { display: "none" }}
+      >
+        Выберите размер
       </div>
     </div>
   );

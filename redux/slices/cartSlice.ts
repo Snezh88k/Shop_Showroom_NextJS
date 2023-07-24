@@ -29,10 +29,13 @@ const catrSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action) {
-      const findItem = state.items.find((obj) => obj.id === action.payload.id);
+      const findItem = state.items.find(
+        (obj) =>
+          obj.id === action.payload.id && obj.size === action.payload.size
+      );
 
       if (findItem) {
-        findItem.count += action.payload.count;
+        // findItem.count += action.payload.count;
       } else {
         state.items.push({
           ...action.payload,
@@ -46,6 +49,8 @@ const catrSlice = createSlice({
       state.allCount = state.items.reduce((sum, item) => {
         return item.count + sum;
       }, 0);
+
+      localStorage.setItem("cart", JSON.stringify(state.items));
     },
     minusItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
@@ -62,7 +67,15 @@ const catrSlice = createSlice({
       }, 0);
     },
     removeItem(state, action) {
-      state.items = state.items.filter((obj) => obj.id !== action.payload);
+      const indexProduct = state.items.findIndex(
+        (product) =>
+          product.id === action.payload.id &&
+          product.size === action.payload.size
+      );
+
+      state.items = state.items.filter((obj, index) => {
+        return index !== indexProduct;
+      });
 
       state.totalPrice = state.items.reduce((sum, item) => {
         return item.price * item.count + sum;
@@ -71,40 +84,28 @@ const catrSlice = createSlice({
       state.allCount = state.items.reduce((sum, item) => {
         return item.count + sum;
       }, 0);
+      localStorage.setItem("cart", JSON.stringify(state.items));
     },
+
     clearItems(state) {
       state.items = [];
       state.totalPrice = 0;
       state.allCount = 0;
+
+      localStorage.setItem("cart", JSON.stringify(state.items));
     },
-    addCounInCart(state) {
-      state.allCount += 1;
-    },
-    createCountInCart(state, action) {
-      if (action.payload === 0) {
-        state.allCount = 0;
-      } else {
-        state.allCount = action.payload - 1;
-      }
-    },
-    addPrice(state, action) {
-      state.totalPrice += action.payload;
-    },
-    revomeTotalPrice(state) {
-      state.totalPrice = 0;
+    fillStore(state, action) {
+      state.items = action.payload;
+      state.totalPrice = action.payload.reduce(
+        (sum: number, product: any) => sum + product.price,
+        0
+      );
+      state.allCount = action.payload.length;
     },
   },
 });
 
-export const {
-  addItem,
-  removeItem,
-  clearItems,
-  minusItem,
-  addCounInCart,
-  createCountInCart,
-  addPrice,
-  revomeTotalPrice,
-} = catrSlice.actions;
+export const { addItem, removeItem, clearItems, minusItem, fillStore } =
+  catrSlice.actions;
 
 export default catrSlice.reducer;
