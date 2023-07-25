@@ -12,7 +12,6 @@ export default async function Home({ params: { lng } }: any) {
   const { t } = await useTranslation(lng);
   return (
     <div>
-      {/* <h1>{t("title")}</h1> */}
       <div className={styles.catalog_wraper}>
         {dataTest.map((product) => (
           <Link href={`/catalog/${product.category}/${product.id}`}>
