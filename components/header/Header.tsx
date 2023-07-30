@@ -57,10 +57,11 @@ export default function Header({ t, lng }: HeaderProps) {
   const closeCatalog = (e: any) => {
     e.stopPropagation();
     setIsOpenMenu(false);
+    const BODY = document.querySelector("body");
+    BODY?.classList.remove("close");
   };
 
   const closeMenu = (e: any) => {
-    console.log(e.target);
     if (e.target.tagName.toLowerCase() === "a") {
       setIsOpenMenu(false);
     }

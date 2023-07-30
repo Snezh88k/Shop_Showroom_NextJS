@@ -46,6 +46,17 @@ export default function SliderInCard({ images }) {
         centerMode={true}
         centerPadding={110}
         arrows={false}
+        responsive={[
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              centerPadding: 35,
+            },
+          },
+        ]}
       >
         {images?.map((image, index) => (
           <div

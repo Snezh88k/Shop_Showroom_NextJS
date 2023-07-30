@@ -110,3 +110,17 @@
     color: white;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    padding: 0 15px 0 15px;
+  }
+
+  .section_wrapper {
+    flex-direction: column;
+  }
+
+  .order_info {
+    margin-top: 30px;
+  }
+}

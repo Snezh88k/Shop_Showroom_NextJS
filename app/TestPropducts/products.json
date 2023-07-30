@@ -2,7 +2,7 @@
   {
     "id": "23S24003",
     "name": "Топ",
-    "category": "suits_sets",
+    "category": "tops_shirts",
     "price": 24,
     "description": "Белый топ с акцентом на талии — непревзойденная свежесть и элегантность в одном образе.",
     "sale": false,
@@ -32,7 +32,7 @@
   {
     "id": "23S24003Y",
     "name": "Топ",
-    "category": "dresses_skirts",
+    "category": "tops_shirts",
     "price": 24,
     "description": "Освежите свой стиль с нашим топом яркого манго, создающим изысканный акцент на талии и придающим вашему образу сочности и энергии.",
     "sale": false,

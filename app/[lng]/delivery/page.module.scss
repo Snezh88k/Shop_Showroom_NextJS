@@ -21,3 +21,9 @@
     margin-bottom: 40px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    padding: 0 15px 0 15px;
+  }
+}

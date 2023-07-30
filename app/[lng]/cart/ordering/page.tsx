@@ -74,7 +74,10 @@ export default function page({ repo }: any) {
         <div className={styles.modal_window}>ОФОРМЛЕНО</div>
       </div> */}
       <h1>Оформление заказа</h1>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{ display: "flex", justifyContent: "space-between" }}
+        className={styles.section_wrapper}
+      >
         <form className={styles.form_wrapper} onSubmit={(e) => sendMessage(e)}>
           <label className="form-name">
             Имя:

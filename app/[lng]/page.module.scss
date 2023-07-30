@@ -29,3 +29,20 @@
   flex-wrap: wrap;
   margin-top: 40px;
 }
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 15px 0 15px;
+
+    .catalog_wraper {
+      width: 100%;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-left: 10px;
+    }
+  }
+}
