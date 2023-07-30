@@ -1,3 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  h1 {
+    color: rgba(0, 0, 0, 0.9);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+}
+
 .random_selection_block {
   display: flex;
   gap: 24px;
@@ -9,8 +24,8 @@
 }
 
 .catalog_wraper {
-  margin-top: 90px;
   display: flex;
   gap: 62px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }

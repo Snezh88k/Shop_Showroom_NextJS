@@ -16,10 +16,10 @@ export default function Compound({ compound, className }: CompoundProps) {
   return (
     <div className={clsx(styles.wrapper, className)}>
       <div className={styles.compound}>
-        {compound.map((property) => {
+        {compound.map((property, index) => {
           for (let key in property) {
             return (
-              <div>
+              <div key={index}>
                 <span className={styles.property}>{key}</span>
                 <span className={styles.property_dots}>
                   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

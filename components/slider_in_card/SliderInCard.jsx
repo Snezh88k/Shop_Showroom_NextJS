@@ -22,8 +22,8 @@ export default function SliderInCard({ images }) {
         fade={true}
         arrows={true}
       >
-        {images?.map((image) => (
-          <div>
+        {images?.map((image, index) => (
+          <div key={index}>
             <Image
               src={image}
               alt={image}
@@ -47,8 +47,11 @@ export default function SliderInCard({ images }) {
         centerPadding={110}
         arrows={false}
       >
-        {images?.map((image) => (
-          <div className="product_card__secondary_slider__image_wrapper">
+        {images?.map((image, index) => (
+          <div
+            className="product_card__secondary_slider__image_wrapper"
+            key={index}
+          >
             <Image
               src={image}
               alt={image}

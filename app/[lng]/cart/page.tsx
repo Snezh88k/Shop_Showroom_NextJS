@@ -31,7 +31,7 @@ export default function page() {
           </div>
 
           <Link href="cart/ordering">
-            <div>
+            <div className={styles.ordering_button}>
               <span>Перейти к оформлению</span>
             </div>
           </Link>

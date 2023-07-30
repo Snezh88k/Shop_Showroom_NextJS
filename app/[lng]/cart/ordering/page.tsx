@@ -5,12 +5,15 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./page.module.scss";
 
-import CardProduct from "@/components/card_product/CardProduct";
 import Image from "next/image";
+import { clearItems } from "@/redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
 
 export default function page({ repo }: any) {
+  const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
   const [storageCart, setStorageCart] = useState<any[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -48,19 +51,28 @@ export default function page({ repo }: any) {
       return sum + item.price;
     }, 0)}\n`;
 
-    const TOKEN = "6038802604:AAGJX09ew1KdPN9Fk1bGVd_VhCLkGX5yn6g";
-    const CHAT_ID = "-1001874434119";
     axios
-      .post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-        chat_id: CHAT_ID,
-        parse_mode: "html",
-        text: message,
+      .post(`/api/user`, {
+        message: message,
       })
-      .then((response) => {})
+      .then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          dispatch(clearItems());
+          setIsVisible(true);
+        }
+      })
       .catch((err) => console.error(err));
   };
+
   return (
     <div className={styles.wrapper}>
+      {/* <div
+        className={styles.order_processed}
+        style={isVisible ? { display: "flex" } : { display: "flex" }}
+      >
+        <div className={styles.modal_window}>ОФОРМЛЕНО</div>
+      </div> */}
       <h1>Оформление заказа</h1>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <form className={styles.form_wrapper} onSubmit={(e) => sendMessage(e)}>

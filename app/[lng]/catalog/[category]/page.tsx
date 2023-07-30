@@ -18,7 +18,6 @@ interface CatalogProps {
 // Выпадающее меню Каталог: Показать все/Топы и рубашки/Платья и юбки/Брюки и джинсы/Костюмы и комплекты
 
 export default function page({ params }: CatalogProps) {
-  console.log(params.category);
   return (
     <div className={styles.wrapper}>
       {params.category === "tops_shirts" ? <h1>Топы и рубашки</h1> : ""}

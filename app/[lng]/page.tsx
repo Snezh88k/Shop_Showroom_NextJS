@@ -11,7 +11,8 @@ import { useTranslation } from "../i18n";
 export default async function Home({ params: { lng } }: any) {
   const { t } = await useTranslation(lng);
   return (
-    <div>
+    <div className={styles.wrapper}>
+      <h1>Все товары</h1>
       <div className={styles.catalog_wraper}>
         {dataTest.map((product) => (
           <Link href={`/catalog/${product.category}/${product.id}`}>
