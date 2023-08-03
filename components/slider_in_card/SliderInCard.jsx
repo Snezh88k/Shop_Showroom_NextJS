@@ -27,9 +27,7 @@ export default function SliderInCard({ images }) {
             <Image
               src={image}
               alt={image}
-              width={570}
-              height={570}
-              quality={100}
+              fill={true}
               className="product_card__main_slider__image"
             />
           </div>

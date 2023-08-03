@@ -16,6 +16,7 @@ import dataTest from "../../../../TestPropducts/products.json";
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
 import { addItem } from "@/redux/slices/cartSlice";
+import { addFavorite } from "@/redux/slices/favoritesSlice";
 
 interface ProductProps {
   params: {
@@ -63,6 +64,20 @@ export default function page({ params }: ProductProps) {
     dispatch(addItem(order));
   };
 
+  const addInFavorite = () => {
+    const order = {
+      id: params.id,
+      name: product?.name,
+      size: isSize,
+      price: product?.price,
+      image: product?.images.main,
+      count: 1,
+      url: currentUrl,
+    };
+
+    dispatch(addFavorite(order));
+  };
+
   const changeSize = (size?: string | null) => {
     setSize(size);
   };
@@ -103,7 +118,7 @@ export default function page({ params }: ProductProps) {
                 text="Добавить в избранное"
                 children={<HeartsIcon />}
                 className={styles.buttonAddToFavorite}
-                onClick={() => console.log("Покупка")}
+                onClick={() => addInFavorite()}
               />
             </div>
           </div>

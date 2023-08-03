@@ -20,7 +20,7 @@
   align-items: flex-start;
   gap: 20px;
 
-  span {
+  img {
     cursor: pointer;
   }
 }
@@ -54,128 +54,12 @@
   }
 }
 
-.burger_menu {
-  display: none;
-}
-
-.main_menu__mobile {
-  display: none;
-  transition: 0.5s;
-}
-
 @media screen and (max-width: 900px) {
-  .top_line {
+  .wrapper {
     padding: 0 15px 0 15px;
   }
+
   .main_menu {
-    display: none;
-  }
-
-  .burger_menu {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 30px;
-  }
-
-  .burger_menu span {
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    top: 5px;
-    background-color: #f1cdb3;
-    transition: 1s all linear;
-    z-index: 10;
-  }
-
-  .burger_menu span:nth-child(1) {
-    transform: translateY(20px);
-  }
-  .burger_menu span:nth-child(3) {
-    transform: translateY(10px);
-  }
-
-  .burger_menu.menu_open span:nth-child(2) {
-    transform: rotate(-45deg) translateY(10px) translateX(0);
-  }
-
-  .burger_menu.menu_open span:nth-child(1) {
-    transform: rotate(45deg) translateY(0) translateX(10px);
-  }
-  .burger_menu.menu_open span:nth-child(3) {
-    opacity: 0;
-  }
-
-  .main_menu__mobile {
-    position: absolute;
-    top: 60px;
-    bottom: 0;
-    z-index: 10;
-    background-color: wheat;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    cursor: pointer;
-
-    & > li {
-      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-      padding-bottom: 10px;
-    }
-
-    li {
-      text-align: center;
-      margin-bottom: 10px;
-
-      ul {
-        transition: 1s;
-        padding: 15px 0 5px 0px;
-        color: rgba(0, 0, 0, 0.6);
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-$glass: rgba(255, 255, 255, 0.2);
-$glass-icon: rgba(255, 255, 255, 0.3);
-$gradient: linear-gradient(35deg, red, purple);
-$option: #320a28;
-
-.lang_select {
-  border: 0;
-  outline: 0;
-
-  width: 60px;
-  height: 20px;
-  text-align: right;
-  padding: 0 2px 0 4px;
-  background: white;
-  color: black;
-  border-radius: 3px;
-  cursor: pointer;
-
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%; /* 24px */
-  text-transform: uppercase;
-  option {
-    color: inherit;
-    background-color: white;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-ms-expand {
     display: none;
   }
 }

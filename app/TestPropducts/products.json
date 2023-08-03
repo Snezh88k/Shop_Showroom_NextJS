@@ -27,7 +27,8 @@
         "/product/TopsShirts/23S24003_2.jpg",
         "/product/TopsShirts/23S24003_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24003Y",
@@ -57,7 +58,8 @@
         "/product/TopsShirts/23S24003_Y_2.jpg",
         "/product/TopsShirts/23S24003_Y_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24003G",
@@ -87,7 +89,8 @@
         "/product/TopsShirts/23S24003_G_2.jpg",
         "/product/TopsShirts/23S24003_G_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -118,7 +121,8 @@
         "/product/TopsShirts/23S15002_P_2.jpg",
         "/product/TopsShirts/23S15002_P_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -149,7 +153,8 @@
         "/product/TopsShirts/23S15002_B_2.jpg",
         "/product/TopsShirts/23S15002_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S15002G",
@@ -179,7 +184,8 @@
         "/product/TopsShirts/23S15002_G_2.jpg",
         "/product/TopsShirts/23S15002_G_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24007Y",
@@ -209,7 +215,8 @@
         "/product/TopsShirts/23S24007_Y_2.jpg",
         "/product/TopsShirts/23S24007_Y_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24007W",
@@ -239,7 +246,8 @@
         "/product/TopsShirts/23S24007_W_2.jpg",
         "/product/TopsShirts/23S24007_W_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S15022P",
@@ -269,7 +277,8 @@
         "/product/TopsShirts/23S15022_P_2.jpg",
         "/product/TopsShirts/23S15022_P_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S18007B",
@@ -299,7 +308,8 @@
         "/product/TopsShirts/23S18007_B_2.jpg",
         "/product/TopsShirts/23S18007_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S18007W",
@@ -329,7 +339,8 @@
         "/product/TopsShirts/23S18007_W_2.jpg",
         "/product/TopsShirts/23S18007_W_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S15009B",
@@ -358,7 +369,8 @@
         "/product/TopsShirts/23S15009_B_1.jpg",
         "/product/TopsShirts/23S15009_B_2.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S15009P",
@@ -388,7 +400,8 @@
         "/product/TopsShirts/23S15009_P_2.jpg",
         "/product/TopsShirts/23S15009_P_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -419,7 +432,8 @@
         "/product/PantsJeans/23S03012_C_2.jpg",
         "/product/PantsJeans/23S03012_C_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -450,7 +464,8 @@
         "/product/DressesSkirts/2513_2.jpg",
         "/product/DressesSkirts/2513_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -481,7 +496,8 @@
         "/product/DressesSkirts/23S25048_W_2.jpg",
         "/product/DressesSkirts/23S25048_W_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -512,7 +528,8 @@
         "/product/TopsShirts/11505_B_2.jpg",
         "/product/TopsShirts/11505_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -543,7 +560,8 @@
         "/product/DressesSkirts/23S02018_2.jpg",
         "/product/DressesSkirts/23S02018_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -574,7 +592,8 @@
         "/product/PantsJeans/23S01008_B_2.jpg",
         "/product/PantsJeans/23S01008_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -605,7 +624,8 @@
         "/product/PantsJeans/23S05001_2.jpg",
         "/product/PantsJeans/23S05001_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "готово": "готово",
@@ -636,7 +656,8 @@
         "/product/PantsJeans/23S01008_G_2.jpg",
         "/product/PantsJeans/23S01008_G_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24007G",
@@ -666,7 +687,8 @@
         "/product/TopsShirts/23S24007_G_2.jpg",
         "/product/TopsShirts/23S24007_G_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -697,7 +719,8 @@
         "/product/TopsShirts/23S24009_P_2.jpg",
         "/product/TopsShirts/23S24009_P_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -728,7 +751,8 @@
         "/product/TopsShirts/11505_P_2.jpg",
         "/product/TopsShirts/11505_P_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -759,7 +783,8 @@
         "/product/TopsShirts/11505_G_2.jpg",
         "/product/TopsShirts/11505_G_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -790,7 +815,8 @@
         "/product/SuitsSets/23S32002_W_2.jpg",
         "/product/SuitsSets/23S32002_W_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -821,7 +847,8 @@
         "/product/SuitsSets/23S32002_B_2.jpg",
         "/product/SuitsSets/23S32002_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -852,7 +879,8 @@
         "/product/SuitsSets/23S08006_B_2.jpg",
         "/product/SuitsSets/23S08006_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -883,7 +911,8 @@
         "/product/SuitsSets/23S08006_P_2.jpg",
         "/product/SuitsSets/23S08006_P_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -914,7 +943,8 @@
         "/product/SuitsSets/23S35016_B_2.jpg",
         "/product/SuitsSets/23S35016_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -946,7 +976,8 @@
         "/product/PantsJeans/23S03009_W_2.jpg",
         "/product/PantsJeans/23S03009_W_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24009B",
@@ -976,7 +1007,8 @@
         "/product/TopsShirts/23S24009_B_2.jpg",
         "/product/TopsShirts/23S24009_B_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
   {
     "id": "23S24009W",
@@ -1006,7 +1038,8 @@
         "/product/TopsShirts/23S24009_W_2.jpg",
         "/product/TopsShirts/23S24009_W_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   },
 
   {
@@ -1038,6 +1071,7 @@
         "/product/DressesSkirts/13500_G_2.jpg",
         "/product/DressesSkirts/13500_G_3.jpg"
       ]
-    }
+    },
+    "selectorWeight": 1
   }
 ]

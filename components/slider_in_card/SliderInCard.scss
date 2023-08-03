@@ -2,6 +2,11 @@
   width: 570px;
   height: 570px;
 
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
   .product_card__main_slider__image {
     object-fit: cover;
   }
@@ -70,10 +75,16 @@
 @media screen and (max-width: 900px) {
   .product_card__main_slider {
     width: 100%;
-    height: max-content;
+
+    .slick-list,
+    .slick-track {
+      height: 100%;
+    }
     .product_card__main_slider__image {
-      object-position: left;
       object-fit: contain;
+    }
+    .slick-slide img {
+      object-position: center;
     }
   }
   .wrapper {

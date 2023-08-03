@@ -10,22 +10,25 @@ import { useTranslation } from "../i18n";
 
 export default async function Home({ params: { lng } }: any) {
   const { t } = await useTranslation(lng);
+
   return (
     <div className={styles.wrapper}>
       <h1>Все товары</h1>
       <div className={styles.catalog_wraper}>
-        {dataTest.map((product) => (
-          <Link href={`/catalog/${product.category}/${product.id}`}>
-            <CardProduct
-              id={product.id}
-              src={product.images.main}
-              alt="Карточка"
-              price={product.price}
-              category={product.name}
-              key={product.id}
-            />
-          </Link>
-        ))}
+        {dataTest
+          .sort((a, b) => (a.id > b.id ? 1 : -1))
+          .map((product) => (
+            <Link href={`/catalog/${product.category}/${product.id}`}>
+              <CardProduct
+                id={product.id}
+                src={product.images.main}
+                alt="Карточка"
+                price={product.price}
+                category={product.name}
+                key={product.id}
+              />
+            </Link>
+          ))}
       </div>
     </div>
   );
