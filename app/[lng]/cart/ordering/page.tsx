@@ -2,12 +2,14 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 
 import styles from "./page.module.scss";
 
 import Image from "next/image";
 import { clearItems } from "@/redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 
 export default function page({ repo }: any) {
   const dispatch = useDispatch();
@@ -66,75 +68,93 @@ export default function page({ repo }: any) {
   };
 
   return (
-    <div className={styles.wrapper}>
-      {/* <div
-        className={styles.order_processed}
-        style={isVisible ? { display: "flex" } : { display: "flex" }}
-      >
-        <div className={styles.modal_window}>ОФОРМЛЕНО</div>
-      </div> */}
-      <h1>Оформление заказа</h1>
-      <div
-        style={{ display: "flex", justifyContent: "space-between" }}
-        className={styles.section_wrapper}
-      >
-        <form className={styles.form_wrapper} onSubmit={(e) => sendMessage(e)}>
-          <label className="form-name">
-            Имя:
-            <input type="text" name="name" className="form-name" required />
-          </label>
-
-          <label className="form-tell">
-            Телефон:
-            <input type="tel" name="tel" className="form-tell" required />
-          </label>
-
-          <label className="form-email">
-            Email:
-            <input
-              id="email"
-              type="email"
-              name="mail"
-              className="form-control"
-              required
-            />
-          </label>
-          <label className="form-address">
-            Адрес:
-            <input
-              type="text"
-              name="address"
-              className="form-address"
-              required
-            />
-          </label>
-
-          <button type="submit">Отправить</button>
-        </form>
-        <div className={styles.order_info}>
-          <h3>Ваш заказ</h3>
-          <div className={styles.image_carousel}>
-            {storageCart.map((item) => {
-              return (
-                <Image
-                  src={item.image}
-                  alt=""
-                  width={80}
-                  height={70}
-                  className={styles.min_image}
-                />
-              );
-            })}
+    <>
+      <title>Оформление заказа</title>
+      <div className={styles.wrapper}>
+        <div
+          className={styles.order_processed}
+          style={isVisible ? { display: "flex" } : { display: "none" }}
+        >
+          <div className={styles.modal_window}>
+            <span>Заказ успешно оформлен.</span>
+            <span>Скоро с вами свяжется менеджер для подтверждения.</span>
+            <Link href={`/`}>
+              <span className={styles.neon_text}>Вернуться на главную</span>
+            </Link>
           </div>
+        </div>
+        <h1>Оформление заказа</h1>
+        <div
+          style={{ display: "flex", justifyContent: "space-between" }}
+          className={styles.section_wrapper}
+        >
+          <form
+            className={styles.form_wrapper}
+            onSubmit={(e) => sendMessage(e)}
+          >
+            <label className="form-name">
+              Имя:
+              <input type="text" name="name" className="form-name" required />
+            </label>
 
-          <span className={styles.total_count}>
-            Товаров к оформлению: <b>{storageCart.length}</b>
-          </span>
-          <span className={styles.total_price}>
-            <span>Итого</span> {totalPrice} ₾
-          </span>
+            <label className="form-tell">
+              Телефон:
+              <input type="tel" name="tel" className="form-tell" required />
+            </label>
+
+            <label className="form-email">
+              Email:
+              <input
+                id="email"
+                type="email"
+                name="mail"
+                className="form-control"
+                required
+              />
+            </label>
+            <label className="form-address">
+              Адрес:
+              <input
+                type="text"
+                name="address"
+                className="form-address"
+                required
+              />
+            </label>
+
+            <button
+              type="submit"
+              disabled={storageCart.length === 0 ? true : false}
+            >
+              Отправить
+            </button>
+          </form>
+          <div className={styles.order_info}>
+            <h3>Ваш заказ</h3>
+            <div className={styles.image_carousel}>
+              {storageCart.map((item, index) => {
+                return (
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={80}
+                    height={70}
+                    className={styles.min_image}
+                    key={index}
+                  />
+                );
+              })}
+            </div>
+
+            <span className={styles.total_count}>
+              Товаров к оформлению: <b>{storageCart.length}</b>
+            </span>
+            <span className={styles.total_price}>
+              <span>Итого</span> {totalPrice} ₾
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
