@@ -26,7 +26,17 @@ export default function page({ params }: CatalogProps) {
       {params.category === "suits_sets" ? <h1>Костюмы и комплекты</h1> : ""}
       <div className={styles.products}>
         {dataTest
-          .sort((a, b) => (a.id > b.id ? -1 : 1))
+          .sort((a, b) => {
+            // сначала сортируем по полю 'selectorWeight'
+            if (a.selectorWeight < b.selectorWeight) {
+              return -1;
+            }
+            if (a.selectorWeight > b.selectorWeight) {
+              return 1;
+            }
+            // если имена совпадают, то сортируем по 'id'
+            return a.id > b.id ? -1 : 1;
+          })
           .map((product) => {
             if (product.category === params.category)
               return (
