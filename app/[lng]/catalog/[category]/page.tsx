@@ -22,7 +22,7 @@ export default function page({ params }: CatalogProps) {
     <div className={styles.wrapper}>
       {params.category === "tops_shirts" ? <h1>Топы и рубашки</h1> : ""}
       {params.category === "dresses_skirts" ? <h1>Платья и юбки</h1> : ""}
-      {params.category === "pants_jeans" ? <h1>Брюки и джинсы</h1> : ""}
+      {params.category === "pants_jeans" ? <h1>Брюки и шорты</h1> : ""}
       {params.category === "suits_sets" ? <h1>Костюмы и комплекты</h1> : ""}
       <div className={styles.products}>
         {dataTest
