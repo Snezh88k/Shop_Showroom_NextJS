@@ -4,21 +4,26 @@ import styles from "./page.module.scss";
 import dataTest from "../../../TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
 import Link from "next/link";
+import { useTranslation } from "@/app/i18n";
 
 interface CatalogProps {
   params: {
     category: string;
+    lng:string;
   };
 }
 
 
-export default function page({ params }: CatalogProps) {
+export default async function page({ params }: any)  {
+  const { t } = await useTranslation(params.lng);
+
   return (
     <div className={styles.wrapper}>
-      {params.category === "tops_shirts" ? <h1>Топы и рубашки</h1> : ""}
-      {params.category === "dresses_skirts" ? <h1>Платья и юбки</h1> : ""}
-      {params.category === "pants_jeans" ? <h1>Брюки и шорты</h1> : ""}
-      {params.category === "suits_sets" ? <h1>Костюмы и комплекты</h1> : ""}
+
+      {params.category === "tops_shirts" ? <h1>{t("category_tops_and_shirts")}</h1> : ""}
+      {params.category === "dresses_skirts" ? <h1>{t("category_dresses_and_skirts")}</h1> : ""}
+      {params.category === "pants_jeans" ? <h1>{t("category_pants_and_shorts")}</h1> : ""}
+      {params.category === "suits_sets" ? <h1>{t("category_suits_and_sets")}</h1> : ""}
       <div className={styles.products}>
         {dataTest
           .sort((a, b) => {

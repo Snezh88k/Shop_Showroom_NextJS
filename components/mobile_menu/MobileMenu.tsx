@@ -3,8 +3,14 @@ import Link from "next/link";
 
 import styles from "./MobileMenu.module.scss";
 import BurgerMenuIcon from "../burger_menu_icon/BurgerMenuIcon";
+import {CatalogCategoryLan} from "../catalog_category/client";
 
-export default function MobileMenu() {
+interface MobileMenuProps {
+  t: any;
+  lng: string;
+}
+
+export default function MobileMenu({t, lng}: MobileMenuProps) {
   const [visible, setVisible] = useState(false);
 
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -44,21 +50,7 @@ export default function MobileMenu() {
             style={visible ? { display: "block" } : { display: "none" }}
             onClick={(e) => closeCatalog(e)}
           >
-            <li>
-              <Link href="/">Показать все</Link>
-            </li>
-            <li>
-              <Link href="/catalog/tops_shirts">Топы и рубашки</Link>
-            </li>
-            <li>
-              <Link href="/catalog/dresses_skirts">Платья и юбки</Link>
-            </li>
-            <li>
-              <Link href="/catalog/pants_jeans">Брюки и джинсы</Link>
-            </li>
-            <li>
-              <Link href="/catalog/suits_sets">Костюмы и комплекты</Link>
-            </li>
+            <CatalogCategoryLan   lng={lng}/>
           </ul>
         </li>
 

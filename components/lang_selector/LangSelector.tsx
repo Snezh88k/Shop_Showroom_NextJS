@@ -2,24 +2,36 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./LangSelector.module.scss";
+import { Trans } from "react-i18next";
+import { languages } from "@/app/i18n/settings";
+import Link from 'next/link'
 
-export default function LangSelector({ lng }: { lng: string }) {
-  const changeLan = (e: any) => {
-    const path = document.location.pathname.slice(3);
-    window.location.href = `/${e.target.value}${path}`;
-  };
+export default function LangSelector({ t, lng }: { t: any, lng: string }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+
+ const openLangSwith = () => { 
+  setIsOpen(!isOpen)
+ }
 
   return (
-    <select
-      name="lang"
-      id="lang"
-      value={lng}
-      onChange={(e) => changeLan(e)}
-      className={styles.lang_select}
-    >
-      <option value="ru">RU</option>
-      <option value="ge">GE</option>
-      <option value="en">EN</option>
-    </select>
+<div className={styles.wrapper}>
+    <Trans i18nKey="languageSwitcher" t={t} >
+<strong className={styles.select_lang}  onClick={openLangSwith}>{lng}<span className={styles.arrow} style={isOpen ? {transform: " rotate(90deg)"}: {}}></span></strong> 
+</Trans>
+<div style={isOpen ? {display: "flex"}: {display: "none"}} className={styles.list}>
+{languages.filter((l) => lng !== l).map((l, index) => {
+return (
+  <span key={l} >
+    {index > 0}
+    <Link href={`/${l}/`} style={{textTransform: 'uppercase'}}>
+      {l}
+    </Link>
+  </span>
+)
+})}
+</div>
+</div>
+
   );
 }

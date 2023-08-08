@@ -40,13 +40,13 @@ export default function Header({ t, lng }: HeaderProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.top_line}>
-        <MobileMenu />
-        <Link href="/">
+        <MobileMenu  t={t} lng={lng}/>
+        <Link href={`/${lng}`}>
           <div className={styles.logo}>I AM</div>
         </Link>
 
         <div className={styles.quick_panel}>
-          <LangSelector lng={lng} />
+          <LangSelector lng={lng} t={t} />
           <Image src={findIcon} alt="find" />
 
           <Link href="/favorites">
@@ -70,6 +70,8 @@ export default function Header({ t, lng }: HeaderProps) {
               <DropdownMenu
                 visible={visible}
                 className={styles.dropdown_menu}
+                t={t}
+                lng={lng}
               />
             </div>
           </li>

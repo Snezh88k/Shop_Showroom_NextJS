@@ -1,17 +1,22 @@
-import Link from "next/link";
+
 import styles from "./DropdownMenu.module.scss";
 import clsx from "clsx";
 import { Inter } from "next/font/google";
+import {CatalogCategoryLan} from "../catalog_category/client";
 
 const inter = Inter({ subsets: ["latin"] });
 interface DropdownMenuProps {
   className?: string;
   visible: boolean;
+  t: any;
+  lng: string;
 }
 
 export default function DropdownMenu({
   className,
   visible,
+  t,
+  lng
 }: DropdownMenuProps) {
   return (
     <div
@@ -19,21 +24,7 @@ export default function DropdownMenu({
       style={visible ? { display: "block" } : { display: "none" }}
     >
       <ul className={styles.list}>
-        <li>
-          <Link href="/">Показать все</Link>
-        </li>
-        <li>
-          <Link href="/catalog/tops_shirts">Топы и рубашки</Link>
-        </li>
-        <li>
-          <Link href="/catalog/dresses_skirts">Платья и юбки</Link>
-        </li>
-        <li>
-          <Link href="/catalog/pants_jeans">Брюки и джинсы</Link>
-        </li>
-        <li>
-          <Link href="/catalog/suits_sets">Костюмы и комплекты</Link>
-        </li>
+      <CatalogCategoryLan  lng={lng}/>
       </ul>
     </div>
   );

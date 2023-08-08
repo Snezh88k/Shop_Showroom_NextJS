@@ -1,9 +1,12 @@
 {
-  "title": "Hi there!",
-  "to-second-page": "To second page",
   "description": "Грузинский",
   "catalog": "catalog",
   "pay": "pay",
   "delivery": "delivery",
-  "sale": "sale"
+  "sale": "sale",
+  "category_show_everything": "Show everything",
+  "category_tops_and_shirts": "Tops and shirts",
+  "category_dresses_and_skirts": "Dresses and skirts",
+  "category_pants_and_shorts": "Pants and shorts",
+  "category_suits_and_sets": "Suits and sets"
 }

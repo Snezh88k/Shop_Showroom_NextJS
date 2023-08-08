@@ -35,3 +35,46 @@ $option: #320a28;
     display: none;
   }
 }
+
+
+.wrapper{
+  position: relative;
+  cursor: pointer;
+
+  .select_lang{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    .arrow{
+   
+      margin-left: 5px;
+      transform: rotate(270deg);
+transition: 0.5s;
+      &::after {
+        content: "\276E";
+        opacity: 1;
+        color: rgba(0, 0, 0);
+        font-size: 12px;
+        font-family: "Zapf Dingbats" !important;
+    
+      
+      }
+    }
+
+  
+
+    span{
+      font-size: 10px;
+    }
+  }
+  
+  .list{
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    background-color: white;
+    position: absolute;
+    left: -2px;
+    flex-direction: column;
+  }
+}

@@ -1,9 +1,13 @@
 {
-  "title": "Hi there!",
-  "to-second-page": "To second page",
+ 
   "description": "Грузинский",
   "catalog": "კატალოგი",
   "pay": "გადახდა",
   "delivery": "მიწოდება",
-  "sale": "მარაგი"
+  "sale": "მარაგი",
+  "category_show_everything": "Показать все",
+  "category_tops_and_shirts": "Топы и рубашки",
+  "category_dresses_and_skirts": "Платья и юбки",
+  "category_pants_and_shorts": "Брюки и шорты",
+  "category_suits_and_sets": "Костюмы и комплекты"
 }
