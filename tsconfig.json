@@ -30,6 +30,6 @@
     ".next/types/**/*.ts",
     "pages/index.js",
     "components/text_slider/testSlider.jsx"
-  ],
+, "app/api/likes/route.js"  ],
   "exclude": ["node_modules"]
 }

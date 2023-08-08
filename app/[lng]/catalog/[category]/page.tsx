@@ -10,12 +10,7 @@ interface CatalogProps {
     category: string;
   };
 }
-// tops_shirts
-// dresses_skirts
-// pants_jeans
-// suits_sets
 
-// Выпадающее меню Каталог: Показать все/Топы и рубашки/Платья и юбки/Брюки и джинсы/Костюмы и комплекты
 
 export default function page({ params }: CatalogProps) {
   return (
@@ -28,14 +23,14 @@ export default function page({ params }: CatalogProps) {
         {dataTest
           .sort((a, b) => {
             // сначала сортируем по полю 'selectorWeight'
-            if (a.selectorWeight < b.selectorWeight) {
+            if (a.price < b.price) {
               return -1;
             }
-            if (a.selectorWeight > b.selectorWeight) {
+            if (a.price > b.price) {
               return 1;
             }
             // если имена совпадают, то сортируем по 'id'
-            return a.id > b.id ? -1 : 1;
+            return a.article > b.article ? -1 : 1;
           })
           .map((product) => {
             if (product.category === params.category)
