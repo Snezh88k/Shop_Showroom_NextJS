@@ -32,7 +32,7 @@ export default async function Home({ params: { lng } }: any) {
 
   return (
     <div className={styles.wrapper}>
-      <button onClick={fetchData}>Fetch</button>
+      {/* <button onClick={fetchData}>Fetch</button> */}
       <h1>Все товары</h1>
       <div className={styles.catalog_wraper}>
         {dataTest
