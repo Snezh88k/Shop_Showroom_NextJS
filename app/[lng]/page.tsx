@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 import styles from "./page.module.scss";
@@ -7,12 +6,12 @@ import dataTest from "../../app/TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
 import Link from "next/link";
 
-import { useTranslation } from "../i18n/client";
+import { useTranslation } from "../i18n";
 
 import axios from "axios";
 
-export default function Home({ params: { lng } }: any) {
-  const { t } = useTranslation(lng);
+export default async function Home({ params: { lng } }: any) {
+  const { t } = await useTranslation(lng);
 
   const fetchData = () => {
     axios

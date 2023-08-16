@@ -93,7 +93,7 @@
         "/product/TopsShirts/23S24003_G_3.jpg"
       ]
     },
-    "selectorWeight": 1
+    "selectorWeight": 0
   },
 
   {
@@ -480,7 +480,7 @@
         "/product/DressesSkirts/2513_3.jpg"
       ]
     },
-    "selectorWeight":5
+    "selectorWeight": 5
   },
   {
     "готово": "готово",
