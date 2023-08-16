@@ -12,10 +12,10 @@ export default function LangSelector({ t, lng }: { t: any, lng: string }) {
 
  const openLangSwith = () => { 
   setIsOpen(!isOpen)
- }
+ }  
 
   return (
-<div className={styles.wrapper}>
+  <div className={styles.wrapper}>
     <Trans i18nKey="languageSwitcher" t={t} >
 <strong className={styles.select_lang}  onClick={openLangSwith}>{lng}<span className={styles.arrow} style={isOpen ? {transform: " rotate(90deg)"}: {}}></span></strong> 
 </Trans>

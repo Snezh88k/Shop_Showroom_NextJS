@@ -1,6 +1,5 @@
-
-'use client'
-import React  from "react";
+"use client";
+import React from "react";
 
 import styles from "./page.module.scss";
 
@@ -8,37 +7,34 @@ import dataTest from "../../app/TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
 import Link from "next/link";
 
-import { useTranslation } from "../i18n";
+import { useTranslation } from "../i18n/client";
+
 import axios from "axios";
 
-export default async function Home({ params: { lng } }: any) {
-  const { t } = await useTranslation(lng);
+export default function Home({ params: { lng } }: any) {
+  const { t } = useTranslation(lng);
 
- 
-
-
-  
-    const fetchData = () => {
-      axios
+  const fetchData = () => {
+    axios
       .get(`/api/likes`)
       .then((response) => {
         console.log(response);
-        
       })
       .catch((err) => console.error(err));
   };
-      
-
 
   return (
     <div className={styles.wrapper}>
       {/* <button onClick={fetchData}>Fetch</button> */}
-      <h1>Все товары</h1>
+      <h1>{t("h_all_products")}</h1>
       <div className={styles.catalog_wraper}>
         {dataTest
           .sort((a, b) => (a.selectorWeight > b.selectorWeight ? 1 : -1))
           .map((product) => (
-            <Link href={`/${lng}/catalog/${product.category}/${product.id}`}      key={product.id}>
+            <Link
+              href={`/${lng}/catalog/${product.category}/${product.id}`}
+              key={product.id}
+            >
               <CardProduct
                 id={product.id}
                 src={product.images.main}
@@ -52,4 +48,3 @@ export default async function Home({ params: { lng } }: any) {
     </div>
   );
 }
-

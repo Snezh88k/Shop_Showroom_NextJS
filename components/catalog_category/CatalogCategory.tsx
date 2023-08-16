@@ -17,7 +17,7 @@ export default function CatalogCategory({t, lng}: CatalogCategoryProps) {
   return (
     <>
     <li>
-    <Link href={`/${lng}`}>{t("category_show_everything")}</Link>
+    <Link href={`/${lng}/catalog/all_products`}>{t("category_show_everything")}</Link>
   </li>
   <li>
     <Link href={`/${lng}/catalog/tops_shirts`}>{t("category_tops_and_shirts")}</Link>

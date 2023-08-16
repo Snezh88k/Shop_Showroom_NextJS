@@ -8,6 +8,13 @@
 
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 
+    .like {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 15;
+    }
+
     .description {
       position: absolute;
       z-index: 10;

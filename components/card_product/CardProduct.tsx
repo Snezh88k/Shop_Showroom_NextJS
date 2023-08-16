@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CardProduct.module.scss";
 import Image from "next/image";
+import Like from "../like/Like";
 
 interface CardProductProps {
   id: string;
@@ -19,6 +20,7 @@ export default function CardProduct({
 }: CardProductProps) {
   return (
     <div className={styles.wrapper}>
+      <Like className={styles.like} id={id} />
       <div className={styles.image_wrapper}>
         <Image
           src={src}

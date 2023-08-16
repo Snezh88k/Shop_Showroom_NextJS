@@ -18,6 +18,7 @@ import { fillStore } from "@/redux/slices/cartSlice";
 import { fallbackLng, languages } from "@/app/i18n/settings";
 import LangSelector from "../lang_selector/LangSelector";
 import MobileMenu from "../mobile_menu/MobileMenu";
+import { fillFavoriteStore } from "@/redux/slices/favoritesSlice";
 
 interface HeaderProps {
   t: any;
@@ -35,12 +36,16 @@ export default function Header({ t, lng }: HeaderProps) {
   useEffect(() => {
     const cartLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
     dispatch(fillStore(cartLocalStorage));
+    const favoritesLocalStorage = JSON.parse(
+      localStorage.getItem("favorite") || "[]"
+    );
+    dispatch(fillFavoriteStore(favoritesLocalStorage));
   }, []);
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.top_line}>
-        <MobileMenu  t={t} lng={lng}/>
+        <MobileMenu t={t} lng={lng} />
         <Link href={`/${lng}`}>
           <div className={styles.logo}>I AM</div>
         </Link>
@@ -76,16 +81,16 @@ export default function Header({ t, lng }: HeaderProps) {
             </div>
           </li>
           <li>
-            <Link href="/payment">{t("pay")}</Link>
+            <Link href={`/${lng}/payment`}>{t("pay")}</Link>
           </li>
           <li>
-            <Link href="/delivery">{t("delivery")}</Link>
+            <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
           </li>
           <li>
-            <Link href="/">{t("sale")}</Link>
+            <Link href={`/${lng}/`}>{t("sale")}</Link>
           </li>
           <li>
-            <Link href="/instagram">instagram</Link>
+            <Link href={`/${lng}/instagram`}>instagram</Link>
           </li>
         </ul>
       </nav>

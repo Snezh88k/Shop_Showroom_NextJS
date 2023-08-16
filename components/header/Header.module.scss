@@ -46,6 +46,8 @@
 
 .dropdown_menu_link {
   position: relative;
+  cursor: pointer;
+  
   .dropdown_menu {
     position: absolute;
     z-index: 10;
