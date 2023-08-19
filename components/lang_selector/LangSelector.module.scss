@@ -20,7 +20,7 @@ $option: #320a28;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; /* 24px */
+  line-height: 100%;
   text-transform: uppercase;
   option {
     color: inherit;
@@ -36,45 +36,57 @@ $option: #320a28;
   }
 }
 
-
-.wrapper{
+.wrapper {
   position: relative;
   cursor: pointer;
-
-  .select_lang{
+  z-index: 15;
+  .select_lang {
+    position: relative;
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    z-index: 11;
 
-    .arrow{
-   
-      margin-left: 5px;
+    &:hover {
+      color: rgb(110, 110, 110);
+    }
+
+    .arrow {
+      margin-left: 9px;
       transform: rotate(270deg);
-transition: 0.5s;
+      transition: 0.5s;
       &::after {
         content: "\276E";
         opacity: 1;
         color: rgba(0, 0, 0);
         font-size: 12px;
         font-family: "Zapf Dingbats" !important;
-    
-      
       }
     }
 
-  
-
-    span{
+    span {
       font-size: 10px;
     }
   }
-  
-  .list{
+
+  .list {
     padding: 2px;
-    border: 1px solid rgba(0, 0, 0, 0.315);
+    padding-top: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
     background-color: white;
     position: absolute;
-    left: -2px;
+    left: -4px;
+    top: -2px;
     flex-direction: column;
+    font-weight: 600;
+
+    span {
+      color: black;
+    }
+
+    span:hover {
+      color: rgb(110, 110, 110);
+    }
   }
 }

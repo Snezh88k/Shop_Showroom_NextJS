@@ -65,6 +65,14 @@
   .wrapper {
     border-radius: 5px;
 
+    .like {
+      top: 1px;
+      right: 1px;
+      svg {
+        transform: scale(0.8);
+      }
+    }
+
     .image_wrapper {
       width: 100px;
       height: 116px;
@@ -76,12 +84,16 @@
     }
 
     .description {
-      top: 68px;
+      bottom: 5px;
       left: 5px;
       gap: 2px;
       .category {
         font-size: 10px;
         color: rgba(255, 255, 255, 0.7);
+      }
+
+      .price {
+        font-size: 14px;
       }
     }
   }

@@ -1,7 +1,12 @@
 .wrapper {
-  padding-top: 80px;
+  padding-top: 30px;
   .empty_cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
     max-width: 289px;
+    margin: 0 auto;
     .bag_icon {
       width: 40px;
       height: 40px;
@@ -10,7 +15,7 @@
     h3 {
       color: rgba(0, 0, 0, 0.9);
       font-family: Inter;
-      font-size: 24px;
+      font-size: 28px;
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
@@ -42,13 +47,6 @@
 
 .full_cart_wrapper {
   position: relative;
-
-  h1 {
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
 
   .total {
     display: flex;

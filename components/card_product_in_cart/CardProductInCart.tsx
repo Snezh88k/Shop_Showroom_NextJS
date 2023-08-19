@@ -3,7 +3,7 @@ import styles from "./CardProductInCart.module.scss";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { removeItem } from "@/redux/slices/cartSlice";
-
+import Link from "next/link";
 interface CardProductInCartProps {
   // product: {
   //   id: string;
@@ -28,6 +28,7 @@ interface CardProductInCartProps {
     price: number;
     size: string;
     numberSize: any;
+    url: string;
   };
 }
 
@@ -43,14 +44,16 @@ export default function CardProductInCart({ product }: CardProductInCartProps) {
       {
         <div className={styles.wrapper}>
           <div className={styles.description_wrapper}>
-            <Image
-              src={product.image}
-              alt={product.id}
-              className={styles.product_image}
-              width={100}
-              height={100}
-              fill={false}
-            />
+            <Link href={product.url}>
+              <Image
+                src={product.image}
+                alt={product.id}
+                className={styles.product_image}
+                width={100}
+                height={100}
+                fill={false}
+              />
+            </Link>
             <div className={styles.info}>
               <span className={styles.name}>{product.name}</span>
               <div className={styles.size_wrapper}>

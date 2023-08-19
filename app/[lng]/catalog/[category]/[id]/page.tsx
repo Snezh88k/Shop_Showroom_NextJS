@@ -17,6 +17,7 @@ import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
 import { addItem } from "@/redux/slices/cartSlice";
 import { addFavorite } from "@/redux/slices/favoritesSlice";
+import clsx from "clsx";
 
 interface ProductProps {
   params: {
@@ -67,12 +68,6 @@ export default function page({ params }: ProductProps) {
   const addInFavorite = () => {
     const order = {
       id: params.id,
-      name: product?.name,
-      size: isSize,
-      price: product?.price,
-      image: product?.images.main,
-      count: 1,
-      url: currentUrl,
     };
 
     dispatch(addFavorite(order));
@@ -88,10 +83,17 @@ export default function page({ params }: ProductProps) {
         <div className={styles.wrapper}>
           <SliderInCard images={product?.images.other} />
           <div className={styles.desription}>
-            <h1 className={styles.name}>{product?.name}</h1>
-            <div className={styles.price}>
-              <span>{product?.price} ₾</span>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h1 className={styles.name}>{product?.name}</h1>
+              <span className={styles.price}>{product?.price} ₾</span>
             </div>
+
             <div className={styles.portraiture}>{product?.description}</div>
             <div className={styles.handmade}>
               <span></span>
@@ -110,7 +112,10 @@ export default function page({ params }: ProductProps) {
               <Button
                 text="Добавить в корзину"
                 children={<ShoppingBag />}
-                className={styles.buttonAddToCart}
+                className={clsx(
+                  styles.buttonAddToCart,
+                  successNotification ? styles.successfulAddition : ""
+                )}
                 onClick={() => addProductCart()}
               />
 
@@ -121,14 +126,6 @@ export default function page({ params }: ProductProps) {
                 onClick={() => addInFavorite()}
               />
             </div>
-          </div>
-          <div
-            className={styles.item_added}
-            style={
-              successNotification ? { display: "block" } : { display: "none" }
-            }
-          >
-            Товар добавлен в корзину!
           </div>
         </div>
       ) : (

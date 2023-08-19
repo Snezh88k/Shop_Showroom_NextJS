@@ -54,10 +54,10 @@ export default function Header({ t, lng }: HeaderProps) {
           <LangSelector lng={lng} t={t} />
           <Image src={findIcon} alt="find" />
 
-          <Link href="/favorites">
+          <Link href={`/${lng}/favorites`}>
             <Image src={heartsIcon} alt="hearts" />
           </Link>
-          <Link href="/cart">
+          <Link href={`/${lng}/cart`}>
             <CartIcon count={countInCart} />
           </Link>
         </div>
@@ -70,7 +70,8 @@ export default function Header({ t, lng }: HeaderProps) {
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
           >
-            {t("catalog")}
+            <Link href={`/${lng}`}> {t("catalog")}</Link>
+
             <div onClick={() => setVisible(false)}>
               <DropdownMenu
                 visible={visible}
@@ -87,7 +88,9 @@ export default function Header({ t, lng }: HeaderProps) {
             <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
           </li>
           <li>
-            <Link href={`/${lng}/`}>{t("sale")}</Link>
+            <Link href={`/${lng}/`} style={{ color: "#ff0099" }}>
+              {t("sale")}
+            </Link>
           </li>
           <li>
             <Link href={`/${lng}/instagram`}>instagram</Link>

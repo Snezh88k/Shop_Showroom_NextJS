@@ -12,19 +12,17 @@
 }
 
 .name {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .price {
   color: rgba(0, 0, 0, 0.9);
   font-family: Inter;
-  font-size: 32px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
-
-  margin-top: 15px;
 }
 
 .portraiture {
@@ -37,6 +35,8 @@
 
   margin-top: 28px;
   margin-bottom: 28px;
+
+  word-break: break-all;
 }
 
 .size_table {
@@ -61,22 +61,32 @@
       color: rgba(255, 255, 255, 1);
     }
 
-    &:active {
-      background: rgba(0, 0, 0, 0.7);
+    &:hover {
+      background: rgba(0, 0, 0, 1);
+    }
+
+    &.successfulAddition {
+      svg {
+        fill: #43a06c;
+        // filter: drop-shadow(0px 0px 2px rgb(149, 240, 89));
+      }
     }
   }
 
   .buttonAddToFavorite {
-    background: rgba(244, 244, 244, 1);
+    background: rgb(255 191 191);
     transition: 0.5s;
+
     svg {
-      fill: red;
+      fill: #ff0099;
+      filter: drop-shadow(0px 0px 1px rgb(255, 0, 149));
     }
     span {
-      color: rgba(0, 0, 0, 0.9);
+      color: white;
     }
-    &:active {
-      background: rgb(180, 180, 180);
+
+    &:hover {
+      background: rgb(255, 171, 171);
     }
   }
 }
