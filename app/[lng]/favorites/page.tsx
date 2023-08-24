@@ -15,6 +15,27 @@ interface Params {
   };
 }
 
+const products = dataTest as {
+  id: string;
+  langs: Record<
+    string,
+    {
+      name: string;
+      description: string;
+      compound: Record<string, string | undefined>[];
+    }
+  >;
+  article: string;
+  category: string;
+  price: number;
+  sale: number;
+  size: any;
+  images: {
+    main: string;
+    other: string[];
+  };
+}[];
+
 export default function page({ params: { lng } }: Params) {
   const { t } = useTranslation(lng, "favorites-page");
 
@@ -25,7 +46,7 @@ export default function page({ params: { lng } }: Params) {
       <h1>{t("title")}</h1>
       <div className={styles.catalog_wraper}>
         {favorites.map((product: any) =>
-          dataTest.map((productCatalog) => {
+          products.map((productCatalog) => {
             if (product.id === productCatalog.id) {
               return (
                 <Link
@@ -37,7 +58,10 @@ export default function page({ params: { lng } }: Params) {
                     src={productCatalog.images.main}
                     alt="Карточка"
                     price={productCatalog.price}
-                    category={productCatalog.name}
+                    category={productCatalog.langs?.[lng]?.name}
+                    lng={lng}
+                    salePrice={productCatalog.sale}
+                    t={t}
                   />
                 </Link>
               );
