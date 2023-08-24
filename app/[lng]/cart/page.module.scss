@@ -1,3 +1,5 @@
+@import "@/public/config_theme/config_theme.scss";
+
 .wrapper {
   padding-top: 30px;
   .empty_cart {
@@ -10,10 +12,10 @@
     .bag_icon {
       width: 40px;
       height: 40px;
-      fill: rgba(0, 0, 0, 0.3);
+      fill: white;
     }
     h3 {
-      color: rgba(0, 0, 0, 0.9);
+      color: $main-text-color;
       font-family: Inter;
       font-size: 28px;
       font-style: normal;
@@ -25,7 +27,7 @@
 
     span {
       display: inline-block;
-      color: rgba(0, 0, 0, 0.3);
+      color: $main-text-color;
       font-family: Inter;
       font-size: 16px;
       font-style: normal;
@@ -56,13 +58,13 @@
     padding-top: 24px;
 
     .title {
-      color: rgba(0, 0, 0, 0.9);
+      color: $main-text-color;
       font-size: 20px;
       font-weight: 500;
     }
 
     .price {
-      color: rgba(0, 0, 0, 0.9);
+      color: $main-text-color;
       font-size: 24px;
       font-weight: 600;
     }
@@ -74,7 +76,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.08);
     }
   }
   .ordering_button {
@@ -86,9 +88,13 @@
     align-items: center;
 
     border-radius: 6px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgb(56, 56, 56);
 
     margin-top: 40px;
+
+    &:hover {
+      background: rgba(77, 77, 77, 0.9);
+    }
 
     span {
       color: #fff;
@@ -96,7 +102,7 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
-      line-height: 100%; /* 14px */
+      line-height: 100%;
     }
   }
 }

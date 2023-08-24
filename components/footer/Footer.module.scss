@@ -1,3 +1,5 @@
+@import "@/public/config_theme/config_theme.scss";
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -12,14 +14,14 @@
     }
     span {
       font-size: 14px;
-      color: rgba(0, 0, 0, 0.363);
+      color: #d6d6d68e;
     }
   }
 
   .sections {
     display: flex;
     gap: 24px;
-    color: rgba(0, 0, 0, 0.6);
+    color: $main-text-color;
     font-size: 13px;
     font-weight: 600;
     line-height: 110%;
@@ -28,7 +30,7 @@
       cursor: pointer;
 
       &:hover {
-        color: rgba(0, 0, 0, 1);
+        color: $main-text-color-hover;
       }
     }
   }

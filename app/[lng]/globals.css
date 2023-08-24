@@ -101,6 +101,8 @@ body {
   height: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  background-color: #141414;
+  color: white;
 }
 
 body.close {
@@ -115,7 +117,7 @@ footer {
   margin-top: 100px;
   padding-bottom: 70px;
   padding-top: 20px;
-  border-top: solid 2px rgba(0, 0, 0, 0.08);
+  border-top: solid 2px rgba(255, 255, 255, 0.08);
 }
 
 a {

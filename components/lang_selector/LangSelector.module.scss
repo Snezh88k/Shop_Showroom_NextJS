@@ -58,7 +58,7 @@ $option: #320a28;
       &::after {
         content: "\276E";
         opacity: 1;
-        color: rgba(0, 0, 0);
+        color: white;
         font-size: 12px;
         font-family: "Zapf Dingbats" !important;
       }
@@ -74,7 +74,7 @@ $option: #320a28;
     padding-top: 20px;
     border: 2px solid rgba(0, 0, 0, 0.08);
     border-radius: 3px;
-    background-color: white;
+    background-color: rgb(255 255 255 / 12%);
     position: absolute;
     left: -4px;
     top: -2px;
@@ -82,7 +82,7 @@ $option: #320a28;
     font-weight: 600;
 
     span {
-      color: black;
+      color: white;
     }
 
     span:hover {

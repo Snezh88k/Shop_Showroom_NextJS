@@ -1,9 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 
-import Header from "@/components/header/Header";
 import { HeaderLan } from "../../components/header/client";
-import Footer from "@/components/footer/Footer";
+import { FooterLan } from "@/components/footer/index";
 
 import CartProvider from "../../redux/CartProvider";
 import clsx from "clsx";
@@ -49,7 +48,7 @@ export default function RootLayout({
           </header>
           <main className="main">{children}</main>
           <footer>
-            <Footer />
+            <FooterLan lng={lng} />
           </footer>
         </body>
       </CartProvider>

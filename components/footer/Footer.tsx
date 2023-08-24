@@ -2,8 +2,14 @@ import React from "react";
 
 import styles from "./Footer.module.scss";
 import Link from "next/link";
+import { useTranslation } from "@/app/i18n/client";
 
-export default function Footer() {
+interface FooterProps {
+  t: any;
+  lng: string;
+}
+
+export default function Footer({ t }: FooterProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.about}>
@@ -14,8 +20,15 @@ export default function Footer() {
       </div>
 
       <div className={styles.sections}>
-        <span>Публичная оферта</span>
-        <span>Возврат</span>
+        <Link
+          href={
+            "https://docs.google.com/document/d/e/2PACX-1vSnZ5BFaR7XbtnYOukBedWZ-olfISd58WsFfXbVmh4xLYuhW-PhnW6TC78kUERglA/pub?embedded=true"
+          }
+        >
+          <span>{t("offer")}</span>{" "}
+        </Link>
+
+        <span>{t("refund")}</span>
       </div>
     </div>
   );

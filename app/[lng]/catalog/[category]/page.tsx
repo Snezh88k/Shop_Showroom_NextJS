@@ -5,9 +5,32 @@ import dataTest from "../../../TestPropducts/products.json";
 import CardProduct from "@/components/card_product/CardProduct";
 import Link from "next/link";
 import { useTranslation } from "@/app/i18n";
+import { CardProductLan } from "@/components/card_product/client";
+
+const products = dataTest as {
+  id: string;
+  langs?: Record<
+    string,
+    {
+      name: string;
+      description: string;
+      compound: Record<string, string | undefined>[];
+    }
+  >;
+  article: string;
+  category: string;
+  price: number;
+  sale: number;
+  size: any;
+  images: {
+    main: string;
+    other: string[];
+  };
+}[];
 
 export default async function page({ params }: any) {
   const { t } = await useTranslation(params.lng);
+  const lng: string = params.lng;
 
   return (
     <div className={styles.wrapper}>
@@ -32,7 +55,7 @@ export default async function page({ params }: any) {
         ""
       )}
       <div className={styles.products}>
-        {dataTest
+        {products
           .sort((a, b) => {
             if (a.price < b.price) {
               return -1;
@@ -46,13 +69,15 @@ export default async function page({ params }: any) {
             if (product.category === params.category)
               return (
                 <Link href={`/catalog/${params.category}/${product.id}`}>
-                  <CardProduct
+                  <CardProductLan
                     id={product.id}
                     src={product.images.main}
                     alt="Карточка"
                     price={product.price}
-                    category={product.name}
+                    salePrice={product.sale}
+                    category={product.langs?.[lng]?.name}
                     key={product.id}
+                    lng={params.lng}
                   />
                 </Link>
               );

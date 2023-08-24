@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./CardProduct.module.scss";
 import Image from "next/image";
 import Like from "../like/Like";
+import clsx from "clsx";
 
 interface CardProductProps {
   id: string;
@@ -9,6 +10,9 @@ interface CardProductProps {
   alt: string;
   price: number;
   category: string;
+  lng: string;
+  t: any;
+  salePrice: number;
 }
 
 export default function CardProduct({
@@ -17,6 +21,9 @@ export default function CardProduct({
   alt,
   price,
   category,
+  lng,
+  t,
+  salePrice,
 }: CardProductProps) {
   return (
     <div className={styles.wrapper}>
@@ -33,7 +40,11 @@ export default function CardProduct({
       </div>
 
       <div className={styles.description}>
-        <span className={styles.price}>{price} ₾</span>
+        <span className={styles.price_sale}>{salePrice} ₾</span>
+
+        <span className={clsx(styles.price, salePrice ? styles.through : "")}>
+          {price} ₾
+        </span>
         <span className={styles.category}>{category}</span>
       </div>
     </div>

@@ -5,9 +5,6 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 
-import findIcon from "../../public/menu_icon/search.svg";
-import heartsIcon from "../../public/menu_icon/hearts.svg";
-
 import DropdownMenu from "../dropdown_menu/DropdownMenu";
 import { useEffect, useState } from "react";
 
@@ -19,6 +16,8 @@ import { fallbackLng, languages } from "@/app/i18n/settings";
 import LangSelector from "../lang_selector/LangSelector";
 import MobileMenu from "../mobile_menu/MobileMenu";
 import { fillFavoriteStore } from "@/redux/slices/favoritesSlice";
+import HeartsIcon from "@/public/menu_icon/hearts";
+import FindIcon from "@/public/menu_icon/Find_icon";
 
 interface HeaderProps {
   t: any;
@@ -52,10 +51,10 @@ export default function Header({ t, lng }: HeaderProps) {
 
         <div className={styles.quick_panel}>
           <LangSelector lng={lng} t={t} />
-          <Image src={findIcon} alt="find" />
+          <FindIcon />
 
-          <Link href={`/${lng}/favorites`}>
-            <Image src={heartsIcon} alt="hearts" />
+          <Link href={`/${lng}/favorites`} className={styles.hearts_icon}>
+            <HeartsIcon />
           </Link>
           <Link href={`/${lng}/cart`}>
             <CartIcon count={countInCart} />
@@ -88,7 +87,13 @@ export default function Header({ t, lng }: HeaderProps) {
             <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
           </li>
           <li>
-            <Link href={`/${lng}/`} style={{ color: "#ff0099" }}>
+            <Link
+              href={`/${lng}/`}
+              style={{
+                color: "#ff0099",
+                filter: "drop-shadow(0px 0px 2px rgb(255, 0, 149))",
+              }}
+            >
               {t("sale")}
             </Link>
           </li>

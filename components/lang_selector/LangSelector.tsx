@@ -6,7 +6,7 @@ import { Trans } from "react-i18next";
 import { languages } from "@/app/i18n/settings";
 import Link from "next/link";
 
-import { useClickAway } from "react-use";
+import { useClickAway, useLocation } from "react-use";
 
 export default function LangSelector({ t, lng }: { t: any; lng: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +20,8 @@ export default function LangSelector({ t, lng }: { t: any; lng: string }) {
   useClickAway(ref, () => {
     setIsOpen(false);
   });
+
+  const location = useLocation();
 
   return (
     <div className={styles.wrapper} ref={ref}>
@@ -43,7 +45,7 @@ export default function LangSelector({ t, lng }: { t: any; lng: string }) {
               <span key={l}>
                 {index > 0}
                 <Link
-                  href={`/${l}/`}
+                  href={`/${l}/${location?.pathname?.slice(3)}`}
                   style={{ textTransform: "uppercase", zIndex: "10" }}
                 >
                   {l}

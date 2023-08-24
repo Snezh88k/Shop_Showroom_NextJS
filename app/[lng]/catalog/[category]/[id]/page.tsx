@@ -18,22 +18,47 @@ import Compound from "@/components/compound/Compound";
 import { addItem } from "@/redux/slices/cartSlice";
 import { addFavorite } from "@/redux/slices/favoritesSlice";
 import clsx from "clsx";
+import { useTranslation } from "@/app/i18n/client";
 
 interface ProductProps {
   params: {
     id: string;
+    lng: string;
   };
 }
 
+const products = dataTest as {
+  id: string;
+  langs?: Record<
+    string,
+    {
+      name: string;
+      description: string;
+      compound: Record<string, string | undefined>[];
+    }
+  >;
+  article: string;
+  category: string;
+  price: number;
+  sale: number;
+  size: any;
+  images: {
+    main: string;
+    other: string[];
+  };
+}[];
 export default function page({ params }: ProductProps) {
   const dispatch = useDispatch();
+  const lng = params.lng;
+  const id = params.id;
+  const { t } = useTranslation(lng, "favorites-page");
 
   const [isSize, setSize] = useState<string | null>();
   const [sizeSelected, setSizeSelected] = useState(false);
   const [successNotification, setSuccessNotification] = useState(false);
 
-  const product = dataTest.find((product) => {
-    return product.id === params.id;
+  const product = products.find((goods) => {
+    return goods.id === id;
   });
 
   const [currentUrl, setCurrentUrl] = useState<string | null>(null);
@@ -50,8 +75,8 @@ export default function page({ params }: ProductProps) {
     }
 
     const order = {
-      id: params.id,
-      name: product?.name,
+      id: id,
+      name: product?.langs?.[lng].name,
       size: isSize,
       price: product?.price,
       image: product?.images.main,
@@ -67,7 +92,7 @@ export default function page({ params }: ProductProps) {
 
   const addInFavorite = () => {
     const order = {
-      id: params.id,
+      id: id,
     };
 
     dispatch(addFavorite(order));
@@ -78,10 +103,10 @@ export default function page({ params }: ProductProps) {
   };
 
   return (
-    <>
+    <div>
       {product ? (
         <div className={styles.wrapper}>
-          <SliderInCard images={product?.images.other} />
+          <SliderInCard images={product.images.other} />
           <div className={styles.desription}>
             <div
               style={{
@@ -90,16 +115,18 @@ export default function page({ params }: ProductProps) {
                 alignItems: "center",
               }}
             >
-              <h1 className={styles.name}>{product?.name}</h1>
-              <span className={styles.price}>{product?.price} ₾</span>
+              <h1 className={styles.name}>{product.langs?.[lng].name}</h1>
+              <span className={styles.price}>{product.price} ₾</span>
             </div>
 
-            <div className={styles.portraiture}>{product?.description}</div>
+            <div className={styles.portraiture}>
+              {product?.langs?.[lng].description}
+            </div>
             <div className={styles.handmade}>
               <span></span>
               <span></span>
             </div>
-            <Compound compound={dataTest[0].compound} />
+            <Compound compound={product.langs?.[lng].compound} />
 
             <SizeTable
               sizes={product?.size}
@@ -110,7 +137,7 @@ export default function page({ params }: ProductProps) {
 
             <div className={styles.buttons}>
               <Button
-                text="Добавить в корзину"
+                text={t("add_cart")}
                 children={<ShoppingBag />}
                 className={clsx(
                   styles.buttonAddToCart,
@@ -120,7 +147,7 @@ export default function page({ params }: ProductProps) {
               />
 
               <Button
-                text="Добавить в избранное"
+                text={t("add_favorites")}
                 children={<HeartsIcon />}
                 className={styles.buttonAddToFavorite}
                 onClick={() => addInFavorite()}
@@ -133,6 +160,6 @@ export default function page({ params }: ProductProps) {
           <h1 className={styles.no_found_title}>{"Товар не найден :("}</h1>
         </div>
       )}
-    </>
+    </div>
   );
 }

@@ -1,9 +1,13 @@
+@import "../../public/config_theme/config_theme.scss";
+
 .wrapper {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  background-color: $main-bg;
+
   h1 {
-    color: rgba(0, 0, 0, 0.9);
+    color: $main-h1-color;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;

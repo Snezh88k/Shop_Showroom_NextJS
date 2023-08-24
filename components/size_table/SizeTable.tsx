@@ -39,13 +39,7 @@ export default function SizeTable({
   };
 
   return (
-    <div
-      className={clsx(
-        styles.wrapper,
-
-        className
-      )}
-    >
+    <div className={clsx(styles.wrapper, className)}>
       <h4>Размер</h4>
       <div className={clsx(styles.sizes, sizeSelected ? styles.shake : "")}>
         {sizes?.map((size, index) => (

@@ -7,13 +7,22 @@ import CardProduct from "@/components/card_product/CardProduct";
 import dataTest from "../../TestPropducts/products.json";
 
 import styles from "./page.module.scss";
+import { useTranslation } from "@/app/i18n/client";
 
-export default function page() {
+interface Params {
+  params: {
+    lng: string;
+  };
+}
+
+export default function page({ params: { lng } }: Params) {
+  const { t } = useTranslation(lng, "favorites-page");
+
   const favorites = useSelector((state: any) => state.favorites.items);
 
   return (
     <div className={styles.wrapper}>
-      <h1>Избранное</h1>
+      <h1>{t("title")}</h1>
       <div className={styles.catalog_wraper}>
         {favorites.map((product: any) =>
           dataTest.map((productCatalog) => {

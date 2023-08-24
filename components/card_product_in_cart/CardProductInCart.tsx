@@ -1,26 +1,13 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import React from "react";
 import styles from "./CardProductInCart.module.scss";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { removeItem } from "@/redux/slices/cartSlice";
 import Link from "next/link";
-interface CardProductInCartProps {
-  // product: {
-  //   id: string;
-  //   name: string;
-  //   category: string;
-  //   price: number;
-  //   description: string;
-  //   sale: boolean;
-  //   compound: any;
-  //   size: any;
-  //   images: {
-  //     main: string;
-  //     other: string[];
-  //   };
-  // };
-  // selectSize: number;
 
+interface CardProductInCartProps {
   product: {
     id: string;
     name: string;
@@ -30,9 +17,16 @@ interface CardProductInCartProps {
     numberSize: any;
     url: string;
   };
+
+  lng: string;
+  t: any;
 }
 
-export default function CardProductInCart({ product }: CardProductInCartProps) {
+export default function CardProductInCart({
+  product,
+  lng,
+  t,
+}: CardProductInCartProps) {
   const dispatch = useDispatch();
 
   const removeProduct = () => {
@@ -57,8 +51,12 @@ export default function CardProductInCart({ product }: CardProductInCartProps) {
             <div className={styles.info}>
               <span className={styles.name}>{product.name}</span>
               <div className={styles.size_wrapper}>
-                <span>Размер:</span>
+                <span>{t("size")}: </span>
                 <span className={styles.size}>{product.size}</span>
+              </div>
+              <div className={styles.article_wrapper}>
+                <span>{t("article")}: </span>
+                <span className={styles.article}>{product.id}</span>
               </div>
             </div>
           </div>

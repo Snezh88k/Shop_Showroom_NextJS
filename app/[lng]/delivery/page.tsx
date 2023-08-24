@@ -1,24 +1,21 @@
 import React from "react";
 import styles from "./page.module.scss";
+import { useTranslation } from "@/app/i18n";
 
-export default function page() {
+interface Params {
+  params: {
+    lng: string;
+  };
+}
+
+export default async function page({ params: { lng } }: Params) {
+  const { t } = await useTranslation(lng, "delivery-page");
   return (
     <div className={styles.wrapper}>
-      <h1>ДОСТАВКА</h1>
-      <p>
-        1. Как быстро привезут заказ? Мы осуществляем доставку на следующий день
-        после оформления заказа. Предварительно согласуем с Вами удобное время
-        доставки.
-      </p>
-      <p>
-        2. Можно ли примерить одежду перед покупкой? Конечно! У вас есть
-        возможность примерить вещи перед покупкой и выбрать подходящий размер.
-      </p>
-
-      <p>
-        3. Какова стоимость доставки? Стоимость доставки составляет 5 ₾.
-        Доставка будет бесплатной, если сумма покупки превышает 50 ₾.
-      </p>
+      <h1>{t("title")}</h1>
+      <p>{t("first_point")}</p>
+      <p>{t("second_point")}</p>
+      <p>{t("third_point")}</p>
     </div>
   );
 }

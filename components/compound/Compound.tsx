@@ -8,7 +8,7 @@ type Property = {
 };
 
 interface CompoundProps {
-  compound: Property[];
+  compound?: Property[];
   className?: string;
 }
 
@@ -16,10 +16,10 @@ export default function Compound({ compound, className }: CompoundProps) {
   return (
     <div className={clsx(styles.wrapper, className)}>
       <div className={styles.compound}>
-        {compound.map((property, index) => {
+        {compound?.map((property, index) => {
           for (let key in property) {
             return (
-              <div key={index}>
+              <div key={index} className={styles.line_wrapper}>
                 <span className={styles.property}>{key}</span>
                 <span className={styles.property_dots}>
                   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

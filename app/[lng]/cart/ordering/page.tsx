@@ -2,7 +2,6 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Head from "next/head";
 
 import styles from "./page.module.scss";
 
@@ -10,8 +9,17 @@ import Image from "next/image";
 import { clearItems } from "@/redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
 import Link from "next/link";
+import { useTranslation } from "@/app/i18n/client";
 
-export default function page({ repo }: any) {
+interface Params {
+  params: {
+    lng: string;
+  };
+}
+
+export default function page({ params: { lng } }: Params) {
+  const { t } = useTranslation(lng);
+
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
   const [storageCart, setStorageCart] = useState<any[]>([]);
@@ -69,21 +77,21 @@ export default function page({ repo }: any) {
 
   return (
     <>
-      <title>Оформление заказа</title>
+      <title>{t("making_an_order")}</title>
       <div className={styles.wrapper}>
         <div
           className={styles.order_processed}
           style={isVisible ? { display: "flex" } : { display: "none" }}
         >
           <div className={styles.modal_window}>
-            <span>Заказ успешно оформлен.</span>
-            <span>Скоро с вами свяжется менеджер для подтверждения.</span>
+            <span>{t("order_successfully")}</span>
+            <span>{t("manager_contact")}</span>
             <Link href={`/`}>
-              <span className={styles.neon_text}>Вернуться на главную</span>
+              <span className={styles.neon_text}>{t("back_main_page")}</span>
             </Link>
           </div>
         </div>
-        <h1>Оформление заказа</h1>
+        <h1>{t("making_an_order")}</h1>
         <div
           style={{ display: "flex", justifyContent: "space-between" }}
           className={styles.section_wrapper}
@@ -93,12 +101,12 @@ export default function page({ repo }: any) {
             onSubmit={(e) => sendMessage(e)}
           >
             <label className="form-name">
-              Имя:
+              {t("name")}:
               <input type="text" name="name" className="form-name" required />
             </label>
 
             <label className="form-tell">
-              Телефон:
+              {t("tel")}:
               <input type="tel" name="tel" className="form-tell" required />
             </label>
 
@@ -113,7 +121,7 @@ export default function page({ repo }: any) {
               />
             </label>
             <label className="form-address">
-              Адрес:
+              {t("address")}:
               <input
                 type="text"
                 name="address"
@@ -123,14 +131,15 @@ export default function page({ repo }: any) {
             </label>
 
             <button
+              className={styles.submit_button}
               type="submit"
               disabled={storageCart.length === 0 ? true : false}
             >
-              Отправить
+              {t("to_send")}
             </button>
           </form>
           <div className={styles.order_info}>
-            <h3>Ваш заказ</h3>
+            <h3>{t("your_order")}</h3>
             <div className={styles.image_carousel}>
               {storageCart.map((item, index) => {
                 return (
@@ -147,10 +156,11 @@ export default function page({ repo }: any) {
             </div>
 
             <span className={styles.total_count}>
-              Товаров к оформлению: <b>{storageCart.length}</b>
+              {t("goods_for_registration")}
+              <b>{storageCart.length}</b>
             </span>
             <span className={styles.total_price}>
-              <span>Итого</span> {totalPrice} ₾
+              <span> {t("total")}</span> {totalPrice} ₾
             </span>
           </div>
         </div>

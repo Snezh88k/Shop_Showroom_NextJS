@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import CatalogCategory from "./CatalogCategory";
 import { useTranslation } from "../../app/i18n/client";

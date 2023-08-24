@@ -27,8 +27,8 @@ export default function Size({
       onClick={onClick}
       disabled={availability === false ? true : false}
     >
-      <span className={styles.rus_size}>{rus}</span>
-      <span className={styles.int_size}>{int}</span>
+      {rus ? <span className={styles.size}>{rus}</span> : null}
+      {int ? <span className={styles.size}>{int}</span> : null}
     </button>
   );
 }

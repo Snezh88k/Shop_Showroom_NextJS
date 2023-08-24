@@ -1,3 +1,5 @@
+@import "@/public/config_theme/config_theme.scss";
+
 .wrapper {
   max-width: 400px;
   overflow: hidden;
@@ -16,23 +18,25 @@
       font-weight: 600;
       line-height: 100%;
       white-space: nowrap;
-
+      .line_wrapper {
+        white-space: nowrap;
+      }
       .property {
         margin-right: 8px;
-        color: rgba(0, 0, 0, 0.3);
+        color: $main-text-color;
       }
 
       .property_dots {
-        color: rgba(0, 0, 0, 0.15);
+        color: rgba(255, 255, 255, 0.15);
       }
 
       .value {
         position: absolute;
-        background-color: white;
+        background-color: $main-bg;
         right: 0;
         padding-left: 4px;
 
-        color: rgba(0, 0, 0, 0.6);
+        color: $main-text-color;
       }
     }
   }
