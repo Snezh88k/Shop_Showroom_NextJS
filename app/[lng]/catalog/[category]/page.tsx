@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 
 import dataTest from "../../../TestPropducts/products.json";
-import CardProduct from "@/components/card_product/CardProduct";
+
 import Link from "next/link";
 import { useTranslation } from "@/app/i18n";
 import { CardProductLan } from "@/components/card_product/client";
@@ -26,6 +26,7 @@ const products = dataTest as {
     main: string;
     other: string[];
   };
+  selectorWeight: number;
 }[];
 
 export default async function page({ params }: any) {
@@ -34,6 +35,12 @@ export default async function page({ params }: any) {
 
   return (
     <div className={styles.wrapper}>
+      {params.category === "all_products" ? (
+        <h1>{t("category_show_everything")}</h1>
+      ) : (
+        ""
+      )}
+
       {params.category === "tops_shirts" ? (
         <h1>{t("category_tops_and_shirts")}</h1>
       ) : (
@@ -55,6 +62,26 @@ export default async function page({ params }: any) {
         ""
       )}
       <div className={styles.products}>
+        {params.category === "all_products" &&
+          products
+            .sort((a, b) => (a.selectorWeight > b.selectorWeight ? 1 : -1))
+            .map((product) => (
+              <Link
+                href={`/${lng}/catalog/${product.category}/${product.id}`}
+                key={product.id}
+              >
+                <CardProductLan
+                  id={product.id}
+                  src={product.images.main}
+                  alt="Карточка"
+                  price={product.price}
+                  salePrice={product.sale}
+                  category={product.langs?.[lng]?.name}
+                  lng={lng}
+                />
+              </Link>
+            ))}
+
         {products
           .sort((a, b) => {
             if (a.price < b.price) {
@@ -66,7 +93,7 @@ export default async function page({ params }: any) {
             return a.article > b.article ? -1 : 1;
           })
           .map((product) => {
-            if (product.category === params.category)
+            if (product.category === params.category) {
               return (
                 <Link href={`/catalog/${params.category}/${product.id}`}>
                   <CardProductLan
@@ -81,6 +108,7 @@ export default async function page({ params }: any) {
                   />
                 </Link>
               );
+            }
           })}
       </div>
     </div>

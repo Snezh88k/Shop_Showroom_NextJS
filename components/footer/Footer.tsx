@@ -22,8 +22,9 @@ export default function Footer({ t }: FooterProps) {
       <div className={styles.sections}>
         <Link
           href={
-            "https://docs.google.com/document/d/e/2PACX-1vSnZ5BFaR7XbtnYOukBedWZ-olfISd58WsFfXbVmh4xLYuhW-PhnW6TC78kUERglA/pub?embedded=true"
+            "https://docs.google.com/document/d/e/2PACX-1vSMOlDe7jWCQtCxY_WYTFqwja1XnBa4k-qUfLnfw-8WPWhBGxIYwzJDNKj_D1064-_Q51wTGYSBsYnk/pub?embedded=true"
           }
+          target="_blank"
         >
           <span>{t("offer")}</span>{" "}
         </Link>

@@ -27,6 +27,8 @@
   "refund": "Refund",
   "add_cart": "Add to cart",
   "add_favorites": "Add to favorites",
+  "delete_favorites": "Delete to favorites",
   "size": "Size",
-  "article": "Article"
+  "article": "Article",
+  "hits_this_sizon": "#hits of this season"
 }

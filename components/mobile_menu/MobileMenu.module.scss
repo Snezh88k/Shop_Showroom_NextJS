@@ -1,3 +1,5 @@
+@import "@/public/config_theme/config_theme.scss";
+
 .wrapper {
   display: none;
   -webkit-tap-highlight-color: transparent;
@@ -18,12 +20,12 @@
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: wheat;
+    background-color: #222222;
     display: flex;
     flex-direction: column;
     padding-top: 30px;
 
-    color: rgba(0, 0, 0, 0.9);
+    color: $main-text-color;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -31,7 +33,7 @@
     cursor: pointer;
 
     & > li {
-      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 2px solid rgba(129, 129, 129, 0.308);
       padding-bottom: 10px;
     }
 
@@ -42,7 +44,7 @@
       ul {
         transition: 1s;
         padding: 15px 0 5px 0px;
-        color: rgba(0, 0, 0, 0.6);
+        color: $main-text-color;
         font-size: 16px;
       }
     }

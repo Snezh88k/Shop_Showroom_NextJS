@@ -29,7 +29,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "pages/index.js",
-    "components/text_slider/testSlider.jsx"
-, "app/api/likes/route.js"  ],
+    "components/text_slider/testSlider.jsx",
+    "app/api/likes/route.js",
+    "components/main_slider/MainSlider.jsx"
+  ],
   "exclude": ["node_modules"]
 }

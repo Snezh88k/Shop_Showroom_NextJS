@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import SliderInCard from "../../../../../components/slider_in_card/SliderInCard";
 
@@ -16,7 +16,7 @@ import dataTest from "../../../../TestPropducts/products.json";
 import SizeTable from "@/components/size_table/SizeTable";
 import Compound from "@/components/compound/Compound";
 import { addItem } from "@/redux/slices/cartSlice";
-import { addFavorite } from "@/redux/slices/favoritesSlice";
+import { addFavorite, removeFavorite } from "@/redux/slices/favoritesSlice";
 import clsx from "clsx";
 import { useTranslation } from "@/app/i18n/client";
 
@@ -49,6 +49,18 @@ const products = dataTest as {
 }[];
 export default function page({ params }: ProductProps) {
   const dispatch = useDispatch();
+  const favorites = useSelector((state: any) => state.favorites.items);
+
+  const [isFavorites, setIsFavorites] = useState(false);
+
+  useEffect(() => {
+    if (favorites.find((product: any) => product.id === params.id)) {
+      setIsFavorites(true);
+    } else {
+      setIsFavorites(false);
+    }
+  }, [favorites]);
+
   const lng = params.lng;
   const id = params.id;
   const { t } = useTranslation(lng, "favorites-page");
@@ -95,7 +107,8 @@ export default function page({ params }: ProductProps) {
       id: id,
     };
 
-    dispatch(addFavorite(order));
+    if (isFavorites) dispatch(removeFavorite(order));
+    else dispatch(addFavorite(order));
   };
 
   const changeSize = (size?: string | null) => {
@@ -147,7 +160,7 @@ export default function page({ params }: ProductProps) {
               />
 
               <Button
-                text={t("add_favorites")}
+                text={isFavorites ? t("delete_favorites") : t("add_favorites")}
                 children={<HeartsIcon />}
                 className={styles.buttonAddToFavorite}
                 onClick={() => addInFavorite()}

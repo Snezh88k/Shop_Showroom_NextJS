@@ -86,16 +86,8 @@ export default function Header({ t, lng }: HeaderProps) {
           <li>
             <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
           </li>
-          <li>
-            <Link
-              href={`/${lng}/`}
-              style={{
-                color: "#ff0099",
-                filter: "drop-shadow(0px 0px 2px rgb(255, 0, 149))",
-              }}
-            >
-              {t("sale")}
-            </Link>
+          <li className={styles.sale}>
+            <Link href={`/${lng}/`}>{t("sale")}</Link>
           </li>
           <li>
             <Link href={`/${lng}/instagram`}>instagram</Link>

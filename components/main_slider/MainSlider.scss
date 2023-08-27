@@ -1,0 +1,22 @@
+.main_slider__wrapper {
+  position: relative;
+
+  .main_slider__title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 30px;
+  }
+  .main_slider {
+    img {
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .slick-slide {
+      div {
+        height: 515px;
+      }
+    }
+  }
+}
