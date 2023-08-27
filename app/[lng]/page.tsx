@@ -51,15 +51,9 @@ export default async function Home({ params: { lng } }: any) {
   return (
     <div className={styles.wrapper}>
       {/* <button onClick={fetchData}>Fetch</button> */}
-      <div
-        style={{
-          display: "flex",
-          gap: "20px",
-          justifyContent: "space-between",
-        }}
-      >
-        <div className={styles.first_column}>
-          {/* <div className={styles.message}>
+
+      <div className={styles.first_column}>
+        {/* <div className={styles.message}>
             <Image src={photo} width={100} height={100} alt="photo" />
             <p>
               <i>
@@ -71,34 +65,11 @@ export default async function Home({ params: { lng } }: any) {
             </p>
           </div> */}
 
-          <div className={styles.sale}>SALE 20% OFF ALL</div>
-        </div>
-        <div style={{ width: "515px" }}>
-          <MainSlider />
-        </div>
+        <div className={styles.sale}>SALE 20% OFF ALL</div>
       </div>
-      {/* <h1>{t("h_all_products")}</h1> */}
-
-      {/* <div className={styles.catalog_wraper}>
-        {products
-          .sort((a, b) => (a.selectorWeight > b.selectorWeight ? 1 : -1))
-          .map((product) => (
-            <Link
-              href={`/${lng}/catalog/${product.category}/${product.id}`}
-              key={product.id}
-            >
-              <CardProductLan
-                id={product.id}
-                src={product.images.main}
-                alt="Карточка"
-                price={product.price}
-                salePrice={product.sale}
-                category={product.langs?.[lng]?.name}
-                lng={lng}
-              />
-            </Link>
-          ))}
-      </div> */}
+      <div className={styles.slider_wrapper}>
+        <MainSlider />
+      </div>
     </div>
   );
 }
