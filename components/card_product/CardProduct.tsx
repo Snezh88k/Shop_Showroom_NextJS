@@ -29,7 +29,14 @@ export default function CardProduct({
     <div className={styles.wrapper}>
       <Like className={styles.like} id={id} />
       <div className={styles.image_wrapper}>
-        <Image src={src} alt={alt} width={330} height={440} quality={100} />
+        <Image
+          src={src}
+          alt={alt}
+          className={styles.product_image}
+          width={330}
+          height={440}
+          quality={100}
+        />
       </div>
 
       <div className={styles.description}>
