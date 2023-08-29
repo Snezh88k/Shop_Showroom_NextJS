@@ -153,10 +153,11 @@ html {
 }
 body {
   height: 100%;
-  max-width: 1024px;
+  max-width: 1054px;
   margin: 0 auto;
   background-color: #141414;
   color: white;
+  padding: 0 15px 0 15px;
 }
 
 body.close {

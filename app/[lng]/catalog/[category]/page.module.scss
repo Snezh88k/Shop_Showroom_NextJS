@@ -1,26 +1,23 @@
 @import "@/public/config_theme/config_theme.scss";
 
-@media screen and (max-width: 1920px) {
-  .wrapper {
-    padding-top: 30px;
+.wrapper {
+  padding-top: 30px;
 
-    .products {
-      margin-top: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-    }
-    h1 {
-      $main-text-color: #e1e3e6;
-      font-family: Inter;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 100%;
-      text-transform: uppercase;
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 17px;
+  }
+  h1 {
+    $main-text-color: #e1e3e6;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
 
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
   }
 }
 
@@ -28,16 +25,16 @@
   .wrapper {
     width: 100%;
     padding: 15px 15px 0 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     .products {
-      width: 330px;
-      gap: 10px;
-      justify-content: center;
-      margin: 0 auto;
+      // width: 330px;
+      // align-items: center;
     }
 
     h1 {
-      margin-left: 10px;
     }
   }
 }

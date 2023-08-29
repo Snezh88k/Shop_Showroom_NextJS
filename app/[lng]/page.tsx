@@ -9,10 +9,7 @@ import Link from "next/link";
 import { useTranslation } from "../i18n";
 
 import axios from "axios";
-import MainSlider from "@/components/main_slider/MainSlider";
-
-import photo from "@/public/photo.jpg";
-import Image from "next/image";
+import { MainSliderClient } from "@/components/main_slider/client";
 
 const products = dataTest as {
   id: string;
@@ -65,10 +62,10 @@ export default async function Home({ params: { lng } }: any) {
             </p>
           </div> */}
 
-        <div className={styles.sale}>SALE 20% OFF ALL</div>
+        <div className={styles.sale}>SALE 20% OFF FIRST ORDER</div>
       </div>
       <div className={styles.slider_wrapper}>
-        <MainSlider />
+        <MainSliderClient lng={lng} />
       </div>
     </div>
   );

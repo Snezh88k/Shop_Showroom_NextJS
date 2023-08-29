@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 
 import styles from "./MobileMenu.module.scss";
 import BurgerMenuIcon from "../burger_menu_icon/BurgerMenuIcon";
-import {CatalogCategoryLan} from "../catalog_category/client";
+import { CatalogCategoryLan } from "../catalog_category/client";
+import { useClickAway } from "react-use";
 
 interface MobileMenuProps {
   t: any;
   lng: string;
 }
 
-export default function MobileMenu({t, lng}: MobileMenuProps) {
+export default function MobileMenu({ t, lng }: MobileMenuProps) {
   const [visible, setVisible] = useState(false);
 
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -29,8 +30,16 @@ export default function MobileMenu({t, lng}: MobileMenuProps) {
       setHamburgerOpen(false);
     }
   };
+
+  const ref = useRef(null);
+
+  useClickAway(ref, () => {
+    setHamburgerOpen(false);
+    false;
+  });
+
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={ref}>
       <div onClick={() => setHamburgerOpen(!hamburgerOpen)}>
         <BurgerMenuIcon isOpen={hamburgerOpen} />
       </div>
@@ -50,7 +59,7 @@ export default function MobileMenu({t, lng}: MobileMenuProps) {
             style={visible ? { display: "block" } : { display: "none" }}
             onClick={(e) => closeCatalog(e)}
           >
-            <CatalogCategoryLan   lng={lng}/>
+            <CatalogCategoryLan lng={lng} />
           </ul>
         </li>
 

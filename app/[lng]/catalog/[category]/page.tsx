@@ -35,11 +35,7 @@ export default async function page({ params }: any) {
 
   return (
     <div className={styles.wrapper}>
-      {params.category === "all_products" ? (
-        <h1>{t("category_show_everything")}</h1>
-      ) : (
-        ""
-      )}
+      {params.category === "all_products" ? <h1>{t("h_all_products")}</h1> : ""}
 
       {params.category === "tops_shirts" ? (
         <h1>{t("category_tops_and_shirts")}</h1>

@@ -5,10 +5,21 @@
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    width: fit-content;
     cursor: pointer;
 
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    .image_wrapper {
+      position: relative;
+      border-radius: 5px;
+      transition: 1s;
+      max-width: 330px;
+      width: 100%;
+      .product_image {
+        border-radius: 5px;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
 
     .like {
       position: absolute;
@@ -66,24 +77,8 @@
       .price_sale {
         font-size: 25px;
         color: #f93c00;
-        // filter: drop-shadow(0px 0px 1px rgb(255, 0, 149));
         font-weight: 600;
         margin-left: 4px;
-      }
-    }
-
-    .image_wrapper {
-      border-radius: 20px;
-      width: 330px;
-      height: 440px;
-      object-fit: cover;
-      transition: 1s;
-
-      .product_image {
-        object-fit: cover;
-      }
-      &:hover {
-        transform: scale(1.05);
       }
     }
   }
@@ -102,12 +97,12 @@
     }
 
     .image_wrapper {
-      width: 100px;
-      height: 116px;
+      // width: 100px;
+      // height: 116px;
 
       .product_image {
-        width: 100px;
-        height: 116px;
+        // width: 100px;
+        // height: 116px;
       }
     }
 
