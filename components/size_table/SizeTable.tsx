@@ -18,6 +18,8 @@ interface SizeTableProps {
   className?: string;
   onClick: (size?: string | null) => void;
   sizeSelected: boolean;
+  t: any;
+  lng: string;
 }
 
 export default function SizeTable({
@@ -25,6 +27,8 @@ export default function SizeTable({
   className,
   onClick,
   sizeSelected,
+  t,
+  lng,
 }: SizeTableProps) {
   const [isSelect, setIsSelect] = useState<string | null>();
 
@@ -40,7 +44,7 @@ export default function SizeTable({
 
   return (
     <div className={clsx(styles.wrapper, className)}>
-      <h4>Размер</h4>
+      <h4>{t("size")}</h4>
       <div className={clsx(styles.sizes, sizeSelected ? styles.shake : "")}>
         {sizes?.map((size, index) => (
           <Size

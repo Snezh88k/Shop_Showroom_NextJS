@@ -148,6 +148,8 @@ export default function page({ params }: ProductProps) {
               onClick={changeSize}
               sizeSelected={sizeSelected ? true : false}
               className={styles.size_table}
+              t={t}
+              lng={lng}
             />
 
             <div className={styles.buttons}>
