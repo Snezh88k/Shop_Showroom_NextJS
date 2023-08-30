@@ -50,7 +50,7 @@ export default function page({ params: { lng } }: Params) {
             if (product.id === productCatalog.id) {
               return (
                 <Link
-                  href={`/catalog/${productCatalog.category}/${productCatalog.id}`}
+                  href={`/${lng}/catalog/${productCatalog.category}/${productCatalog.id}`}
                   key={productCatalog.id}
                 >
                   <CardProduct

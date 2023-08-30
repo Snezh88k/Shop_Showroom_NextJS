@@ -4,7 +4,6 @@ import styles from "./page.module.scss";
 
 import dataTest from "../../app/TestPropducts/products.json";
 import { CardProductLan } from "@/components/card_product/client";
-import Link from "next/link";
 
 import { useTranslation } from "../i18n";
 

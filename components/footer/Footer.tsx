@@ -9,11 +9,11 @@ interface FooterProps {
   lng: string;
 }
 
-export default function Footer({ t }: FooterProps) {
+export default function Footer({ t, lng }: FooterProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.about}>
-        <Link href="/">
+        <Link href={`/${lng}`}>
           <div className={styles.logo}>I AM</div>
         </Link>
         <span>© «‎I AM SHOP»‎, 2023</span>

@@ -91,7 +91,7 @@ export default async function page({ params }: any) {
           .map((product) => {
             if (product.category === params.category) {
               return (
-                <Link href={`/catalog/${params.category}/${product.id}`}>
+                <Link href={`/${lng}/catalog/${params.category}/${product.id}`}>
                   <CardProductLan
                     id={product.id}
                     src={product.images.main}

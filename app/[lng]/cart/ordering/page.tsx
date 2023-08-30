@@ -92,7 +92,7 @@ export default function page({ params: { lng } }: Params) {
           <div className={styles.modal_window}>
             <span>{t("order_successfully")}</span>
             <span>{t("manager_contact")}</span>
-            <Link href={`/`}>
+            <Link href={`/${lng}`}>
               <span className={styles.neon_text}>{t("back_main_page")}</span>
             </Link>
           </div>

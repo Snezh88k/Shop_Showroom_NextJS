@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 
@@ -54,7 +56,7 @@ export default function MobileMenu({ t, lng }: MobileMenuProps) {
         onClick={(e) => closeMenu(e)}
       >
         <li onClick={() => openCatalog()}>
-          каталог
+          {t("catalog")}
           <ul
             style={visible ? { display: "block" } : { display: "none" }}
             onClick={(e) => closeCatalog(e)}
@@ -64,16 +66,16 @@ export default function MobileMenu({ t, lng }: MobileMenuProps) {
         </li>
 
         <li>
-          <Link href="/payment">оплата</Link>
+          <Link href={`/${lng}/payment`}> {t("pay")}</Link>
         </li>
         <li>
-          <Link href="/delivery">доставка</Link>
+          <Link href={`/${lng}/delivery`}> {t("delivery")}</Link>
         </li>
         <li>
-          <Link href="/">акции</Link>
+          <Link href={`/${lng}/`}> {t("sale")}</Link>
         </li>
         <li>
-          <Link href="/instagram">instagram</Link>
+          <Link href={`/${lng}/instagram`}>instagram</Link>
         </li>
       </ul>
     </div>
