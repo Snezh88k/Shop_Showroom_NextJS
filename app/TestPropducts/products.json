@@ -4,7 +4,7 @@
     "article": "23S24003",
     "category": "tops_shirts",
     "price": 24,
-    "sale": 19,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -58,7 +58,7 @@
     "article": "23S24003",
     "category": "tops_shirts",
     "price": 24,
-    "sale": 19,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -111,7 +111,7 @@
     "article": "23S24003",
     "category": "tops_shirts",
     "price": 24,
-    "sale": 19,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -165,7 +165,7 @@
     "article": "23S15002",
     "category": "tops_shirts",
     "price": 47,
-    "sale": 38,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Блузка",
@@ -219,7 +219,7 @@
     "article": "23S15002",
     "category": "tops_shirts",
     "price": 47,
-    "sale": 38,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Блузка",
@@ -273,7 +273,7 @@
     "article": "23S15002",
     "category": "tops_shirts",
     "price": 47,
-    "sale": 38,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Блузка",
@@ -327,7 +327,7 @@
     "article": "23S24007",
     "category": "tops_shirts",
     "price": 32,
-    "sale": 25,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -380,7 +380,7 @@
     "article": "23S24007",
     "category": "tops_shirts",
     "price": 32,
-    "sale": 25,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -434,7 +434,7 @@
     "name": "Топ",
     "category": "tops_shirts",
     "price": 32,
-    "sale": 25,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -487,7 +487,7 @@
     "article": "23S15009",
     "category": "tops_shirts",
     "price": 32,
-    "sale": 25,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Блуза",
@@ -539,7 +539,7 @@
     "article": "23S15009",
     "category": "tops_shirts",
     "price": 32,
-    "sale": 25,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Блуза",
@@ -594,7 +594,7 @@
     "name": "Полупрозрачный топ",
     "category": "tops_shirts",
     "price": 43,
-    "sale": 34,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Полупрозрачный топ",
@@ -647,7 +647,7 @@
     "article": "23S18007",
     "category": "tops_shirts",
     "price": 67,
-    "sale": 54,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Рубашка",
@@ -699,7 +699,7 @@
     "article": "23S18007",
     "category": "tops_shirts",
     "price": 67,
-    "sale": 54,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Рубашка",
@@ -752,7 +752,7 @@
     "article": "23S24009",
     "category": "tops_shirts",
     "price": 24,
-    "sale": 19,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -805,7 +805,7 @@
     "article": "23S24009",
     "category": "tops_shirts",
     "price": 24,
-    "sale": 19,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -858,7 +858,7 @@
     "article": "23S24009",
     "category": "tops_shirts",
     "price": 24,
-    "sale": 19,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -912,7 +912,7 @@
     "article": "11505",
     "category": "tops_shirts",
     "price": 20,
-    "sale": 16,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -964,7 +964,7 @@
     "article": "11505",
     "category": "tops_shirts",
     "price": 20,
-    "sale": 16,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -1018,7 +1018,7 @@
     "name": "Топ",
     "category": "tops_shirts",
     "price": 20,
-    "sale": 16,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Топ",
@@ -1071,7 +1071,7 @@
     "article": "23S02018",
     "category": "dresses_skirts",
     "price": 40,
-    "sale": 32,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Юбка",
@@ -1123,7 +1123,7 @@
     "article": "13500",
     "category": "dresses_skirts",
     "price": 25,
-    "sale": 20,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Юбка",
@@ -1175,7 +1175,7 @@
     "article": "23S25048",
     "category": "dresses_skirts",
     "price": 85,
-    "sale": 68,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Платье-рубашка",
@@ -1227,7 +1227,7 @@
     "article": "2513",
     "category": "dresses_skirts",
     "price": 78,
-    "sale": 62,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Платье-пиджак",
@@ -1280,7 +1280,7 @@
     "article": "23S01008",
     "category": "pants_jeans",
     "price": 105,
-    "sale": 84,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Брюки",
@@ -1334,7 +1334,7 @@
     "category": "pants_jeans",
     "price": 105,
 
-    "sale": 84,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Брюки",
@@ -1386,7 +1386,7 @@
     "article": "23S05001",
     "category": "pants_jeans",
     "price": 120,
-    "sale": 96,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Брюки",
@@ -1438,7 +1438,7 @@
     "article": "23S35016",
     "category": "suits_sets",
     "price": 80,
-    "sale": 64,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Костюм",
@@ -1490,7 +1490,7 @@
     "article": "23S32002",
     "category": "suits_sets",
     "price": 95,
-    "sale": 76,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Костюм",
@@ -1542,7 +1542,7 @@
     "article": "23S32002",
     "category": "suits_sets",
     "price": 95,
-    "sale": 76,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Костюм",
@@ -1595,7 +1595,7 @@
     "article": "23S08006",
     "category": "suits_sets",
     "price": 160,
-    "sale": 128,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Костюм",
@@ -1648,7 +1648,7 @@
     "article": "23S08006",
     "category": "suits_sets",
     "price": 160,
-    "sale": 128,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Костюм",
@@ -1700,7 +1700,7 @@
     "article": "23S03009",
     "category": "pants_jeans",
     "price": 94,
-    "sale": 74,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Шорты",
@@ -1754,7 +1754,7 @@
     "article": "23S03012",
     "category": "pants_jeans",
     "price": 80,
-    "sale": 64,
+    "sale": 0,
     "langs": {
       "ru": {
         "name": "Шорты",

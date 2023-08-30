@@ -48,7 +48,13 @@ export default function page({ params: { lng } }: Params) {
     message += `<b>Имя: </b> ${e.target.name.value}\n`;
     message += `<b>Почта:</b> ${e.target.mail.value}\n`;
     message += `<b>Телефон: </b> ${e.target.tel.value}\n`;
-    message += `<b>Адрес:</b> ${e.target.address.value}\n`;
+    message += `<b>Улица:</b> ${e.target.address_street.value}\n`;
+    message += `<b>Дом:</b> ${e.target.address_house.value}\n`;
+    message += `<b>Подъезд:</b> ${e.target.address_entrance.value}\n`;
+    message += `<b>Квартира:</b> ${e.target.address_flat.value}\n`;
+    message += `<b>Метод оплаты:</b> ${e.target.contact.value}\n`;
+
+    message += `<b>Дата рождения:</b> ${e.target.date.value}\n`;
     storageCart.forEach((item: any, index: number) => {
       message += `<b>Товар ${index + 1}:</b> \n Название: ${item.name} \n ID: ${
         item.id
@@ -101,17 +107,17 @@ export default function page({ params: { lng } }: Params) {
             onSubmit={(e) => sendMessage(e)}
           >
             <label className="form-name">
-              {t("name")}:
+              {t("name")}*
               <input type="text" name="name" className="form-name" required />
             </label>
 
             <label className="form-tell">
-              {t("tel")}:
+              {t("tel")}*
               <input type="tel" name="tel" className="form-tell" required />
             </label>
 
             <label className="form-email">
-              Email:
+              Email*
               <input
                 id="email"
                 type="email"
@@ -120,15 +126,70 @@ export default function page({ params: { lng } }: Params) {
                 required
               />
             </label>
-            <label className="form-address">
-              {t("address")}:
+
+            <label className="form-date">
+              {t("date")}
+              <input type="date" name="date" className="form-date" />
+            </label>
+            <span> {t("address")}:</span>
+            <label className="form-address-street">
+              {t("address_street")}*
               <input
                 type="text"
-                name="address"
-                className="form-address"
+                name="address_street"
+                className="form-address-street"
                 required
               />
             </label>
+            <label className="form-address-house">
+              {t("address_house")}*
+              <input
+                type="text"
+                name="address_house"
+                className="form-address-house"
+                required
+              />
+            </label>
+            <label className="form-address-entrance">
+              {t("address_entrance")}
+              <input
+                type="text"
+                name="address_entrance"
+                className="form-address-entrance"
+              />
+            </label>
+            <label className="form-address-flat">
+              {t("address_flat")}
+              <input
+                type="text"
+                name="address_flat"
+                className="form-address-flat"
+              />
+            </label>
+
+            <p> {t("payment_method")}:</p>
+            <div style={{ display: "flex" }}>
+              <input
+                type="radio"
+                id="contactChoice1"
+                name="contact"
+                value="card"
+              />
+              <label htmlFor="contactChoice1" style={{ marginLeft: "5px" }}>
+                Карта
+              </label>
+
+              <input
+                type="radio"
+                id="contactChoice2"
+                name="contact"
+                value="cash"
+                style={{ marginLeft: "15px" }}
+              />
+              <label htmlFor="contactChoice2" style={{ marginLeft: "5px" }}>
+                Наличные
+              </label>
+            </div>
 
             <button
               className={styles.submit_button}
@@ -146,7 +207,7 @@ export default function page({ params: { lng } }: Params) {
                   <Image
                     src={item.image}
                     alt=""
-                    width={80}
+                    width={50}
                     height={70}
                     className={styles.min_image}
                     key={index}

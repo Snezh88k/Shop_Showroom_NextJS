@@ -90,7 +90,7 @@ export default function page({ params }: ProductProps) {
       id: id,
       name: product?.langs?.[lng].name,
       size: isSize,
-      price: product?.price,
+      price: product?.sale ? product?.sale : product?.price,
       image: product?.images.main,
       count: 1,
       url: currentUrl,
@@ -129,7 +129,9 @@ export default function page({ params }: ProductProps) {
               }}
             >
               <h1 className={styles.name}>{product.langs?.[lng].name}</h1>
-              <span className={styles.price}>{product.price} ₾</span>
+              <span className={styles.price}>
+                {product.sale ? product.sale : product.price} ₾
+              </span>
             </div>
 
             <div className={styles.portraiture}>

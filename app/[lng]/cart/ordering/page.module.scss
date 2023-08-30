@@ -1,7 +1,7 @@
 @import "@/public/config_theme/config_theme.scss";
 
 .wrapper {
-  padding-top: 40px;
+  padding-top: 25px;
 
   h1 {
     font-size: 30px;
@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
 
+    max-width: 384px;
     width: 384px;
     height: 317px;
     padding: 16px;
@@ -25,7 +26,7 @@
     }
 
     .total_count {
-      margin-top: 20px;
+      margin-top: 10px;
       font-size: 16px;
     }
 
@@ -38,25 +39,25 @@
     }
 
     .image_carousel {
-      margin-top: 15px;
+      margin-top: 10px;
       padding-bottom: 10px;
       display: flex;
-      gap: 10px;
+      gap: 5px;
       overflow-x: auto;
       overflow-y: hidden;
 
       &::-webkit-scrollbar {
         height: 5px;
-
+        border-radius: 5px;
         background-color: #ffffff;
       }
 
       &::-webkit-scrollbar-thumb {
         background-color: #888888;
-        border-radius: 5em;
+        border-radius: 5px;
       }
       .min_image {
-        object-fit: contain;
+        object-fit: cover;
       }
     }
   }
@@ -66,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 270px;
+  width: 350px;
 
   label {
     display: flex;
@@ -119,7 +120,7 @@
     max-height: 200px;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
@@ -132,11 +133,6 @@
     .neon_text {
       display: inline-block;
       color: #fff;
-      text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
-        0 0 42px rgb(255, 0, 242), 0 0 82px rgb(255, 0, 242),
-        0 0 92px rgb(255, 0, 242), 0 0 102px rgb(255, 0, 242),
-        0 0 151px rgb(255, 0, 242);
-
       margin-top: 20px;
       font-size: 18px;
     }
@@ -144,15 +140,16 @@
 }
 
 @media screen and (max-width: 900px) {
-  .wrapper {
-    padding: 0 15px 0 15px;
-  }
-
   .section_wrapper {
     flex-direction: column;
   }
 
+  .form_wrapper {
+    width: 100%;
+  }
   .order_info {
-    margin-top: 30px;
+    order: -1;
+    width: 100%;
+    margin-bottom: 30px;
   }
 }

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { removeItem } from "@/redux/slices/cartSlice";
 import Link from "next/link";
+import DeleteIcon from "@/public/icons/DeleteIcon";
 
 interface CardProductInCartProps {
   product: {
@@ -63,7 +64,7 @@ export default function CardProductInCart({
           <div className={styles.total}>
             <span className={styles.price}>{product.price} ₾</span>
             <span className={styles.delete} onClick={removeProduct}>
-              удалить
+              <DeleteIcon />
             </span>
           </div>
         </div>

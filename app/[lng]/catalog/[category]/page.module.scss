@@ -4,9 +4,10 @@
   padding-top: 30px;
 
   .products {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 17px;
+    gap: 10px;
   }
   h1 {
     $main-text-color: #e1e3e6;
@@ -23,10 +24,7 @@
 
 @media screen and (max-width: 900px) {
   .wrapper {
-    padding: 15px 15px 0 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    // padding: 15px 15px 0 15px;
 
     .products {
       // width: 330px;

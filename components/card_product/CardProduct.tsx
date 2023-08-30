@@ -28,31 +28,33 @@ export default function CardProduct({
   return (
     <div className={styles.wrapper}>
       <Like className={styles.like} id={id} />
-      <div className={styles.image_wrapper}>
-        <Image
-          src={src}
-          alt={alt}
-          className={styles.product_image}
-          width={330}
-          height={440}
-          quality={100}
-        />
-      </div>
+
+      <Image
+        src={src}
+        alt={alt}
+        className={styles.product_image}
+        fill
+        quality={100}
+      />
 
       <div className={styles.description}>
         <div style={{ display: "flex" }}>
           <span className={clsx(styles.price, salePrice ? styles.through : "")}>
-            {price}{" "}
+            {price}
             <span
               style={salePrice ? { display: "none" } : { marginLeft: "2px" }}
             >
               ₾
             </span>
           </span>
-          <span className={styles.price_sale}>
-            {salePrice}
-            <span style={{ marginLeft: "2px" }}>₾</span>
-          </span>
+          {salePrice ? (
+            <span className={styles.price_sale}>
+              {salePrice}
+              <span style={{ marginLeft: "2px" }}>₾</span>
+            </span>
+          ) : (
+            ""
+          )}
         </div>
 
         <span className={styles.category}>{category}</span>
