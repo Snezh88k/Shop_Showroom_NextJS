@@ -1,8 +1,6 @@
 @import "@/public/config_theme/config_theme.scss";
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
   padding-top: 30px;
   h1 {
     color: $main-h1-color;
@@ -16,9 +14,10 @@
 }
 
 .catalog_wraper {
-  display: flex;
-  gap: 17px;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   margin-top: 40px;
 }
 

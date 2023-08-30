@@ -12,7 +12,13 @@
     transform: scale(1.01);
 
     .description {
-      background-color: #2222224d;
+      background: linear-gradient(
+        0deg,
+        rgba(14, 14, 14, 0.3),
+        rgba(14, 14, 14, 0.2),
+        rgba(14, 14, 14, 0.1),
+        rgba(14, 14, 14, 0.01)
+      );
     }
   }
   .product_image {
@@ -22,8 +28,8 @@
 
   .like {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     z-index: 15;
   }
 
@@ -32,14 +38,19 @@
     z-index: 10;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #222222a1;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: 0.5s;
-    padding: 5px 10px;
-    min-height: 39px;
+    background: linear-gradient(
+      0deg,
+      rgba(14, 14, 14, 0.7),
+      rgba(14, 14, 14, 0.6),
+      rgba(14, 14, 14, 0.2),
+      rgba(14, 14, 14, 0.01)
+    );
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    transition: 1s;
+    padding: 30px 10px 5px 10px;
+    min-height: 70px;
 
     .price {
       color: $main-text-color;
@@ -49,7 +60,7 @@
       text-transform: uppercase;
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       color: white;
 
@@ -72,6 +83,9 @@
       font-family: Inter;
       font-weight: 400;
       line-height: 100%;
+
+      display: flex;
+      align-items: flex-end;
     }
 
     .price_sale {
@@ -94,8 +108,8 @@
     }
 
     .description {
-      padding: 2px 6px;
-      min-height: 24px;
+      padding: 20px 5px 5px 5px;
+      min-height: 40px;
       .category {
         font-size: 8px;
         color: rgba(255, 255, 255, 0.9);
