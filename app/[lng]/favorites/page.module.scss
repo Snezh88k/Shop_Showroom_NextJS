@@ -3,13 +3,14 @@
 .wrapper {
   padding-top: 30px;
   h1 {
-    color: $main-h1-color;
+    color: white;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
+    margin-bottom: 20px;
   }
 }
 
@@ -18,7 +19,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin-top: 40px;
 }
 
 @media screen and (max-width: 900px) {
@@ -32,7 +32,6 @@
     }
 
     h1 {
-      margin-left: 10px;
     }
   }
 }

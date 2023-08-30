@@ -176,7 +176,7 @@ export default function page({ params: { lng } }: Params) {
                 value="card"
               />
               <label htmlFor="contactChoice1" style={{ marginLeft: "5px" }}>
-                Карта
+                {t("card")}
               </label>
 
               <input
@@ -187,7 +187,7 @@ export default function page({ params: { lng } }: Params) {
                 style={{ marginLeft: "15px" }}
               />
               <label htmlFor="contactChoice2" style={{ marginLeft: "5px" }}>
-                Наличные
+                {t("cash")}
               </label>
             </div>
 

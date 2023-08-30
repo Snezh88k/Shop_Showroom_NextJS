@@ -28,9 +28,16 @@
 
   .like {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 7px;
+    right: 7px;
     z-index: 15;
+
+    svg {
+      fill: rgb(255, 255, 255);
+
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .description {
