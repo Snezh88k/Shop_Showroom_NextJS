@@ -15,8 +15,6 @@ export default async function part({ params: { lng } }: Params) {
     <div className={styles.wrapper}>
       <h1>{t("title")}</h1>
       <p>{t("10.1")}</p>
-      <p>{t("10.2")}</p>
-      <p>{t("10.3")}</p>
     </div>
   );
 }

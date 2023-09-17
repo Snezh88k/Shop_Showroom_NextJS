@@ -21,7 +21,7 @@ export default function Footer({ t, lng }: FooterProps) {
       <div className={styles.sections}>
         <Link
           href={
-            "https://drive.google.com/file/d/1-77J4DBqQZiuAga0r9IW7NdM4LzmooZS/view?usp=drive_link"
+            "https://drive.google.com/file/d/1aSsTKNxjMog7pw6iRkyLHtXk9RRjcEk6/view?usp=sharing"
           }
           target="_blank"
         >

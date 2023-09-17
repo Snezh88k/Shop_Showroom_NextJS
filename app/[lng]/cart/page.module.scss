@@ -16,13 +16,12 @@
     }
     h3 {
       color: $main-text-color;
-      font-family: Inter;
       font-size: 28px;
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
-
       margin-top: 32px;
+      text-wrap: nowrap;
     }
 
     span {
@@ -86,7 +85,6 @@
     padding: 10px 16px;
     justify-content: center;
     align-items: center;
-
     border-radius: 6px;
     background: rgb(56, 56, 56);
 
@@ -98,16 +96,10 @@
 
     span {
       color: #fff;
-      font-family: Inter;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
       line-height: 100%;
     }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .wrapper {
   }
 }
