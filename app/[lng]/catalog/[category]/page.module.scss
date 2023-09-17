@@ -1,37 +1,29 @@
 @import "@/public/config_theme/config_theme.scss";
 
 .wrapper {
-  padding-top: 30px;
+  padding-top: 36px;
 
   .products {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 25px;
   }
   h1 {
-    $main-text-color: #e1e3e6;
-    font-family: Inter;
-    font-size: 24px;
+    color: white;
+
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .wrapper {
-    // padding: 15px 15px 0 15px;
-
-    .products {
-      // width: 330px;
-      // align-items: center;
-    }
-
-    h1 {
-    }
+  .products {
+    gap: 15px;
   }
 }

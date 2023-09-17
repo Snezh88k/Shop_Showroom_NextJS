@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 
 import { HeaderLan } from "../../components/header/client";
 import { FooterLan } from "@/components/footer/index";
@@ -15,7 +15,8 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const comfrotao = Comfortaa({ subsets: ["latin"] });
 
 export const metadata = {
   title: "I AM",
@@ -42,7 +43,7 @@ export default function RootLayout({
         `}
       </Script>
       <CartProvider>
-        <body className={clsx(inter.className, "body")}>
+        <body className={clsx(comfrotao.className, "body")}>
           <header>
             <HeaderLan lng={lng} />
           </header>

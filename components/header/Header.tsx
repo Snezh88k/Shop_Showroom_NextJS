@@ -18,6 +18,7 @@ import MobileMenu from "../mobile_menu/MobileMenu";
 import { fillFavoriteStore } from "@/redux/slices/favoritesSlice";
 import HeartsIcon from "@/public/menu_icon/hearts";
 import FindIcon from "@/public/menu_icon/Find_icon";
+import clsx from "clsx";
 
 interface HeaderProps {
   t: any;
@@ -48,8 +49,7 @@ export default function Header({ t, lng }: HeaderProps) {
         <Link href={`/${lng}`}>
           <div className={styles.logo}>I AM</div>
         </Link>
-
-        <div className={styles.quick_panel}>
+        <div className={clsx(styles.quick_panel, styles.mobile)}>
           <LangSelector lng={lng} t={t} />
           <FindIcon />
 
@@ -62,38 +62,51 @@ export default function Header({ t, lng }: HeaderProps) {
         </div>
       </div>
 
-      <nav>
-        <ul className={styles.main_menu}>
-          <li
-            className={styles.dropdown_menu_link}
-            onMouseEnter={() => setVisible(true)}
-            onMouseLeave={() => setVisible(false)}
-          >
-            <Link href={`/${lng}`}> {t("catalog")}</Link>
+      <div className={styles.menu_wrapper}>
+        <nav>
+          <ul className={styles.main_menu}>
+            <li
+              className={styles.dropdown_menu_link}
+              onMouseEnter={() => setVisible(true)}
+              onMouseLeave={() => setVisible(false)}
+            >
+              <Link href={`/${lng}`}> {t("catalog")}</Link>
 
-            <div onClick={() => setVisible(false)}>
-              <DropdownMenu
-                visible={visible}
-                className={styles.dropdown_menu}
-                t={t}
-                lng={lng}
-              />
-            </div>
-          </li>
-          <li>
-            <Link href={`/${lng}/payment`}>{t("pay")}</Link>
-          </li>
-          <li>
-            <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
-          </li>
-          <li className={styles.sale}>
-            <Link href={`/${lng}/`}>{t("sale")}</Link>
-          </li>
-          <li>
-            <Link href={`/${lng}/instagram`}>instagram</Link>
-          </li>
-        </ul>
-      </nav>
+              <div onClick={() => setVisible(false)}>
+                <DropdownMenu
+                  visible={visible}
+                  className={styles.dropdown_menu}
+                  t={t}
+                  lng={lng}
+                />
+              </div>
+            </li>
+            <li>
+              <Link href={`/${lng}/payment`}>{t("pay")}</Link>
+            </li>
+            <li>
+              <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
+            </li>
+            <li className={styles.sale}>
+              <Link href={`/${lng}/`}>{t("sale")}</Link>
+            </li>
+            {/* <li>
+              <Link href={`/${lng}/instagram`}>instagram</Link>
+            </li> */}
+          </ul>
+        </nav>
+        <div className={styles.quick_panel}>
+          <LangSelector lng={lng} t={t} />
+          <FindIcon />
+
+          <Link href={`/${lng}/favorites`} className={styles.hearts_icon}>
+            <HeartsIcon />
+          </Link>
+          <Link href={`/${lng}/cart`}>
+            <CartIcon count={countInCart} />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

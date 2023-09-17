@@ -5,5 +5,5 @@ import { useTranslation } from "../../app/i18n/client";
 
 export const MainSliderClient = ({ lng }) => {
   const { t } = useTranslation(lng);
-  return <MainSlider t={t} />;
+  return <MainSlider t={t} lng={lng} />;
 };

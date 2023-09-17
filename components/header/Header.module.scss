@@ -3,24 +3,55 @@
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
+
+  .menu_wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
 }
 
 .top_line {
   height: 72px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quick_panel.mobile {
+    display: none;
+
+    @media screen and (max-width: 900px) {
+      display: inline-flex;
+    }
+  }
 
   .logo {
-    font-size: 40px;
-    font-weight: 600;
+    font-family: "Cormorant Infant", serif;
+    text-shadow: 0px 0px 6px white;
+    font-size: 50px;
+    font-weight: 300;
     color: white;
+    padding-top: 6px;
+
+    @media screen and (max-width: 900px) {
+      padding-top: 0px;
+    }
   }
 }
 
 .quick_panel {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
 
   svg {
@@ -51,13 +82,17 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  gap: 30px;
   font-weight: 600;
   font-size: 16px;
-  color: $main-text-color;
-  padding-right: 400px;
-  border-top: 2px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  letter-spacing: 3px;
+
   text-transform: uppercase;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 
   .sale {
     color: #ff0099;
@@ -88,11 +123,5 @@
     z-index: 10;
     top: 50px;
     left: 0;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .main_menu {
-    display: none;
   }
 }

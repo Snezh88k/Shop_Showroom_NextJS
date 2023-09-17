@@ -34,7 +34,7 @@ export default function CardProduct({
         alt={alt}
         className={styles.product_image}
         fill
-        quality={100}
+        quality={80}
       />
 
       <div className={styles.description}>
@@ -42,7 +42,8 @@ export default function CardProduct({
           <span className={clsx(styles.price, salePrice ? styles.through : "")}>
             {price}
             <span
-              style={salePrice ? { display: "none" } : { marginLeft: "2px" }}
+              style={salePrice ? { display: "none" } : { display: "block" }}
+              className={styles.currency}
             >
               ₾
             </span>
@@ -50,7 +51,7 @@ export default function CardProduct({
           {salePrice ? (
             <span className={styles.price_sale}>
               {salePrice}
-              <span style={{ marginLeft: "2px" }}>₾</span>
+              <span className={styles.currency}>₾</span>
             </span>
           ) : (
             ""

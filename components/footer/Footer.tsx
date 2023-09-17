@@ -2,7 +2,6 @@ import React from "react";
 
 import styles from "./Footer.module.scss";
 import Link from "next/link";
-import { useTranslation } from "@/app/i18n/client";
 
 interface FooterProps {
   t: any;
@@ -29,7 +28,9 @@ export default function Footer({ t, lng }: FooterProps) {
           <span>{t("offer")}</span>{" "}
         </Link>
 
-        <span>{t("refund")}</span>
+        <Link href={`/${lng}/refund`}>
+          <span>{t("refund")}</span>
+        </Link>
       </div>
     </div>
   );

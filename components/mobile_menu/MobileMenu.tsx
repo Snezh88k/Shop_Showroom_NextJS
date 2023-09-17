@@ -74,9 +74,9 @@ export default function MobileMenu({ t, lng }: MobileMenuProps) {
         <li>
           <Link href={`/${lng}/`}> {t("sale")}</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href={`/${lng}/instagram`}>instagram</Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

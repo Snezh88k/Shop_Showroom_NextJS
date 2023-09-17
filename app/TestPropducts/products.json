@@ -38,7 +38,7 @@
     "size": [
       { "rus": null, "int": "xs", "availability": false },
       { "rus": null, "int": "s", "availability": true },
-      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "m", "availability": false },
       { "rus": null, "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
     ],
@@ -1051,7 +1051,7 @@
     "size": [
       { "rus": null, "int": "xs", "availability": false },
       { "rus": null, "int": "s", "availability": true },
-      { "rus": null, "int": "m", "availability": true },
+      { "rus": null, "int": "m", "availability": false },
       { "rus": null, "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
     ],
@@ -1259,7 +1259,7 @@
     },
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "s", "availability": false },
       { "rus": null, "int": "m", "availability": true },
       { "rus": null, "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
@@ -1627,7 +1627,7 @@
     },
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "s", "availability": false },
       { "rus": null, "int": "m", "availability": true },
       { "rus": null, "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }

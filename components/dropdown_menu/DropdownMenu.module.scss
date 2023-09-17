@@ -1,6 +1,7 @@
 .wrapper {
-  border-radius: 5px;
-  background: rgb(56, 56, 56);
+  border-radius: 3px;
+  background: rgb(56 56 56 / 82%);
+  backdrop-filter: blur(4px);
   box-shadow: 0px 2px 20px -4px rgba(0, 0, 0, 0.3);
   padding: 15px;
   white-space: nowrap;
@@ -14,11 +15,13 @@
 
   li {
     color: white;
-    font-family: Inter;
     font-size: 14px;
+    font-family: "__Comfortaa_f86cd1";
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
+    text-transform: none;
+    letter-spacing: 2px;
     cursor: pointer;
 
     &:hover {
