@@ -15,7 +15,6 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-// const inter = Inter({ subsets: ["latin"] });
 const comfrotao = Comfortaa({ subsets: ["latin"] });
 
 export const metadata = {
