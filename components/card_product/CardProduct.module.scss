@@ -45,7 +45,6 @@
 
   .description {
     position: absolute;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -53,13 +52,9 @@
     left: 0;
     right: 0;
     z-index: 10;
-
     padding: 10px 10px;
-    // min-height: 40px;
     background: rgb(0 0 0 / 33%);
     backdrop-filter: blur(4px);
-
-    // border-top: 1px solid #6666661f;
 
     .price {
       order: 1;
@@ -71,15 +66,16 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      // color: white;
       color: rgb(255, 255, 255);
 
       &.through {
         color: rgb(190, 190, 190);
+        font-size: 14px;
         &::after {
           content: "";
           position: absolute;
           width: 100%;
+          top: 50%;
           height: 1px;
           border-radius: 20px;
           background-color: rgb(190, 190, 190);
@@ -93,8 +89,6 @@
     }
 
     .category {
-      // order: -1;
-
       font-size: 16px;
 
       font-weight: 600;
@@ -111,7 +105,7 @@
     }
 
     .price_sale {
-      font-size: 24px;
+      font-size: 18px;
       color: #ffffff;
       margin-left: 4px;
     }
@@ -122,15 +116,16 @@
   .wrapper {
     height: 325px;
     .like {
-      top: 1px;
-      right: 1px;
+      top: 3px;
+      right: 3px;
+      padding: 0px;
       svg {
-        transform: scale(0.8);
+        transform: scale(0.6);
       }
     }
 
     .description {
-      padding: 5px 10px;
+      padding: 5px 5px;
 
       .category {
         font-size: 8px;

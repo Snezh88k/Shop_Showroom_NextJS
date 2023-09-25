@@ -3,9 +3,10 @@
 
   .main_slider__title {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0px;
+    left: 0px;
     font-size: 30px;
+    padding: 20px;
   }
   .main_slider {
     img {
@@ -17,6 +18,14 @@
       div {
         height: 515px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main_slider__wrapper {
+    .main_slider__title {
+      font-size: 24px;
     }
   }
 }

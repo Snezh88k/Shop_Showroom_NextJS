@@ -88,11 +88,8 @@ export default function Header({ t, lng }: HeaderProps) {
               <Link href={`/${lng}/delivery`}>{t("delivery")}</Link>
             </li>
             <li className={styles.sale}>
-              <Link href={`/${lng}/`}>{t("sale")}</Link>
+              <Link href={`/${lng}/sale`}>{t("sale")}</Link>
             </li>
-            {/* <li>
-              <Link href={`/${lng}/instagram`}>instagram</Link>
-            </li> */}
           </ul>
         </nav>
         <div className={styles.quick_panel}>

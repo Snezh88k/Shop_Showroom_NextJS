@@ -19,7 +19,7 @@ const comfrotao = Comfortaa({ subsets: ["latin"] });
 
 export const metadata = {
   title: "I AM",
-  description: "shop",
+  description: "Магазин женской одежды в Тбилиси",
 };
 
 export default function RootLayout({

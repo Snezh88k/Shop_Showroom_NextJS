@@ -1,8 +1,6 @@
 @import "@/public/config_theme/config_theme.scss";
 
 .wrapper {
-  padding-top: 25px;
-
   h1 {
     font-size: 30px;
     font-weight: 600;
@@ -147,9 +145,12 @@
   .form_wrapper {
     width: 100%;
   }
-  .order_info {
-    order: -1;
-    width: 100%;
-    margin-bottom: 30px;
+  .wrapper {
+    .order_info {
+      order: -1;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
   }
 }

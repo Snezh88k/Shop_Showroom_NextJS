@@ -2,31 +2,9 @@
 
 .wrapper {
   display: flex;
-  padding-top: 70px;
   background-color: $main-bg;
   gap: 20px;
   justify-content: space-between;
-
-  h1 {
-    color: $main-h1-color;
-    font-family: inherit;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-    text-transform: uppercase;
-  }
-}
-
-.popular_block {
-  margin-top: 90px;
-}
-
-.catalog_wraper {
-  display: flex;
-  gap: 62px;
-  flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .first_column {
@@ -46,7 +24,7 @@
   }
   p {
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 10px;
     background-color: #202020;
     font-size: 16px;
   }
@@ -63,31 +41,22 @@
     text-transform: uppercase;
     font-size: 26px;
     font-weight: 600;
+    padding: 20px;
   }
 }
+
 .slider_wrapper {
-  width: 515px;
+  width: calc(50% - 10px);
 }
 
 @media screen and (max-width: 900px) {
   .wrapper {
-    padding: 40px 15px;
     width: 100%;
     flex-direction: column;
 
-    .catalog_wraper {
-      width: 100%;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    h1 {
-      margin-left: 10px;
-    }
-
     .sale {
       height: 200px;
-      font-size: 24px;
+      font-size: 27px;
     }
 
     .first_column {
@@ -95,6 +64,14 @@
     }
     .slider_wrapper {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper {
+    .sale {
+      font-size: 18px;
     }
   }
 }

@@ -46,8 +46,6 @@ export default async function Home({ params: { lng } }: any) {
 
   return (
     <div className={styles.wrapper}>
-      {/* <button onClick={fetchData}>Fetch</button> */}
-
       <div className={styles.first_column}>
         {/* <div className={styles.message}>
             <Image src={photo} width={100} height={100} alt="photo" />
@@ -60,7 +58,6 @@ export default async function Home({ params: { lng } }: any) {
               </i>
             </p>
           </div> */}
-
         <div className={styles.sale}>20% discount on first order</div>
       </div>
       <div className={styles.slider_wrapper}>

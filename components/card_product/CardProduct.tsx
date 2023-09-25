@@ -38,7 +38,7 @@ export default function CardProduct({
       />
 
       <div className={styles.description}>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: "5px" }}>
           <span className={clsx(styles.price, salePrice ? styles.through : "")}>
             {price}
             <span
