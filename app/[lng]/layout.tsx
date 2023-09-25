@@ -31,18 +31,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-W114QGHH7K" />
-      <Script id="google-analytics">
-        {`
+      <meta
+        name="google-site-verification"
+        content="oiPWq1gn4yUP1DlXOdMXL0j5oxd3lHVqjG9xVdwy8fE"
+      />
+      <CartProvider>
+        <body className={clsx(comfrotao.className, "body")}>
+          <Script src="https://www.googletagmanager.com/gtag/js?id=G-W114QGHH7K" />
+          <Script id="google-analytics">
+            {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
           gtag('config', 'G-W114QGHH7K');
         `}
-      </Script>
-      <CartProvider>
-        <body className={clsx(comfrotao.className, "body")}>
+          </Script>
           <header>
             <HeaderLan lng={lng} />
           </header>
