@@ -14,7 +14,7 @@ export default async function page({ params: { lng } }: Params) {
   return (
     <div className={styles.wrapper}>
       <h1>{t("title")}</h1>
-      <p>💳 {t("first_point")}</p>
+      <p>{t("first_point")}</p>
     </div>
   );
 }

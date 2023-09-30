@@ -5,13 +5,18 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
+  p {
+    text-align: left;
+    margin-bottom: 15px;
+    color: $main-text-color;
+  }
   h1 {
     color: $main-text-color;
     font-size: 24px;
-    font-style: normal;
     font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }

@@ -58,7 +58,7 @@ export default async function Home({ params: { lng } }: any) {
               </i>
             </p>
           </div> */}
-        <div className={styles.sale}>20% discount on first order</div>
+        <div className={styles.sale}>{t("free_shipping")}</div>
       </div>
       <div className={styles.slider_wrapper}>
         <MainSliderClient lng={lng} />

@@ -34,7 +34,7 @@ export default function CardProduct({
         alt={alt}
         className={styles.product_image}
         fill
-        quality={80}
+        quality={100}
       />
 
       <div className={styles.description}>
