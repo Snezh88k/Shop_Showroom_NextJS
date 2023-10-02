@@ -1573,7 +1573,7 @@
     },
     "size": [
       { "rus": null, "int": "xs", "availability": false },
-      { "rus": null, "int": "s", "availability": true },
+      { "rus": null, "int": "s", "availability": false },
       { "rus": null, "int": "m", "availability": true },
       { "rus": null, "int": "l", "availability": true },
       { "rus": null, "int": "xl", "availability": false }
@@ -1788,7 +1788,7 @@
       { "rus": "36", "int": null, "availability": true },
       { "rus": "38", "int": null, "availability": false },
       { "rus": "40", "int": null, "availability": false },
-      { "rus": "42", "int": null, "availability": true }
+      { "rus": "42", "int": null, "availability": false }
     ],
     "images": {
       "main": "/product/PantsJeans/23S03012_C_1.jpg",
