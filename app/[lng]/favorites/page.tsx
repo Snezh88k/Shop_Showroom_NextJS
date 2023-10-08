@@ -1,13 +1,12 @@
 "use client";
 import Link from "next/link";
-import { fillFavoriteStore } from "@/redux/slices/favoritesSlice";
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import CardProduct from "@/components/card_product/CardProduct";
 import dataTest from "../../TestPropducts/products.json";
-
 import styles from "./page.module.scss";
 import { useTranslation } from "@/app/i18n/client";
+import { DataType } from "@/types/products";
 
 interface Params {
   params: {
@@ -15,26 +14,12 @@ interface Params {
   };
 }
 
-const products = dataTest as {
-  id: string;
-  langs: Record<
-    string,
-    {
-      name: string;
-      description: string;
-      compound: Record<string, string | undefined>[];
-    }
-  >;
-  article: string;
-  category: string;
-  price: number;
-  sale: number;
-  size: any;
-  images: {
-    main: string;
-    other: string[];
-  };
-}[];
+const products = dataTest as DataType[];
+
+export const metadata = {
+  title: "Избранное",
+  description: "Товары добавленные в избранное",
+};
 
 export default function page({ params: { lng } }: Params) {
   const { t } = useTranslation(lng, "favorites-page");

@@ -1,12 +1,9 @@
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
-
 import { HeaderLan } from "../../components/header/client";
 import { FooterLan } from "@/components/footer/index";
-
 import CartProvider from "../../redux/CartProvider";
 import clsx from "clsx";
-
 import { dir } from "i18next";
 import { languages } from "../i18n/settings";
 import Script from "next/script";

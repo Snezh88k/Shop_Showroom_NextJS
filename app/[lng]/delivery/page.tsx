@@ -8,6 +8,11 @@ interface Params {
   };
 }
 
+export const metadata = {
+  title: "Доставка",
+  description: "Бесплатная доствка и примерка",
+};
+
 export default async function page({ params: { lng } }: Params) {
   const { t } = await useTranslation(lng, "delivery-page");
   return (

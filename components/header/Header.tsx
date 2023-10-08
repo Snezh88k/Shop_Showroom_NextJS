@@ -19,9 +19,10 @@ import { fillFavoriteStore } from "@/redux/slices/favoritesSlice";
 import HeartsIcon from "@/public/menu_icon/hearts";
 import FindIcon from "@/public/menu_icon/Find_icon";
 import clsx from "clsx";
+import { TFunction } from "i18next";
 
 interface HeaderProps {
-  t: any;
+  t: TFunction;
   lng: string;
 }
 
@@ -70,7 +71,7 @@ export default function Header({ t, lng }: HeaderProps) {
               onMouseEnter={() => setVisible(true)}
               onMouseLeave={() => setVisible(false)}
             >
-              <Link href={`/${lng}`}> {t("catalog")}</Link>
+              <Link href={`/${lng}/catalog/all_products`}> {t("catalog")}</Link>
 
               <div onClick={() => setVisible(false)}>
                 <DropdownMenu

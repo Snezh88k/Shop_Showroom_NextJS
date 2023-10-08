@@ -1,33 +1,17 @@
 import React from "react";
 import styles from "./page.module.scss";
-
 import dataTest from "../../../TestPropducts/products.json";
-
 import Link from "next/link";
 import { useTranslation } from "@/app/i18n";
 import { CardProductLan } from "@/components/card_product/client";
+import { DataType } from "@/types/products";
 
-const products = dataTest as {
-  id: string;
-  langs?: Record<
-    string,
-    {
-      name: string;
-      description: string;
-      compound: Record<string, string | undefined>[];
-    }
-  >;
-  article: string;
-  category: string;
-  price: number;
-  sale: number;
-  size: any;
-  images: {
-    main: string;
-    other: string[];
-  };
-  selectorWeight: number;
-}[];
+const products = dataTest as DataType[];
+
+export const metadata = {
+  title: "Каталог - Все товары",
+  description: "Топы, брюки, джинсы, юбки.",
+};
 
 export default async function page({ params }: any) {
   const { t } = await useTranslation(params.lng);
