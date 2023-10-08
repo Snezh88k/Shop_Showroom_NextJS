@@ -16,11 +16,6 @@ interface Params {
 
 const products = dataTest as DataType[];
 
-export const metadata = {
-  title: "Избранное",
-  description: "Товары добавленные в избранное",
-};
-
 export default function page({ params: { lng } }: Params) {
   const { t } = useTranslation(lng, "favorites-page");
 
