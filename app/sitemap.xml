@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://www.iamshop.ge/en</loc>
-    <xhtml:link
-               rel="alternate"
-               hreflang="ru"
-               href="https://www.iamshop.ge/ru"/>
-    <xhtml:link
-               rel="alternate"
-               hreflang="ge"
-               href="https://www.iamshop.ge/ge"/>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://www.iamshop.ge/sitemaps/sitemap_ge.xml</loc></sitemap>
+<sitemap><loc>https://www.iamshop.ge/sitemaps/sitemap_en.xml</loc></sitemap>
+<sitemap><loc>https://www.iamshop.ge/sitemaps/sitemap_ru.xml</loc></sitemap>
+</sitemapindex>
