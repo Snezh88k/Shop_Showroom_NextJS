@@ -1,6 +1,6 @@
 {
   "name": "showroom",
-  "version": "0.1.39",
+  "version": "0.1.40",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -33,6 +33,7 @@
     "sass": "^1.63.6",
     "sharp": "^0.32.4",
     "slick-carousel": "^1.8.1",
+    "superhub-packages": "^1.0.8",
     "typescript": "5.1.3"
   },
   "devDependencies": {

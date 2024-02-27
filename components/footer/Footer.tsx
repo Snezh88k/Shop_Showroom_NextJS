@@ -17,6 +17,10 @@ export default function Footer({ t, lng }: FooterProps) {
         </Link>
         <span>© «‎I AM SHOP»‎, 2023</span>
       </div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <span>Mail: Mokrushina.ale@gmail.com</span>
+        <span>Tel: +79645640881</span>
+      </div>
 
       <div className={styles.sections}>
         <Link
